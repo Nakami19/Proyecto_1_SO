@@ -1,17 +1,17 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interfaces;
 
 /**
  *
- * @author Tomas
+ * @author Natalia
  */
-public class Ventana extends javax.swing.JPanel {
+public class Ventana extends javax.swing.JFrame {
 
     /**
-     * Creates new form Ventana
+     * Creates new form NewJFrame
      */
     public Ventana() {
         initComponents();
@@ -27,38 +27,104 @@ public class Ventana extends javax.swing.JPanel {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        Tab1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        Config = new javax.swing.JPanel();
+        Cartoon = new javax.swing.JPanel();
+        Nick = new javax.swing.JPanel();
+        Graf = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1000, 500));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTabbedPane1.setBackground(new java.awt.Color(51, 51, 51));
+        Config.setBackground(new java.awt.Color(204, 153, 255));
+        Config.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jTabbedPane1.addTab("Config", Config);
 
-        Tab1.setBackground(new java.awt.Color(102, 102, 102));
-        Tab1.setForeground(new java.awt.Color(153, 153, 153));
-        Tab1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane1.addTab("Main", Tab1);
+        Cartoon.setBackground(new java.awt.Color(0, 0, 0));
+        Cartoon.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jTabbedPane1.addTab("Cartoon", Cartoon);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
-        jPanel2.setForeground(new java.awt.Color(102, 102, 102));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane1.addTab("Cartoon Network", jPanel2);
+        Nick.setBackground(new java.awt.Color(255, 153, 0));
 
-        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane1.addTab("Nickelodeon", jPanel3);
+        javax.swing.GroupLayout NickLayout = new javax.swing.GroupLayout(Nick);
+        Nick.setLayout(NickLayout);
+        NickLayout.setHorizontalGroup(
+            NickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 820, Short.MAX_VALUE)
+        );
+        NickLayout.setVerticalGroup(
+            NickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
 
-        add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 480));
+        jTabbedPane1.addTab("Nick", Nick);
+
+        Graf.setBackground(new java.awt.Color(204, 153, 255));
+
+        javax.swing.GroupLayout GrafLayout = new javax.swing.GroupLayout(Graf);
+        Graf.setLayout(GrafLayout);
+        GrafLayout.setHorizontalGroup(
+            GrafLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 820, Short.MAX_VALUE)
+        );
+        GrafLayout.setVerticalGroup(
+            GrafLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Grafico", Graf);
+
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 550));
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Ventana().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Tab1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel Cartoon;
+    private javax.swing.JPanel Config;
+    private javax.swing.JPanel Graf;
+    private javax.swing.JPanel Nick;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
