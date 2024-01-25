@@ -3,10 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Main;
+import Interfaces.Ventana;
 
 /**
  *
- * @author Natalia
+ * @author Natalia, Tomás Gil
  */
 public class main {
 
@@ -14,7 +15,8 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Ventana ventana = new Ventana();
+        ventana.setVisible(true);
     }
     
 }
