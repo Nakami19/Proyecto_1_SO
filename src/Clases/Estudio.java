@@ -4,6 +4,7 @@
  */
 package Clases;
 
+import EDD.Lista;
 import java.util.concurrent.Semaphore;
 
 /**
@@ -18,7 +19,12 @@ public class Estudio {
     private double utilidad;
     private Drive personalDrive; //drive del estudio
     private Semaphore mutex; // un semaforo para el estudio, asi los trabajadores de este estudio acceden uno a la vez al drive del estudio
-
+    private Lista listaGuion;
+    private Lista listaEscenario;
+    private Lista listaAnimacion;
+    private Lista listaDoblaje;
+    private Lista listaPlotTwist;
+    
     public Estudio(String name) {
         this.name = name;
         this.ganancias=0;
@@ -26,6 +32,12 @@ public class Estudio {
         this.utilidad=0;
         this.personalDrive=new Drive(this.name);
         this.mutex=new Semaphore(1);
+        this.listaGuion = new Lista();
+        this.listaDoblaje = new Lista();
+        this.listaEscenario = new Lista();
+        this.listaAnimacion = new Lista();
+        this.listaDoblaje = new Lista();
+        this.listaPlotTwist = new Lista();
     }
 
     public String getName() {
@@ -76,7 +88,44 @@ public class Estudio {
         this.mutex = mutex;
     }
     
+    public Lista getListaGuion(){
+        return listaGuion;
+    }
     
+    public void setListaGuion(Lista listaGuion){
+        this.listaGuion = listaGuion;
+    }
     
+    public Lista getListaEscenario(){
+        return listaEscenario;
+    }
+    
+    public void setListaEscenario(Lista listaEscenario){
+        this.listaEscenario = listaEscenario;
+    }
+    
+    public Lista getListaAnimacion(){
+        return listaAnimacion;
+    }
+    
+    public void setListaAnimacion(Lista listaAnimacion){
+        this.listaAnimacion = listaAnimacion;
+    }
+    
+    public Lista getListaDoblaje(){
+        return listaDoblaje;
+    }
+    
+    public void setListaDoblaje(Lista listaDoblaje){
+        this.listaDoblaje = listaDoblaje;
+    }
+    
+    public Lista getListaPlotTwist(){
+        return listaPlotTwist;
+    }
+    
+    public void setListaPlotTwist(Lista listaPlotTwist){
+        this.listaPlotTwist = listaPlotTwist;
+    }
     
 }
