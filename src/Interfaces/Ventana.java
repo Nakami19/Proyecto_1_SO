@@ -4,6 +4,9 @@
  */
 package Interfaces;
 
+import Clases.Developer;
+import Clases.Estudio;
+
 /**
  *
  * @author Natalia
@@ -29,6 +32,11 @@ public class Ventana extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         Config = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        saveButton = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        Cont_Deadline = new javax.swing.JSpinner();
+        jButton1 = new javax.swing.JButton();
         Cartoon = new javax.swing.JPanel();
         Cont_Guionista_PW_CN = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
@@ -63,6 +71,41 @@ public class Ventana extends javax.swing.JFrame {
 
         Config.setBackground(new java.awt.Color(204, 153, 255));
         Config.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("DIAS ENTRE DEADLINES: ");
+        Config.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+
+        saveButton.setText("GUARDAR");
+        saveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveButtonActionPerformed(evt);
+            }
+        });
+        Config.add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("GUARDAR: ");
+        Config.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        Cont_Deadline.setValue(1);
+        Cont_Deadline.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Cont_DeadlineStateChanged(evt);
+            }
+        });
+        Config.add(Cont_Deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 80, 20));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        Config.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, -1, -1));
+
         jTabbedPane1.addTab("Config", Config);
 
         Cartoon.setBackground(new java.awt.Color(0, 0, 0));
@@ -323,6 +366,31 @@ public class Ventana extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Cont_Ensamblador_NKStateChanged
 
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_saveButtonActionPerformed
+
+    private void Cont_DeadlineStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_DeadlineStateChanged
+        if((int)this.Cont_Deadline.getValue() <= 0){
+            this.Cont_Deadline.setValue(1);
+            this.repaint();
+        }
+    }//GEN-LAST:event_Cont_DeadlineStateChanged
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Estudio nick=new Estudio("nick",5);
+        nick.AddDeveloper(0, 2);
+//        nick.AddDeveloper(1, 1);
+//        nick.AddDeveloper(2, 1);
+//        nick.AddDeveloper(3, 1);
+//        nick.AddDeveloper(4, 1);
+//        nick.AddDeveloper(5, 1);
+        //Developer guion1=new Developer(nick.getPersonalDrive(),0,20,nick.getMutex(),3000,0.5,nick.getName());
+        
+        //nick.getListaGuion().insertBegin(guion1);
+        //guion1.start();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -372,6 +440,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JSpinner Cont_Actor_Doblaje_NK;
     private javax.swing.JSpinner Cont_Animador_CN;
     private javax.swing.JSpinner Cont_Animador_NK;
+    private javax.swing.JSpinner Cont_Deadline;
     private javax.swing.JSpinner Cont_Diseñador_CN;
     private javax.swing.JSpinner Cont_Diseñador_NK;
     private javax.swing.JSpinner Cont_Ensamblador_CN;
@@ -382,10 +451,13 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JSpinner Cont_Guionista_PW_NK;
     private javax.swing.JPanel Graf;
     private javax.swing.JPanel Nick;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -395,5 +467,6 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton saveButton;
     // End of variables declaration//GEN-END:variables
 }

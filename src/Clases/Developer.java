@@ -22,8 +22,7 @@ public class Developer extends Thread {
     private int dayDuration;//duracion del dia 
     private float salarioacc=0; //salario acumulado en total, inicia en 0
     private double produccionPordia; //tiempo que tarda un trabajador en crear su parte, cada trabajador puede tener un numero diferente que represente su dia, ej el animador es 0.34 y cuando pasan 3 dias hace algo, el guionista necesita dos dias entonces en vez de 0.34 puedo poner 0.5 
-    private String estudio; //cartoon o nick, capaz saber el estudio aqui no es tan importante
-    
+    private String estudio; //cartoon o nick, capaz saber el estudio aqui no es tan importante    
     public Developer(Drive drive, int type, int sueldoph, Semaphore m, int dayDuration,double ppd, String estudio) {
         this.drive = drive;
         this.type = type;
@@ -41,8 +40,14 @@ public class Developer extends Thread {
         while(true) {
             try {
                 obtenerSalario();
-                Work();
                 System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
+                if (type==5) {
+                    if(PuedeEnsamblar()) {
+                        Work();
+                    }
+                } else {
+                Work();
+                }
                 sleep(this.dayDuration);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
@@ -56,20 +61,75 @@ public class Developer extends Thread {
     //type 2 animacion 
     //type 3 doblaje
     //type 4 plot twist 
+    //type 5 ensamblador
     public void Work() {
         this.acc+=this.produccionPordia; 
         if(this.acc>=1) {try {
             //si completa sus dias para producir
             this.mutex.acquire(); //wait
-            //empieza parte critica 
+            //empieza parte critica
+            if(this.type==5) {
+                this.drive.Create(); //se crea un cap
+            }
+            else {
             this.drive.addPart(this.type); //se añade la parte al drive, aqui creo que si necesito pasarle el tipo 
-            this.mutex.release(); //sognal
+            }
+            
+            this.mutex.release(); //signal
             this.acc=0; //se reinicia la produccion
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     
+    }
+    
+    public boolean PuedeEnsamblar() {
+        //try { 
+            //this.mutex.acquire(); //debe acceder al drive y solo puede hacerlo uno a la vez entpnces con esto otro hilo no puede acceder mientras el ensamblador revisa
+                if(this.estudio.compareTo("nick")==0) {
+                    if(drive.getCapsHastaPlot()>0) {
+                        if(drive.getGuion()>=2 && drive.getEscenario()>=1 && drive.getAnimaciones()>=4 && drive.getDoblajes()>=4) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    }
+                    else {
+                        if(drive.getGuion()>=2 && drive.getEscenario()>=1 && drive.getAnimaciones()>=4 && drive.getDoblajes()>=4 && drive.getPlotTwist()>=2) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    
+                    }
+                }
+                if(this.estudio.compareTo("cartoon")==0) {
+                    if(drive.getCapsHastaPlot()>0) {
+                        if(drive.getGuion()>=1 && drive.getEscenario()>=2 && drive.getAnimaciones()>=6 && drive.getDoblajes()>=5) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    }
+                    else {
+                        if(drive.getGuion()>=1 && drive.getEscenario()>=2 && drive.getAnimaciones()>=6 && drive.getDoblajes()>=5 && drive.getPlotTwist()>=1) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    
+                    }
+                }
+          //  this.mutex.release();
+        //} catch (InterruptedException ex) {
+           // Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
+        //}
+        return false;
     }
     
     public void obtenerSalario() {

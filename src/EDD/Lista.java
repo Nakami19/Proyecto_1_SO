@@ -39,8 +39,9 @@ public class Lista {
         return getHead() == null;
     }
    
-   public Nodo insertBegin(Developer number){
-        Nodo node = new Nodo(number);
+
+   public Nodo insertBegin(Developer dev){
+        Nodo node = new Nodo(dev);
         if(isEmpty()){
             setHead(node);
         }else{

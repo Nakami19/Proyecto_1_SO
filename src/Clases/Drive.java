@@ -17,10 +17,13 @@ public class Drive {
     public int plotTwist;
     
    private int caps; //cantidad de capitulos creados
+   //private int capN; //capitulo normal
+   //private int capP; //capitulo con plot Twist, se me ocurre que para ir calculando la utilidad/ganancias cada vez que se cree algo 
+   private int capsHastaPlot;
    
    private String estudio;
 
-    public Drive(String estudio) {
+    public Drive(String estudio, int capsPlot) {
         this.guion = 0;
         this.escenario = 0;
         this.animaciones = 0;
@@ -28,6 +31,7 @@ public class Drive {
         this.plotTwist = 0;
         this.caps = 0;
         this.estudio=estudio;
+        this.capsHastaPlot=capsPlot;
     }
    
        //type 0 guion
@@ -38,24 +42,89 @@ public class Drive {
     
     public void addPart(int type) {
         if (type==0) {
-            this.guion+=1;
+            if(this.guion<25) {
+                this.guion+=1;
+            }
+            else {System.out.println("Drive lleno!!");}
             System.out.println("guiones disponibles de "+this.estudio+": " + this.guion);
         }
         if (type==1) {
-            this.escenario+=1;
+            if (this.escenario<20) {
+                this.escenario+=1;
+            }
+            else {System.out.println("Drive lleno!!");}
             System.out.println("escenarios disponiblesde "+this.estudio+": " + this.escenario);
         }
         if (type==2) {
-            this.animaciones+=1;
+            if (this.animaciones<55) {
+                this.animaciones+=3;
+            }
+            else {System.out.println("Drive lleno!!");}
             System.out.println("animaciones disponiblesde "+this.estudio+": " + this.animaciones);
 
         }
         if (type==3) {
-            this.doblajes+=1;
+            if (this.doblajes<35) {
+               this.doblajes+=3;
+               System.out.println("doblajes disponiblesde "+this.estudio+": " + this.doblajes);
+            }
+            else {System.out.println("Drive lleno!!");}
         }
         if (type==4) {
-            this.plotTwist+=1;
+            if (this.plotTwist<10) {
+               this.plotTwist+=1;
+               System.out.println("plot twist disponiblesde "+this.estudio+": " + this.plotTwist);
+            }
+            else {System.out.println("Drive lleno!!");}
         }
+    }
+    
+    public void Create() {
+        if(this.estudio.compareTo("nick")==0) {
+            if(this.capsHastaPlot>0) {
+                this.guion-=2;
+                this.escenario-=1;
+                this.animaciones-=4;
+                this.doblajes-=4;
+                this.capsHastaPlot-=1;
+                
+                
+            }else {
+                this.guion-=2;
+                this.escenario-=1;
+                this.animaciones-=4;
+                this.doblajes-=4;
+                this.plotTwist-=2; 
+                this.capsHastaPlot=5;
+                System.out.println("se creo uno con plot");
+            }
+            this.caps+=1;
+        }
+        else {
+            if(this.capsHastaPlot>0) {
+                this.guion-=1;
+                this.escenario-=2;
+                this.animaciones-=6;
+                this.doblajes-=5;
+                this.capsHastaPlot-=1;
+            }else {
+                this.guion-=1;
+                this.escenario-=2;
+                this.animaciones-=6;
+                this.doblajes-=5;
+                this.plotTwist-=1; 
+                this.capsHastaPlot=3;
+            }
+            this.caps+=1;
+        
+        }
+        System.out.println("caps creados: "+this.caps);
+        System.out.println("guiones disponibles luego  de "+this.estudio+": " + this.guion);
+        System.out.println("escenarios disponiblesde luego "+this.estudio+": " + this.escenario);
+        System.out.println("animaciones disponiblesde luego "+this.estudio+": " + this.animaciones);
+        System.out.println("doblajes disponiblesde luego "+this.estudio+": " + this.doblajes);
+        System.out.println("plot twist disponiblesde luego "+this.estudio+": " + this.plotTwist);
+
     }
 
     public int getGuion() {
@@ -112,6 +181,14 @@ public class Drive {
 
     public void setEstudio(String estudio) {
         this.estudio = estudio;
+    }
+
+    public int getCapsHastaPlot() {
+        return capsHastaPlot;
+    }
+
+    public void setCapsHastaPlot(int capsHastaPlot) {
+        this.capsHastaPlot = capsHastaPlot;
     }
     
     
