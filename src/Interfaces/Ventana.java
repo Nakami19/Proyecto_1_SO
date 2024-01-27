@@ -40,6 +40,8 @@ public class Ventana extends javax.swing.JFrame {
         Cont_Animador_CN = new javax.swing.JSpinner();
         jLabel5 = new javax.swing.JLabel();
         Cont_Actor_Doblaje_CN = new javax.swing.JSpinner();
+        jLabel11 = new javax.swing.JLabel();
+        Cont_Ensamblador_CN = new javax.swing.JSpinner();
         Nick = new javax.swing.JPanel();
         Cont_Guionista_PW_NK = new javax.swing.JSpinner();
         jLabel6 = new javax.swing.JLabel();
@@ -51,6 +53,8 @@ public class Ventana extends javax.swing.JFrame {
         Cont_Animador_NK = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
         Cont_Actor_Doblaje_NK = new javax.swing.JSpinner();
+        jLabel12 = new javax.swing.JLabel();
+        Cont_Ensamblador_NK = new javax.swing.JSpinner();
         Graf = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,8 +77,8 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.add(Cont_Guionista_PW_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 80, 20));
 
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel1.setText("GUIONISTAS DE PLOT-TWIST:");
-        Cartoon.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 210, -1));
+        jLabel1.setText("ENSAMBLADORES:");
+        Cartoon.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 210, -1));
 
         jLabel2.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel2.setText("GUIONISTAS:");
@@ -123,6 +127,18 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
         Cartoon.add(Cont_Actor_Doblaje_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 80, 20));
+
+        jLabel11.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel11.setText("GUIONISTAS DE PLOT-TWIST:");
+        Cartoon.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 210, -1));
+
+        Cont_Ensamblador_CN.setValue(1);
+        Cont_Ensamblador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Cont_Ensamblador_CNStateChanged(evt);
+            }
+        });
+        Cartoon.add(Cont_Ensamblador_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 80, -1));
 
         jTabbedPane1.addTab("Cartoon", Cartoon);
 
@@ -199,21 +215,23 @@ public class Ventana extends javax.swing.JFrame {
         });
         Nick.add(Cont_Actor_Doblaje_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 80, 20));
 
+        jLabel12.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("ENSAMBLADORES:");
+        Nick.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 210, -1));
+
+        Cont_Ensamblador_NK.setValue(1);
+        Cont_Ensamblador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Cont_Ensamblador_NKStateChanged(evt);
+            }
+        });
+        Nick.add(Cont_Ensamblador_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 80, -1));
+
         jTabbedPane1.addTab("Nick", Nick);
 
         Graf.setBackground(new java.awt.Color(204, 153, 255));
-
-        javax.swing.GroupLayout GrafLayout = new javax.swing.GroupLayout(Graf);
-        Graf.setLayout(GrafLayout);
-        GrafLayout.setHorizontalGroup(
-            GrafLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 820, Short.MAX_VALUE)
-        );
-        GrafLayout.setVerticalGroup(
-            GrafLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
-        );
-
+        Graf.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jTabbedPane1.addTab("Grafico", Graf);
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 550));
@@ -291,6 +309,20 @@ public class Ventana extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Cont_Actor_Doblaje_NKStateChanged
 
+    private void Cont_Ensamblador_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Ensamblador_CNStateChanged
+        if((int)this.Cont_Ensamblador_CN.getValue() <= 0){
+            this.Cont_Ensamblador_CN.setValue(1);
+            this.repaint();
+        }
+    }//GEN-LAST:event_Cont_Ensamblador_CNStateChanged
+
+    private void Cont_Ensamblador_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Ensamblador_NKStateChanged
+        if((int)this.Cont_Ensamblador_NK.getValue() <= 0){
+            this.Cont_Ensamblador_NK.setValue(1);
+            this.repaint();
+        }
+    }//GEN-LAST:event_Cont_Ensamblador_NKStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -342,6 +374,8 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JSpinner Cont_Animador_NK;
     private javax.swing.JSpinner Cont_Diseñador_CN;
     private javax.swing.JSpinner Cont_Diseñador_NK;
+    private javax.swing.JSpinner Cont_Ensamblador_CN;
+    private javax.swing.JSpinner Cont_Ensamblador_NK;
     private javax.swing.JSpinner Cont_Guionista_CN;
     private javax.swing.JSpinner Cont_Guionista_NK;
     private javax.swing.JSpinner Cont_Guionista_PW_CN;
@@ -350,6 +384,8 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JPanel Nick;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -21,8 +21,8 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//            Ventana ventana= new Ventana();
-//        ventana.setVisible(true);
+            Ventana ventana= new Ventana();
+      ventana.setVisible(true);
 
 //    Semaphore mutex = new Semaphore(1);
 //        Drive drive = new Drive("nick");
