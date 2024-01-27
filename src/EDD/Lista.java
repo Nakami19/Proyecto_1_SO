@@ -4,6 +4,8 @@
  */
 package EDD;
 
+import Clases.Developer;
+
 /**
  *
  * @author Tomas
@@ -37,7 +39,7 @@ public class Lista {
         return getHead() == null;
     }
    
-   public Nodo insertBegin(int number){
+   public Nodo insertBegin(Developer number){
         Nodo node = new Nodo(number);
         if(isEmpty()){
             setHead(node);
