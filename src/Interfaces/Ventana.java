@@ -13,7 +13,8 @@ import Clases.Estudio;
  */
 public class Ventana extends javax.swing.JFrame {
 
-    Estudio nick = new Estudio("nick", 5, 6);
+    Estudio nick = new Estudio("Nickelodeon", 5, 6);
+    Estudio cn = new Estudio("Cartoon Network", 5, 6);
     
     /**
      * Creates new form NewJFrame
@@ -39,13 +40,15 @@ public class Ventana extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         Cont_Deadline = new javax.swing.JSpinner();
         jButton1 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        Cont_Day_Duration = new javax.swing.JSpinner();
         Cartoon = new javax.swing.JPanel();
         Cont_Guionista_PW_CN = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Cont_Guionista_CN = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
-        Cont_Diseñador_CN = new javax.swing.JSpinner();
+        Cont_Escenario_CN = new javax.swing.JSpinner();
         jLabel4 = new javax.swing.JLabel();
         Cont_Animador_CN = new javax.swing.JSpinner();
         jLabel5 = new javax.swing.JLabel();
@@ -58,7 +61,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         Cont_Guionista_NK = new javax.swing.JSpinner();
         jLabel8 = new javax.swing.JLabel();
-        Cont_Diseñador_NK = new javax.swing.JSpinner();
+        Cont_Escenario_NK = new javax.swing.JSpinner();
         jLabel9 = new javax.swing.JLabel();
         Cont_Animador_NK = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
@@ -76,8 +79,8 @@ public class Ventana extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("DIAS ENTRE DEADLINES: ");
-        Config.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+        jLabel13.setText("DURACIÓN DE DÍAS (S): ");
+        Config.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         saveButton.setText("GUARDAR");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -108,6 +111,20 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
         Config.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("DIAS ENTRE DEADLINES: ");
+        Config.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+
+        Cont_Day_Duration.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Day_Duration, ""));
+        Cont_Day_Duration.setValue(1);
+        Cont_Day_Duration.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Cont_Day_DurationStateChanged(evt);
+            }
+        });
+        Config.add(Cont_Day_Duration, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 80, 20));
 
         jTabbedPane1.addTab("Config", Config);
 
@@ -141,17 +158,17 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.add(Cont_Guionista_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 80, 20));
 
         jLabel3.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel3.setText("DISEÑADORES DE  PERSONAJES:");
+        jLabel3.setText("DISEÑADORES DE  ESCENARIOS:");
         Cartoon.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 220, -1));
 
-        Cont_Diseñador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
-        Cont_Diseñador_CN.setValue(1);
-        Cont_Diseñador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
+        Cont_Escenario_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Escenario_CN, ""));
+        Cont_Escenario_CN.setValue(1);
+        Cont_Escenario_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                Cont_Diseñador_CNStateChanged(evt);
+                Cont_Escenario_CNStateChanged(evt);
             }
         });
-        Cartoon.add(Cont_Diseñador_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 80, 20));
+        Cartoon.add(Cont_Escenario_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 80, 20));
 
         jLabel4.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel4.setText("ANIMADORES DE  PERSONAJES:");
@@ -234,18 +251,18 @@ public class Ventana extends javax.swing.JFrame {
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("DISEÑADORES DE  PERSONAJES:");
+        jLabel8.setText("DISEÑADORES DE  ESCENARIOS:");
         Nick.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 220, -1));
 
-        Cont_Diseñador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Cont_Diseñador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_NK, ""));
-        Cont_Diseñador_NK.setValue(1);
-        Cont_Diseñador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
+        Cont_Escenario_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Escenario_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Escenario_NK, ""));
+        Cont_Escenario_NK.setValue(1);
+        Cont_Escenario_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                Cont_Diseñador_NKStateChanged(evt);
+                Cont_Escenario_NKStateChanged(evt);
             }
         });
-        Nick.add(Cont_Diseñador_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 80, 20));
+        Nick.add(Cont_Escenario_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 80, 20));
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
@@ -309,22 +326,65 @@ public class Ventana extends javax.swing.JFrame {
         if((int)this.Cont_Guionista_CN.getValue() <= 0){
             this.Cont_Guionista_CN.setValue(1);
             this.repaint();
-        }else{
-            
         }
+        int cont = cn.getListaGuion().getSize();
+        int cont2 = (int) Cont_Guionista_CN.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                cn.deleteDeveloper(0);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                cn.AddDeveloper(0, 1);
+                cont ++;
+            }
+        }    
     }//GEN-LAST:event_Cont_Guionista_CNStateChanged
 
-    private void Cont_Diseñador_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Diseñador_CNStateChanged
-        if((int)this.Cont_Diseñador_CN.getValue() <= 0){
-            this.Cont_Diseñador_CN.setValue(1);
+    private void Cont_Escenario_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Escenario_CNStateChanged
+        if((int)this.Cont_Escenario_CN.getValue() <= 0){
+            this.Cont_Escenario_CN.setValue(1);
             this.repaint();
         }
-    }//GEN-LAST:event_Cont_Diseñador_CNStateChanged
+        int cont = cn.getListaEscenario().getSize();
+        int cont2 = (int) Cont_Escenario_CN.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                cn.deleteDeveloper(1);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                cn.AddDeveloper(1, 1);
+                cont ++;
+            }
+        }  
+    }//GEN-LAST:event_Cont_Escenario_CNStateChanged
 
     private void Cont_Animador_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Animador_CNStateChanged
         if((int)this.Cont_Animador_CN.getValue() <= 0){
             this.Cont_Animador_CN.setValue(1);
             this.repaint();
+        }
+        int cont = cn.getListaAnimacion().getSize();
+        int cont2 = (int) Cont_Animador_CN.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                cn.deleteDeveloper(2);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                cn.AddDeveloper(2, 1);
+                cont ++;
+            }
         }
     }//GEN-LAST:event_Cont_Animador_CNStateChanged
 
@@ -333,12 +393,42 @@ public class Ventana extends javax.swing.JFrame {
             this.Cont_Actor_Doblaje_CN.setValue(1);
             this.repaint();
         }
+        int cont = cn.getListaDoblaje().getSize();
+        int cont2 = (int) Cont_Actor_Doblaje_CN.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                cn.deleteDeveloper(3);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                cn.AddDeveloper(3, 1);
+                cont ++;
+            }
+        }
     }//GEN-LAST:event_Cont_Actor_Doblaje_CNStateChanged
 
     private void Cont_Guionista_PW_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Guionista_PW_CNStateChanged
         if((int)this.Cont_Guionista_PW_CN.getValue() <= 0){
             this.Cont_Guionista_PW_CN.setValue(1);
             this.repaint();
+        }
+        int cont = cn.getListaPlotTwist().getSize();
+        int cont2 = (int) Cont_Guionista_PW_CN.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                cn.deleteDeveloper(4);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                cn.AddDeveloper(4, 1);
+                cont ++;
+            }
         }
     }//GEN-LAST:event_Cont_Guionista_PW_CNStateChanged
 
@@ -347,6 +437,22 @@ public class Ventana extends javax.swing.JFrame {
             this.Cont_Guionista_PW_NK.setValue(1);
             this.repaint();
         }
+        int cont = nick.getListaPlotTwist().getSize();
+        int cont2 = (int) Cont_Guionista_PW_NK.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                nick.deleteDeveloper(4);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                nick.AddDeveloper(4, 1);
+                cont ++;
+            }
+        }
+        
     }//GEN-LAST:event_Cont_Guionista_PW_NKStateChanged
 
     private void Cont_Guionista_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Guionista_NKStateChanged
@@ -368,21 +474,51 @@ public class Ventana extends javax.swing.JFrame {
                 nick.AddDeveloper(0, 1);
                 cont ++;
             }
-        }
-        
+        }        
     }//GEN-LAST:event_Cont_Guionista_NKStateChanged
 
-    private void Cont_Diseñador_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Diseñador_NKStateChanged
-        if((int)this.Cont_Diseñador_NK.getValue() <= 0){
-            this.Cont_Diseñador_NK.setValue(1);
+    private void Cont_Escenario_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Escenario_NKStateChanged
+        if((int)this.Cont_Escenario_NK.getValue() <= 0){
+            this.Cont_Escenario_NK.setValue(1);
             this.repaint();
         }
-    }//GEN-LAST:event_Cont_Diseñador_NKStateChanged
+        int cont = nick.getListaEscenario().getSize();
+        int cont2 = (int) Cont_Escenario_NK.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                nick.deleteDeveloper(1);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                nick.AddDeveloper(1, 1);
+                cont ++;
+            }
+        }    
+    }//GEN-LAST:event_Cont_Escenario_NKStateChanged
 
     private void Cont_Animador_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Animador_NKStateChanged
         if((int)this.Cont_Animador_NK.getValue() <= 0){
             this.Cont_Animador_NK.setValue(1);
             this.repaint();
+        }
+        
+        int cont = nick.getListaAnimacion().getSize();
+        int cont2 = (int) Cont_Animador_NK.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                nick.deleteDeveloper(2);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                nick.AddDeveloper(2, 1);
+                cont ++;
+            }
         }
     }//GEN-LAST:event_Cont_Animador_NKStateChanged
 
@@ -391,12 +527,42 @@ public class Ventana extends javax.swing.JFrame {
             this.Cont_Actor_Doblaje_NK.setValue(1);
             this.repaint();
         }
+        int cont = nick.getListaDoblaje().getSize();
+        int cont2 = (int) Cont_Actor_Doblaje_NK.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                nick.deleteDeveloper(3);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                nick.AddDeveloper(3, 1);
+                cont ++;
+            }
+        }
     }//GEN-LAST:event_Cont_Actor_Doblaje_NKStateChanged
 
     private void Cont_Ensamblador_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Ensamblador_CNStateChanged
         if((int)this.Cont_Ensamblador_CN.getValue() <= 0){
             this.Cont_Ensamblador_CN.setValue(1);
             this.repaint();
+        }
+        int cont = cn.getListaEnsamblador().getSize();
+        int cont2 = (int) Cont_Ensamblador_CN.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                cn.deleteDeveloper(5);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                cn.AddDeveloper(5, 1);
+                cont ++;
+            }
         }
     }//GEN-LAST:event_Cont_Ensamblador_CNStateChanged
 
@@ -405,6 +571,22 @@ public class Ventana extends javax.swing.JFrame {
             this.Cont_Ensamblador_NK.setValue(1);
             this.repaint();
         }
+        int cont = nick.getListaEnsamblador().getSize();
+        int cont2 = (int) Cont_Ensamblador_NK.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                nick.deleteDeveloper(5);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                nick.AddDeveloper(5, 1);
+                cont ++;
+            }
+        }
+        
     }//GEN-LAST:event_Cont_Ensamblador_NKStateChanged
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
@@ -431,6 +613,13 @@ public class Ventana extends javax.swing.JFrame {
         //nick.getListaGuion().insertBegin(guion1);
         //guion1.start();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void Cont_Day_DurationStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Day_DurationStateChanged
+        if((int)this.Cont_Deadline.getValue() <= 0){
+            this.Cont_Deadline.setValue(1);
+            this.repaint();
+        }
+    }//GEN-LAST:event_Cont_Day_DurationStateChanged
 
     /**
      * @param args the command line arguments
@@ -481,11 +670,12 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JSpinner Cont_Actor_Doblaje_NK;
     private javax.swing.JSpinner Cont_Animador_CN;
     private javax.swing.JSpinner Cont_Animador_NK;
+    private javax.swing.JSpinner Cont_Day_Duration;
     private javax.swing.JSpinner Cont_Deadline;
-    private javax.swing.JSpinner Cont_Diseñador_CN;
-    private javax.swing.JSpinner Cont_Diseñador_NK;
     private javax.swing.JSpinner Cont_Ensamblador_CN;
     private javax.swing.JSpinner Cont_Ensamblador_NK;
+    private javax.swing.JSpinner Cont_Escenario_CN;
+    private javax.swing.JSpinner Cont_Escenario_NK;
     private javax.swing.JSpinner Cont_Guionista_CN;
     private javax.swing.JSpinner Cont_Guionista_NK;
     private javax.swing.JSpinner Cont_Guionista_PW_CN;
@@ -499,6 +689,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

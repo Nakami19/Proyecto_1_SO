@@ -25,7 +25,7 @@ public class Estudio {
     private Lista listaAnimacion;
     private Lista listaDoblaje;
     private Lista listaPlotTwist;
-    private Lista listaEmsamblador;
+    private Lista listaEnsamblador;
     private int DiasEntrega;
     
     public Estudio(String name, int capsPlot, int DiasEntrega) {
@@ -41,7 +41,7 @@ public class Estudio {
         this.listaAnimacion = new Lista();
         this.listaDoblaje = new Lista();
         this.listaPlotTwist = new Lista();
-        this.listaEmsamblador=new Lista();
+        this.listaEnsamblador=new Lista();
         this.DiasEntrega=DiasEntrega;
     }
     
@@ -86,7 +86,7 @@ public class Estudio {
         if(type==5) {
             for (int i = 1; i<=cantidad; i++) {
                 Developer ensam=new Developer(getPersonalDrive(),5,50,getMutex(),3000,0.5,getName());
-                getListaEmsamblador().insertBegin(ensam);
+                getListaEnsamblador().insertBegin(ensam);
                 
                 ensam.start();
             }
@@ -122,7 +122,7 @@ public class Estudio {
         }
         
         if(type==5) {
-            Nodo borrar=getListaEmsamblador().deleteBegin();
+            Nodo borrar=getListaEnsamblador().deleteBegin();
              borrar.getData().detener();
         }
            
@@ -218,12 +218,12 @@ public class Estudio {
         this.listaPlotTwist = listaPlotTwist;
     }
 
-    public Lista getListaEmsamblador() {
-        return listaEmsamblador;
+    public Lista getListaEnsamblador() {
+        return listaEnsamblador;
     }
 
-    public void setListaEmsamblador(Lista listaEmsamblador) {
-        this.listaEmsamblador = listaEmsamblador;
+    public void setListaEnsamblador(Lista listaEnsamblador) {
+        this.listaEnsamblador = listaEnsamblador;
     }
     
 }
