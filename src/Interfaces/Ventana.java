@@ -5,6 +5,7 @@
 package Interfaces;
 
 import Clases.Developer;
+import Clases.Director;
 import Clases.Estudio;
 import Clases.ProjectManager;
 
@@ -25,7 +26,9 @@ public class Ventana extends javax.swing.JFrame {
         initComponents();        
         this.setLocationRelativeTo(null);
         ProjectManager nickpm=new ProjectManager(40,3000,nick.getMutex(),nick.getPersonalDrive());
+        Director nickDir = new Director(60, 3000, nick.getMutex(), nick.getPersonalDrive(), nickpm);
         nickpm.start();
+        nickDir.start();
     }
 
     /**
