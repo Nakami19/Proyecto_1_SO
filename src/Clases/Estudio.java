@@ -94,7 +94,7 @@ public class Estudio {
     
     }
     
-    public void deteleDeveloper(int type) {
+    public void deleteDeveloper(int type) {
         if(type==0) {
                 Nodo borrar=getListaGuion().deleteBegin();
                 borrar.getData().detener();      

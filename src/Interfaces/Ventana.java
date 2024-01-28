@@ -13,6 +13,8 @@ import Clases.Estudio;
  */
 public class Ventana extends javax.swing.JFrame {
 
+    Estudio nick = new Estudio("nick", 5);
+    
     /**
      * Creates new form NewJFrame
      */
@@ -112,7 +114,7 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.setBackground(new java.awt.Color(0, 0, 0));
         Cartoon.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Cont_Guionista_PW_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
+        Cont_Guionista_PW_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_PW_CN, ""));
         Cont_Guionista_PW_CN.setValue(1);
         Cont_Guionista_PW_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -155,7 +157,8 @@ public class Ventana extends javax.swing.JFrame {
         jLabel4.setText("ANIMADORES DE  PERSONAJES:");
         Cartoon.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 220, -1));
 
-        Cont_Animador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
+        Cont_Animador_CN.setModel(new javax.swing.SpinnerNumberModel());
+        Cont_Animador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Animador_CN, ""));
         Cont_Animador_CN.setValue(1);
         Cont_Animador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -168,7 +171,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel5.setText("ACTORES DE DOBLAJE:");
         Cartoon.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 210, -1));
 
-        Cont_Actor_Doblaje_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
+        Cont_Actor_Doblaje_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Actor_Doblaje_CN, ""));
         Cont_Actor_Doblaje_CN.setValue(1);
         Cont_Actor_Doblaje_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -181,7 +184,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel11.setText("GUIONISTAS DE PLOT-TWIST:");
         Cartoon.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 210, -1));
 
-        Cont_Ensamblador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
+        Cont_Ensamblador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Ensamblador_CN, ""));
         Cont_Ensamblador_CN.setValue(1);
         Cont_Ensamblador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -196,7 +199,7 @@ public class Ventana extends javax.swing.JFrame {
         Nick.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Cont_Guionista_PW_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Cont_Guionista_PW_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
+        Cont_Guionista_PW_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_PW_NK, ""));
         Cont_Guionista_PW_NK.setValue(1);
         Cont_Guionista_PW_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -235,7 +238,7 @@ public class Ventana extends javax.swing.JFrame {
         Nick.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 220, -1));
 
         Cont_Diseñador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Cont_Diseñador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
+        Cont_Diseñador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_NK, ""));
         Cont_Diseñador_NK.setValue(1);
         Cont_Diseñador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -251,7 +254,7 @@ public class Ventana extends javax.swing.JFrame {
         Nick.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 220, -1));
 
         Cont_Animador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Cont_Animador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
+        Cont_Animador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Animador_NK, ""));
         Cont_Animador_NK.setValue(1);
         Cont_Animador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -267,7 +270,7 @@ public class Ventana extends javax.swing.JFrame {
         Nick.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 210, -1));
 
         Cont_Actor_Doblaje_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Cont_Actor_Doblaje_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
+        Cont_Actor_Doblaje_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Actor_Doblaje_NK, ""));
         Cont_Actor_Doblaje_NK.setValue(1);
         Cont_Actor_Doblaje_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -282,7 +285,7 @@ public class Ventana extends javax.swing.JFrame {
         Nick.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 210, -1));
 
         Cont_Ensamblador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Cont_Ensamblador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
+        Cont_Ensamblador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Ensamblador_NK, ""));
         Cont_Ensamblador_NK.setValue(1);
         Cont_Ensamblador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -306,6 +309,8 @@ public class Ventana extends javax.swing.JFrame {
         if((int)this.Cont_Guionista_CN.getValue() <= 0){
             this.Cont_Guionista_CN.setValue(1);
             this.repaint();
+        }else{
+            
         }
     }//GEN-LAST:event_Cont_Guionista_CNStateChanged
 
@@ -349,6 +354,22 @@ public class Ventana extends javax.swing.JFrame {
             this.Cont_Guionista_NK.setValue(1);
             this.repaint();
         }
+        int cont = nick.getListaGuion().getSize();
+        int cont2 = (int) Cont_Guionista_NK.getValue();
+        
+        if (cont > cont2){
+            while (cont > cont2){
+                nick.deleteDeveloper(0);
+                cont --;
+            }
+        }else if (cont < cont2){
+            
+            while (cont < cont2){
+                nick.AddDeveloper(0, 1);
+                cont ++;
+            }
+        }
+        
     }//GEN-LAST:event_Cont_Guionista_NKStateChanged
 
     private void Cont_Diseñador_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Diseñador_NKStateChanged
@@ -398,7 +419,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_Cont_DeadlineStateChanged
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Estudio nick=new Estudio("nick",5);
+        
         nick.AddDeveloper(0, 2);
 //        nick.AddDeveloper(1, 1);
 //        nick.AddDeveloper(2, 1);
