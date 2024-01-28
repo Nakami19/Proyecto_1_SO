@@ -11,6 +11,6 @@ import Clases.Estudio;
  * @author Tomas
  */
 public class Global {
-    private static Estudio nick = new Estudio("Nick", 5); 
+    private static Estudio nick = new Estudio("Nick", 5, 5); 
     
 }

@@ -26,13 +26,14 @@ public class Estudio {
     private Lista listaDoblaje;
     private Lista listaPlotTwist;
     private Lista listaEmsamblador;
+    private int DiasEntrega;
     
-    public Estudio(String name, int capsPlot) {
+    public Estudio(String name, int capsPlot, int DiasEntrega) {
         this.name = name;
         this.ganancias=0;
         this.costos=0;
         this.utilidad=0;
-        this.personalDrive=new Drive(name, capsPlot);
+        this.personalDrive=new Drive(name, capsPlot, DiasEntrega);
         this.mutex=new Semaphore(1);
         this.listaGuion = new Lista();
         this.listaDoblaje = new Lista();
@@ -41,6 +42,7 @@ public class Estudio {
         this.listaDoblaje = new Lista();
         this.listaPlotTwist = new Lista();
         this.listaEmsamblador=new Lista();
+        this.DiasEntrega=DiasEntrega;
     }
     
     
