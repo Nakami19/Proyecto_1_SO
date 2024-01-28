@@ -90,6 +90,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel14.setText("GUARDAR: ");
         Config.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
+        Cont_Deadline.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Deadline, ""));
         Cont_Deadline.setValue(1);
         Cont_Deadline.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -111,6 +112,7 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.setBackground(new java.awt.Color(0, 0, 0));
         Cartoon.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Cont_Guionista_PW_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
         Cont_Guionista_PW_CN.setValue(1);
         Cont_Guionista_PW_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -127,6 +129,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel2.setText("GUIONISTAS:");
         Cartoon.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
+        Cont_Guionista_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_CN, ""));
         Cont_Guionista_CN.setValue(1);
         Cont_Guionista_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -139,6 +142,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel3.setText("DISEÑADORES DE  PERSONAJES:");
         Cartoon.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 220, -1));
 
+        Cont_Diseñador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
         Cont_Diseñador_CN.setValue(1);
         Cont_Diseñador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -151,6 +155,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel4.setText("ANIMADORES DE  PERSONAJES:");
         Cartoon.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 220, -1));
 
+        Cont_Animador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
         Cont_Animador_CN.setValue(1);
         Cont_Animador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -163,6 +168,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel5.setText("ACTORES DE DOBLAJE:");
         Cartoon.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 210, -1));
 
+        Cont_Actor_Doblaje_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
         Cont_Actor_Doblaje_CN.setValue(1);
         Cont_Actor_Doblaje_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -175,6 +181,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel11.setText("GUIONISTAS DE PLOT-TWIST:");
         Cartoon.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 210, -1));
 
+        Cont_Ensamblador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Diseñador_CN, ""));
         Cont_Ensamblador_CN.setValue(1);
         Cont_Ensamblador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -188,6 +195,8 @@ public class Ventana extends javax.swing.JFrame {
         Nick.setBackground(new java.awt.Color(255, 153, 0));
         Nick.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Cont_Guionista_PW_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Guionista_PW_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
         Cont_Guionista_PW_NK.setValue(1);
         Cont_Guionista_PW_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -208,7 +217,10 @@ public class Ventana extends javax.swing.JFrame {
         jLabel7.setText("GUIONISTAS:");
         Nick.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
+        Cont_Guionista_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Guionista_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
         Cont_Guionista_NK.setValue(1);
+        Cont_Guionista_NK.setVerifyInputWhenFocusTarget(false);
         Cont_Guionista_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Cont_Guionista_NKStateChanged(evt);
@@ -222,6 +234,8 @@ public class Ventana extends javax.swing.JFrame {
         jLabel8.setText("DISEÑADORES DE  PERSONAJES:");
         Nick.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 220, -1));
 
+        Cont_Diseñador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Diseñador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
         Cont_Diseñador_NK.setValue(1);
         Cont_Diseñador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -236,6 +250,8 @@ public class Ventana extends javax.swing.JFrame {
         jLabel9.setText("ANIMADORES DE  PERSONAJES:");
         Nick.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 220, -1));
 
+        Cont_Animador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Animador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
         Cont_Animador_NK.setValue(1);
         Cont_Animador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -250,6 +266,8 @@ public class Ventana extends javax.swing.JFrame {
         jLabel10.setText("ACTORES DE DOBLAJE:");
         Nick.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 210, -1));
 
+        Cont_Actor_Doblaje_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Actor_Doblaje_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
         Cont_Actor_Doblaje_NK.setValue(1);
         Cont_Actor_Doblaje_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -263,6 +281,8 @@ public class Ventana extends javax.swing.JFrame {
         jLabel12.setText("ENSAMBLADORES:");
         Nick.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 210, -1));
 
+        Cont_Ensamblador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Ensamblador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
         Cont_Ensamblador_NK.setValue(1);
         Cont_Ensamblador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
