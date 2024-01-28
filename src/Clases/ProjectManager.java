@@ -41,11 +41,11 @@ public class ProjectManager extends Thread {
             for (int i = 1; i <= 16; i++) {
                 try {
                     this.estado="Viendo One Piece";
-                    System.out.println(this.estado);
+                   // System.out.println(this.estado);
                     sleep(this.horas/2);//espera media hora
                     
                     this.estado="Trabajando"; //paso la media hora y trabaja de nuevo 
-                    System.out.println(this.estado);
+//                    //System.out.println(this.estado);
                     sleep(this.horas/2); //trabaja media y luego vuelve a ver anime
                 } catch (InterruptedException ex) {
                     Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -61,7 +61,7 @@ public class ProjectManager extends Thread {
                 //ahora cobra su dia de trabajo
                 this.salarioacc+=this.sueldoph*24;
                 
-                System.out.println("dias hasta la entrega "+this.drive.getDiasEntrega());
+                //System.out.println("dias hasta la entrega "+this.drive.getDiasEntrega());
             } catch (InterruptedException ex) {
                 Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
             }

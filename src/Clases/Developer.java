@@ -75,6 +75,7 @@ public class Developer extends Thread {
             this.mutex.acquire(); //wait
             //empieza parte critica
             if(this.type==5) {
+                System.out.println("Holaaa");
                 this.drive.Create(); //se crea un cap
             }
             else {
