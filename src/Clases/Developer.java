@@ -46,7 +46,7 @@ public class Developer extends Thread {
         while(this.continuar) {
             try {
                 obtenerSalario();
-                System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
+                //System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
                 if (type==5) {
                     if(PuedeEnsamblar()) {
                         Work();
@@ -75,7 +75,6 @@ public class Developer extends Thread {
             this.mutex.acquire(); //wait
             //empieza parte critica
             if(this.type==5) {
-                System.out.println("Holaaa");
                 this.drive.Create(); //se crea un cap
             }
             else {
@@ -94,7 +93,7 @@ public class Developer extends Thread {
     public boolean PuedeEnsamblar() {
         //try { 
             //this.mutex.acquire(); //debe acceder al drive y solo puede hacerlo uno a la vez entpnces con esto otro hilo no puede acceder mientras el ensamblador revisa
-                if(this.estudio.compareTo("nick")==0) {
+                if(this.estudio.compareTo("Nickelodeon")==0) {
                     if(drive.getCapsHastaPlot()>0) {
                         if(drive.getGuion()>=2 && drive.getEscenario()>=1 && drive.getAnimaciones()>=4 && drive.getDoblajes()>=4) {
                             return true;
@@ -113,7 +112,7 @@ public class Developer extends Thread {
                     
                     }
                 }
-                if(this.estudio.compareTo("cartoon")==0) {
+                if(this.estudio.compareTo("Cartoon Network")==0) {
                     if(drive.getCapsHastaPlot()>0) {
                         if(drive.getGuion()>=1 && drive.getEscenario()>=2 && drive.getAnimaciones()>=6 && drive.getDoblajes()>=5) {
                             return true;

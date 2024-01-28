@@ -20,6 +20,8 @@ public class ProjectManager extends Thread {
     private Semaphore mutex;
     private Drive drive;
     private String estado;
+    private int dineroDescontado = 0;
+    private int faltas = 0;
 
     public ProjectManager(int sueldoph, int dayDuration, Semaphore mutex, Drive drive) {
         this.sueldoph = sueldoph;
@@ -46,6 +48,11 @@ public class ProjectManager extends Thread {
                     
                     this.estado="Trabajando"; //paso la media hora y trabaja de nuevo 
 //                    //System.out.println(this.estado);
+                    //System.out.println(this.estado);
+                    sleep(this.horas/2);//espera media hora
+                    
+                    this.estado="Trabajando"; //paso la media hora y trabaja de nuevo 
+                    //System.out.println(this.estado);
                     sleep(this.horas/2); //trabaja media y luego vuelve a ver anime
                 } catch (InterruptedException ex) {
                     Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -128,5 +135,20 @@ public class ProjectManager extends Thread {
         this.estado = estado;
     }
     
+    public int getDineroDescontado(){
+        return dineroDescontado;
+    }
+    
+    public void setDineroDescontado(int dineroDescontado){
+        this.dineroDescontado = dineroDescontado;
+    }
+    
+    public int getFaltas(){
+        return faltas;
+    }
+    
+    public void setFaltas(int faltas){
+        this.faltas = faltas;
+    }
     
 }

@@ -21,6 +21,7 @@ public class Drive {
    //private int capP; //capitulo con plot Twist, se me ocurre que para ir calculando la utilidad/ganancias cada vez que se cree algo 
    private int capsHastaPlot;
    private int DiasEntrega;
+   private int DiasEntregaOriginal;
    private String estudio;
 
     public Drive(String estudio, int capsPlot, int Diasentrega) {
@@ -33,6 +34,7 @@ public class Drive {
         this.estudio=estudio;
         this.capsHastaPlot=capsPlot;
         this.DiasEntrega=Diasentrega;
+        this.DiasEntregaOriginal = Diasentrega;
     }
    
        //type 0 guion
@@ -81,7 +83,7 @@ public class Drive {
     }
     
     public void Create() {
-        if(this.estudio.compareTo("nick")==0) {
+        if(this.estudio.compareTo("Nickelodeon")==0) {
             if(this.capsHastaPlot>0) {
                 this.guion-=2;
                 this.escenario-=1;
@@ -200,5 +202,12 @@ public class Drive {
         this.DiasEntrega = DiasEntrega;
     }
     
+    public int getDiasEntregaOriginal(){
+        return DiasEntregaOriginal;
+    }
+    
+    public void setDiasEntregaOriginal(int DiasEntregaOriginal){
+        this.DiasEntregaOriginal = DiasEntregaOriginal;
+    }
     
 }
