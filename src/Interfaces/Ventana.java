@@ -398,7 +398,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_Cont_DeadlineStateChanged
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Estudio nick=new Estudio("nick",5);
+        Estudio nick=new Estudio("nick",5,6);
         nick.AddDeveloper(0, 2);
 //        nick.AddDeveloper(1, 1);
 //        nick.AddDeveloper(2, 1);
