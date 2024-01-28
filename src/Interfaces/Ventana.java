@@ -6,6 +6,7 @@ package Interfaces;
 
 import Clases.Developer;
 import Clases.Estudio;
+import Clases.ProjectManager;
 
 /**
  *
@@ -16,12 +17,15 @@ public class Ventana extends javax.swing.JFrame {
     Estudio nick = new Estudio("Nickelodeon", 5, 6);
     Estudio cn = new Estudio("Cartoon Network", 5, 6);
     
+    
     /**
      * Creates new form NewJFrame
      */
     public Ventana() {
         initComponents();        
         this.setLocationRelativeTo(null);
+        ProjectManager nickpm=new ProjectManager(40,3000,nick.getMutex(),nick.getPersonalDrive());
+        nickpm.start();
     }
 
     /**
