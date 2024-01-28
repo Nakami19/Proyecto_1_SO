@@ -5,6 +5,7 @@
 package Clases;
 
 import EDD.Lista;
+import EDD.Nodo;
 import java.util.concurrent.Semaphore;
 
 /**
@@ -24,6 +25,7 @@ public class Estudio {
     private Lista listaAnimacion;
     private Lista listaDoblaje;
     private Lista listaPlotTwist;
+    private Lista listaEmsamblador;
     
     public Estudio(String name, int capsPlot) {
         this.name = name;
@@ -38,6 +40,7 @@ public class Estudio {
         this.listaAnimacion = new Lista();
         this.listaDoblaje = new Lista();
         this.listaPlotTwist = new Lista();
+        this.listaEmsamblador=new Lista();
     }
     
     
@@ -81,11 +84,46 @@ public class Estudio {
         if(type==5) {
             for (int i = 1; i<=cantidad; i++) {
                 Developer ensam=new Developer(getPersonalDrive(),5,50,getMutex(),3000,0.5,getName());
+                getListaEmsamblador().insertBegin(ensam);
                 
                 ensam.start();
             }
         
         }
+    
+    
+    }
+    
+    public void deteleDeveloper(int type) {
+        if(type==0) {
+                Nodo borrar=getListaGuion().deleteBegin();
+                borrar.getData().detener();      
+        }
+        if(type==1) {
+                Nodo borrar=getListaEscenario().deleteBegin();
+                borrar.getData().detener();  
+        }
+        if(type==2) {
+            
+                Nodo borrar=getListaAnimacion().deleteBegin();
+                 borrar.getData().detener();       
+        }
+        if(type==3) {
+            
+                Nodo borrar=getListaDoblaje().deleteBegin();
+                 borrar.getData().detener();       
+        }
+        if(type==4) {
+           
+                Nodo borrar=getListaPlotTwist().deleteBegin();
+                 borrar.getData().detener();
+        }
+        
+        if(type==5) {
+            Nodo borrar=getListaEmsamblador().deleteBegin();
+             borrar.getData().detener();
+        }
+           
     
     
     }
@@ -176,6 +214,14 @@ public class Estudio {
     
     public void setListaPlotTwist(Lista listaPlotTwist){
         this.listaPlotTwist = listaPlotTwist;
+    }
+
+    public Lista getListaEmsamblador() {
+        return listaEmsamblador;
+    }
+
+    public void setListaEmsamblador(Lista listaEmsamblador) {
+        this.listaEmsamblador = listaEmsamblador;
     }
     
 }

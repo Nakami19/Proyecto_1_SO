@@ -22,7 +22,10 @@ public class Developer extends Thread {
     private int dayDuration;//duracion del dia 
     private float salarioacc=0; //salario acumulado en total, inicia en 0
     private double produccionPordia; //tiempo que tarda un trabajador en crear su parte, cada trabajador puede tener un numero diferente que represente su dia, ej el animador es 0.34 y cuando pasan 3 dias hace algo, el guionista necesita dos dias entonces en vez de 0.34 puedo poner 0.5 
-    private String estudio; //cartoon o nick, capaz saber el estudio aqui no es tan importante    
+    private String estudio; //cartoon o nick, capaz saber el estudio aqui no es tan importante
+    private boolean continuar=true; //para detener el hilo
+
+    
     public Developer(Drive drive, int type, int sueldoph, Semaphore m, int dayDuration,double ppd, String estudio) {
         this.drive = drive;
         this.type = type;
@@ -33,11 +36,14 @@ public class Developer extends Thread {
         this.estudio=estudio;
     }
     
+    public void detener() {
+        this.continuar=false;
+    }
     
     @Override
     public void run() {
         
-        while(true) {
+        while(this.continuar) {
             try {
                 obtenerSalario();
                 System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
