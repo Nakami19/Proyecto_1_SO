@@ -110,7 +110,7 @@ public class Director extends Thread{
     @Override
     public void run(){
         while(true){
-            System.out.println(drive.getDiasEntrega() + " jajaja "+ drive.getEstudio());
+            //System.out.println(drive.getDiasEntrega() + " jajaja "+ drive.getEstudio());
             if(this.drive.getDiasEntrega() == 0){
                 try{
                     this.estado = "Entregando Capitulos";
@@ -127,6 +127,7 @@ public class Director extends Thread{
                     this.mutex.release(); //Signal, termina la parte crítica
                 }catch(InterruptedException ex){
                         Logger.getLogger(Director.class.getName()).log(Level.SEVERE, null, ex);
+                        System.out.println("error en director en run cuando entrega "+this.drive.getEstudio());
                 }                
             }else{
                 //Acá abajo está todo el código de el director cuando NO esta entregando caps
@@ -152,6 +153,7 @@ public class Director extends Thread{
                         sleep(this.horas/(12/7)); //Se llevan los 35 minutos que se requieren                    
                     }catch(InterruptedException ex){
                         Logger.getLogger(Director.class.getName()).log(Level.SEVERE, null, ex);
+                        System.out.println("error en director en run cuando no entrega "+this.drive.getEstudio());
                     }
                 }                
             }

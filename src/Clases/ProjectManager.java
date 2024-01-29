@@ -52,6 +52,7 @@ public class ProjectManager extends Thread {
                     
                 } catch (InterruptedException ex) {
                     Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
+                    System.out.println("error en pm en las 16 horas "+this.drive.getEstudio());
                 }
             }
             
@@ -67,6 +68,7 @@ public class ProjectManager extends Thread {
                 //System.out.println("dias hasta la entrega "+this.drive.getDiasEntrega());
             } catch (InterruptedException ex) {
                 Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("error en pm en las 8 horas "+this.drive.getEstudio());
             }
             
             

@@ -48,37 +48,47 @@ public class Drive {
             if(this.guion<25) {
                 this.guion+=1;
             }
-            else {System.out.println("Drive lleno!!");}
-            System.out.println("guiones disponibles de "+this.estudio+": " + this.guion);
+            else {System.out.println("Drive lleno!! guion");}
+            //System.out.println("guiones disponibles de "+this.estudio+": " + this.guion);
         }
         if (type==1) {
             if (this.escenario<20) {
                 this.escenario+=1;
             }
-            else {System.out.println("Drive lleno!!");}
-            System.out.println("escenarios disponiblesde "+this.estudio+": " + this.escenario);
+            else {System.out.println("Drive lleno!! escenario");}
+            //System.out.println("escenarios disponiblesde "+this.estudio+": " + this.escenario);
         }
         if (type==2) {
             if (this.animaciones<55) {
-                this.animaciones+=3;
+                if((this.animaciones+=3)>55){
+                    this.animaciones+=(55-this.animaciones);
+                } else {
+                    this.animaciones+=3;
+                }
+                
             }
-            else {System.out.println("Drive lleno!!");}
-            System.out.println("animaciones disponiblesde "+this.estudio+": " + this.animaciones);
+            else {System.out.println("Drive lleno!! animacion "+this.estudio);}
+           // System.out.println("animaciones disponiblesde "+this.estudio+": " + this.animaciones);
 
         }
         if (type==3) {
             if (this.doblajes<35) {
-               this.doblajes+=3;
-               System.out.println("doblajes disponiblesde "+this.estudio+": " + this.doblajes);
+                if((this.doblajes+=3)>35){
+                    this.doblajes+=(35-this.doblajes);
+                } else {
+                    this.doblajes+=3;
+                }
+                
+               //System.out.println("doblajes disponiblesde "+this.estudio+": " + this.doblajes);
             }
-            else {System.out.println("Drive lleno!!");}
+            else {System.out.println("Drive lleno!! doblaje "+this.estudio);}
         }
         if (type==4) {
             if (this.plotTwist<10) {
                this.plotTwist+=1;
-               System.out.println("plot twist disponiblesde "+this.estudio+": " + this.plotTwist);
+               //System.out.println("plot twist disponiblesde "+this.estudio+": " + this.plotTwist);
             }
-            else {System.out.println("Drive lleno!!");}
+            else {System.out.println("Drive lleno!! plot");}
         }
     }
     
@@ -90,6 +100,7 @@ public class Drive {
                 this.animaciones-=4;
                 this.doblajes-=4;
                 this.capsHastaPlot-=1;
+                System.out.println("se creo un cap nick");
                 
                 
             }else {
@@ -99,7 +110,7 @@ public class Drive {
                 this.doblajes-=4;
                 this.plotTwist-=2; 
                 this.capsHastaPlot=5;
-                System.out.println("se creo uno con plot");
+                //System.out.println("se creo uno con plot");
             }
             this.caps+=1;
         }
@@ -119,14 +130,16 @@ public class Drive {
                 this.capsHastaPlot=3;
             }
             this.caps+=1;
+            System.out.println("se creo un cap cartoon");
+
         
         }
-        System.out.println("caps creados: "+this.caps);
-        System.out.println("guiones disponibles luego  de "+this.estudio+": " + this.guion);
-        System.out.println("escenarios disponiblesde luego "+this.estudio+": " + this.escenario);
-        System.out.println("animaciones disponiblesde luego "+this.estudio+": " + this.animaciones);
-        System.out.println("doblajes disponiblesde luego "+this.estudio+": " + this.doblajes);
-        System.out.println("plot twist disponiblesde luego "+this.estudio+": " + this.plotTwist);
+//        System.out.println("caps creados: "+this.caps);
+//        System.out.println("guiones disponibles luego  de "+this.estudio+": " + this.guion);
+//        System.out.println("escenarios disponiblesde luego "+this.estudio+": " + this.escenario);
+//        System.out.println("animaciones disponiblesde luego "+this.estudio+": " + this.animaciones);
+//        System.out.println("doblajes disponiblesde luego "+this.estudio+": " + this.doblajes);
+//        System.out.println("plot twist disponiblesde luego "+this.estudio+": " + this.plotTwist);
 
     }
 

@@ -46,7 +46,7 @@ public class Developer extends Thread {
         while(this.continuar) {
             try {
                 obtenerSalario();
-                System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
+                //System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
                 if (type==5) {        
                     if(PuedeEnsamblar()) {
                         Work();
@@ -57,6 +57,9 @@ public class Developer extends Thread {
                 sleep(this.dayDuration);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Error!!! "+this.estudio+" en run "+ this.type );
+            
+                
             }
         }
         
@@ -85,6 +88,7 @@ public class Developer extends Thread {
             this.acc=0; //se reinicia la produccion
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Error!!! "+this.estudio+" en work "+ this.type );
             }
         }
     
