@@ -110,6 +110,7 @@ public class Director extends Thread{
     @Override
     public void run(){
         while(true){
+            System.out.println(drive.getDiasEntrega() + " jajaja "+ drive.getEstudio());
             if(this.drive.getDiasEntrega() == 0){
                 try{
                     this.estado = "Entregando Capitulos";
@@ -120,7 +121,8 @@ public class Director extends Thread{
                     this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());//Reinicia los días requeridos
                     //Aquí va una función para calcular la ganancia, en donde se agarran los caps y se multiplica y se añade a estudio, pero esa conexión no está hecha todavía
                     
-                    if(this.drive.getCaps() > 0){this.drive.setCaps(0);}else{System.out.println("NO SE ENTREGÓ CAPS");}//Reinicia el la cantidad de caps a 0 ya que agarró todos los que tenían
+                    if(this.drive.getCaps() > 0){this.drive.setCaps(0);}else{System.out.println("NO SE ENTREGÓ CAPS");
+                    }//Reinicia el la cantidad de caps a 0 ya que agarró todos los que tenían
                     
                     this.mutex.release(); //Signal, termina la parte crítica
                 }catch(InterruptedException ex){

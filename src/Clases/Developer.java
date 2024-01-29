@@ -46,8 +46,8 @@ public class Developer extends Thread {
         while(this.continuar) {
             try {
                 obtenerSalario();
-                //System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
-                if (type==5) {
+                System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
+                if (type==5) {        
                     if(PuedeEnsamblar()) {
                         Work();
                     }

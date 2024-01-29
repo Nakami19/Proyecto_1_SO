@@ -24,7 +24,7 @@ public class Drive {
    private int DiasEntregaOriginal;
    private String estudio;
 
-    public Drive(String estudio, int capsPlot, int Diasentrega) {
+    public Drive(String estudio, int capsPlot) {
         this.guion = 0;
         this.escenario = 0;
         this.animaciones = 0;
@@ -33,8 +33,8 @@ public class Drive {
         this.caps = 0;
         this.estudio=estudio;
         this.capsHastaPlot=capsPlot;
-        this.DiasEntrega=Diasentrega;
-        this.DiasEntregaOriginal = Diasentrega;
+        //this.DiasEntrega=Diasentrega;
+        //this.DiasEntregaOriginal = Diasentrega;
     }
    
        //type 0 guion

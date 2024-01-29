@@ -47,13 +47,9 @@ public class ProjectManager extends Thread {
                     sleep(this.horas/2);//espera media hora
                     
                     this.estado="Trabajando"; //paso la media hora y trabaja de nuevo 
-//                    //System.out.println(this.estado);
                     //System.out.println(this.estado);
                     sleep(this.horas/2);//espera media hora
                     
-                    this.estado="Trabajando"; //paso la media hora y trabaja de nuevo 
-                    //System.out.println(this.estado);
-                    sleep(this.horas/2); //trabaja media y luego vuelve a ver anime
                 } catch (InterruptedException ex) {
                     Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
                 }

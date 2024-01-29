@@ -27,13 +27,14 @@ public class Estudio {
     private Lista listaPlotTwist;
     private Lista listaEnsamblador;
     private int DiasEntrega;
+    private int duracionDia;
     
-    public Estudio(String name, int capsPlot, int DiasEntrega) {
+    public Estudio(String name, int capsPlot) {
         this.name = name;
         this.ganancias=0;
         this.costos=0;
         this.utilidad=0;
-        this.personalDrive=new Drive(name, capsPlot, DiasEntrega);
+        this.personalDrive=new Drive(name, capsPlot);
         this.mutex=new Semaphore(1);
         this.listaGuion = new Lista();
         this.listaDoblaje = new Lista();
@@ -42,42 +43,42 @@ public class Estudio {
         this.listaDoblaje = new Lista();
         this.listaPlotTwist = new Lista();
         this.listaEnsamblador=new Lista();
-        this.DiasEntrega=DiasEntrega;
+        
     }
     
     
     public void AddDeveloper(int type, int cantidad) { //saber el tipo de desarrollador a añadir y la cantidad
         if(type==0) {
             for (int i = 1; i<=cantidad; i++) {
-                Developer guion1=new Developer(getPersonalDrive(),0,20,getMutex(),3000,0.5,getName());
+                Developer guion1=new Developer(getPersonalDrive(),0,20,getMutex(),duracionDia,0.5,getName());
                 getListaGuion().insertBegin(guion1);
                 guion1.start();
             }
         }
         if(type==1) {
             for (int i = 1; i<=cantidad; i++) {
-                Developer escenario1=new Developer(getPersonalDrive(),1,26,getMutex(),3000,0.5,getName());
+                Developer escenario1=new Developer(getPersonalDrive(),1,26,getMutex(),duracionDia,0.5,getName());
                 getListaEscenario().insertBegin(escenario1);
                 escenario1.start();
             }
         }
         if(type==2) {
             for (int i = 1; i<=cantidad; i++) {
-                Developer animacion1=new Developer(getPersonalDrive(),2,40,getMutex(),3000,1,getName());
+                Developer animacion1=new Developer(getPersonalDrive(),2,40,getMutex(),duracionDia,1,getName());
                 getListaAnimacion().insertBegin(animacion1);
                 animacion1.start();
             }
         }
         if(type==3) {
             for (int i = 1; i<=cantidad; i++) {
-                Developer doblaje1=new Developer(getPersonalDrive(),3,16,getMutex(),3000,1,getName());
+                Developer doblaje1=new Developer(getPersonalDrive(),3,16,getMutex(),duracionDia,1,getName());
                 getListaDoblaje().insertBegin(doblaje1);
                 doblaje1.start();
             }
         }
         if(type==4) {
             for (int i = 1; i<=cantidad; i++) {
-                Developer plotT1=new Developer(getPersonalDrive(),4,34,getMutex(),3000,0.34,getName());
+                Developer plotT1=new Developer(getPersonalDrive(),4,34,getMutex(),duracionDia,0.34,getName());
                 getListaPlotTwist().insertBegin(plotT1);
                 plotT1.start();
             }
@@ -85,7 +86,7 @@ public class Estudio {
         
         if(type==5) {
             for (int i = 1; i<=cantidad; i++) {
-                Developer ensam=new Developer(getPersonalDrive(),5,50,getMutex(),3000,0.5,getName());
+                Developer ensam=new Developer(getPersonalDrive(),5,50,getMutex(),duracionDia,0.5,getName());
                 getListaEnsamblador().insertBegin(ensam);
                 
                 ensam.start();
@@ -125,9 +126,6 @@ public class Estudio {
             Nodo borrar=getListaEnsamblador().deleteBegin();
              borrar.getData().detener();
         }
-           
-    
-    
     }
 
     public String getName() {
@@ -224,6 +222,22 @@ public class Estudio {
 
     public void setListaEnsamblador(Lista listaEnsamblador) {
         this.listaEnsamblador = listaEnsamblador;
+    }
+
+    public int getDiasEntrega() {
+        return DiasEntrega;
+    }
+
+    public void setDiasEntrega(int DiasEntrega) {
+        this.DiasEntrega = DiasEntrega;
+    }
+
+    public int getDuracionDia() {
+        return duracionDia;
+    }
+
+    public void setDuracionDia(int duracionDia) {
+        this.duracionDia = duracionDia;
     }
     
 }

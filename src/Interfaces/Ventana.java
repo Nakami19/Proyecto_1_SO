@@ -8,6 +8,13 @@ import Clases.Developer;
 import Clases.Director;
 import Clases.Estudio;
 import Clases.ProjectManager;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -15,9 +22,9 @@ import Clases.ProjectManager;
  */
 public class Ventana extends javax.swing.JFrame {
 
-    Estudio nick = new Estudio("Nickelodeon", 5, 6);
-    Estudio cn = new Estudio("Cartoon Network", 5, 6);
-    
+            Estudio nick = new Estudio("Nickelodeon", 5);
+            Estudio cn = new Estudio("Cartoon Network", 5);
+            boolean iniciado=false;
     
     /**
      * Creates new form NewJFrame
@@ -25,10 +32,7 @@ public class Ventana extends javax.swing.JFrame {
     public Ventana() {
         initComponents();        
         this.setLocationRelativeTo(null);
-        ProjectManager nickpm=new ProjectManager(40,3000,nick.getMutex(),nick.getPersonalDrive());
-        Director nickDir = new Director(60, 3000, nick.getMutex(), nick.getPersonalDrive(), nickpm);
-        nickpm.start();
-        nickDir.start();
+        
     }
 
     /**
@@ -49,6 +53,7 @@ public class Ventana extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         Cont_Day_Duration = new javax.swing.JSpinner();
+        IniciarSimulacion = new javax.swing.JButton();
         Cartoon = new javax.swing.JPanel();
         Cont_Guionista_PW_CN = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
@@ -132,6 +137,14 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
         Config.add(Cont_Day_Duration, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 80, 20));
+
+        IniciarSimulacion.setText("Iniciar simulacion");
+        IniciarSimulacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IniciarSimulacionActionPerformed(evt);
+            }
+        });
+        Config.add(IniciarSimulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, -1, -1));
 
         jTabbedPane1.addTab("Config", Config);
 
@@ -628,6 +641,177 @@ public class Ventana extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Cont_Day_DurationStateChanged
 
+    private void IniciarSimulacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarSimulacionActionPerformed
+        // TODO add your handling code here:
+//    
+//    //se lee el txt
+    if (iniciado==false){
+        iniciado=true;
+    JFileChooser file = new JFileChooser();
+    FileNameExtensionFilter filter = new FileNameExtensionFilter(".TXT","txt");
+    file.setFileSelectionMode(JFileChooser.FILES_ONLY);
+    file.setFileFilter(filter);
+    int selection=file.showOpenDialog(this);
+    File archive=file.getSelectedFile(); 
+    String path=archive.getAbsolutePath();
+    
+        if(!path.contains("txt")) {
+        JOptionPane.showMessageDialog(null, "Por favor elija un archivo del tipo txt");
+        }
+        else {
+        try{
+            File archivo = new File (path);
+            FileReader fr = new FileReader(archivo); 
+            BufferedReader br = new BufferedReader(fr); 
+                 
+            String cadena;
+            String complete=""; 
+      
+            while ((cadena=br.readLine())!=null) { //lee hasta llegar a null que significa que se acabo el archivo
+
+                if(!cadena.isEmpty()&& !cadena.isBlank()) { //revisa que la linea no sea vacia/que el tamaño de la cadena sea 0
+                    complete+=cadena+"\n";
+                }
+            }
+                
+            fr.close();
+            br.close();
+            complete=complete.trim(); //quita linea en blanco al final
+            //el !"".equals es para verificar que el string no sea solo un espacio en blanco
+            if(!"".equals(complete)) {
+                String[] info;
+                String [] todo=complete.split(";");
+                String [] Dias=todo[0].split("\n");
+                int duracionDias=Integer.parseInt(Dias[1]);
+                //System.out.println(duracionDias); //todo bien aqui
+                String[] Diasdead=todo[1].split("\n");
+                //System.out.println(Diasdead[1]);
+                int Deadline=Integer.parseInt(Diasdead[2]);
+                
+                //ya tengo la duracion del dia y la deadline se crean/agregan las cosas
+                nick.setDuracionDia(duracionDias);
+                cn.setDuracionDia(duracionDias);
+                nick.setDiasEntrega(Deadline);
+                cn.setDiasEntrega(Deadline);
+                
+                nick.getPersonalDrive().setDiasEntrega(Deadline);
+                nick.getPersonalDrive().setDiasEntregaOriginal(Deadline);
+                
+                cn.getPersonalDrive().setDiasEntrega(Deadline);
+                cn.getPersonalDrive().setDiasEntregaOriginal(Deadline);
+                
+                ProjectManager nickpm=new ProjectManager(40,duracionDias,nick.getMutex(),nick.getPersonalDrive());
+                Director nickDir = new Director(60, duracionDias, nick.getMutex(), nick.getPersonalDrive(), nickpm);
+                ProjectManager cartoonpm=new ProjectManager(40,duracionDias,cn.getMutex(),cn.getPersonalDrive());
+                Director cartoonDir = new Director(60, duracionDias, cn.getMutex(), cn.getPersonalDrive(), cartoonpm);
+                
+               //todo2 tiene cosas de cartoon
+                todo[2]=todo[2].trim();
+                String [] infoestu1=todo[2].split("-");
+                //todo3 tiene cosas de nick
+                todo[3]=todo[3].trim();
+                String [] infoestu2=todo[3].split("-");
+                
+                if (infoestu1[0].compareTo("Cartoon")==0) { //el if es porsia 
+//                     System.out.println("jajajaj "+infoestu1[0]);
+//                     System.out.println(infoestu1[1]);
+                     infoestu1[1]=infoestu1[1].trim();
+                     String [] divTra=infoestu1[1].split(":");
+                     divTra[1]=divTra[1].trim();
+                     String [] trabajadores=divTra[1].split("\n");
+                     
+                     for (int i = 0; i < trabajadores.length; i++) {
+                         //System.out.println(i+" "+trabajadores[i]);
+                         String [] cantidad=trabajadores[i].split(",");
+                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                         //System.out.println(cantidad[1]);
+                         cn.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                     }
+                    cartoonpm.start();
+                    cartoonDir.start();
+                    System.out.println("Listo cartoon");
+                 
+                 }
+                 else if (infoestu1[0].compareTo("Nick")==0) {
+                     infoestu1[1]=infoestu1[1].trim();
+                     String [] divTra=infoestu1[1].split(":");
+                     divTra[1]=divTra[1].trim();
+                     String [] trabajadores=divTra[1].split("\n");
+                     
+                     for (int i = 0; i < trabajadores.length; i++) {
+                         //System.out.println(i+" "+trabajadores[i]);
+                         String [] cantidad=trabajadores[i].split(",");
+                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                         //System.out.println(cantidad[1]);
+                         nick.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                     }
+                    nickpm.start();
+                    nickDir.start();
+                 }
+                 
+                 if (infoestu2[0].compareTo("Cartoon")==0) {
+//                     System.out.println("jejejeje "+infoestu2[0]);
+//                     System.out.println(infoestu2[1]);
+                     infoestu1[1]=infoestu1[1].trim();
+                     String [] divTra=infoestu1[1].split(":");
+                     divTra[1]=divTra[1].trim();
+                     String [] trabajadores=divTra[1].split("\n");
+                     
+                     for (int i = 0; i < trabajadores.length; i++) {
+                         //System.out.println(i+" "+trabajadores[i]);
+                         String [] cantidad=trabajadores[i].split(",");
+                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                         //System.out.println(cantidad[1]);
+                         cn.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                     }
+                     
+                 cartoonpm.start();
+                 cartoonDir.start();
+                 }
+                 else if (infoestu2[0].compareTo("Nick")==0) {
+                     String [] divTra=infoestu2[1].split(":");
+                     divTra[1]=divTra[1].trim();
+                     String [] trabajadores=divTra[1].split("\n");
+                     System.out.println(infoestu2[0]);
+                     for (int i = 0; i < trabajadores.length; i++) {
+                         //System.out.println(i+" "+trabajadores[i]);
+                         String [] cantidad=trabajadores[i].split(",");
+                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                         //System.out.println(cantidad[1]);
+                         nick.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                     }
+                      nickpm.start();
+                      nickDir.start();
+                      System.out.println("Listo nick");
+                 
+                 
+                 }
+                 
+                
+//                for (int i = 0; i < todo.length; i++) {
+//                  System.out.println(todo[i]);  
+//                }
+                
+            
+            }
+                
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erorr!!!! Asegurate de haber cargado el archivo correcto");
+            System.exit(0);
+            }
+        }
+    } else {
+        JOptionPane.showMessageDialog(null, "La simulacion ya ha iniciado");
+    }
+    
+//    nickpm.start();
+//    nickDir.start();
+    }//GEN-LAST:event_IniciarSimulacionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -688,6 +872,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JSpinner Cont_Guionista_PW_CN;
     private javax.swing.JSpinner Cont_Guionista_PW_NK;
     private javax.swing.JPanel Graf;
+    private javax.swing.JButton IniciarSimulacion;
     private javax.swing.JPanel Nick;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
