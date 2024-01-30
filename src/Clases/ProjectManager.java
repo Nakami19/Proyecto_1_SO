@@ -4,6 +4,7 @@
  */
 package Clases;
 
+import static Interfaces.Ventana.getCn_Pm_State;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,10 +44,12 @@ public class ProjectManager extends Thread {
             for (int i = 1; i <= 16; i++) {
                 try {
                     this.estado="Viendo One Piece";
+                    getCn_Pm_State().setText(this.estado);
                    // System.out.println(this.estado);
                     sleep(this.horas/2);//espera media hora
                     
-                    this.estado="Trabajando"; //paso la media hora y trabaja de nuevo 
+                    this.estado="Trabajando"; //paso la media hora y trabaja de nuevo
+                    getCn_Pm_State().setText(this.estado);
                     //System.out.println(this.estado);
                     sleep(this.horas/2);//espera media hora
                     

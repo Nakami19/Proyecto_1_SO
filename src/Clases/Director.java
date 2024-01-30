@@ -4,10 +4,12 @@
  */
 package Clases;
 
+import Interfaces.Ventana;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JLabel;
 
 /**
  *
@@ -29,7 +31,7 @@ public class Director extends Thread{
         this.dayDuration = dayDuration;
         this.mutex = mutex;
         this.drive = drive;
-        this.estado = "Trabajando en Labores Administrativas";
+        this.estado = "Trabajando";
         this.horaAleatoria = 0;
         this.horas = this.dayDuration/24;
         this.pm = pm;
@@ -114,8 +116,9 @@ public class Director extends Thread{
             if(this.drive.getDiasEntrega() == 0){
                 try{
                     this.estado = "Entregando Capitulos";
+                    changeText(); //??????? Porque no se cambia a la cosa??????
                     System.out.println(this.estado);
-                    sleep(this.horas/24);
+                    sleep(this.horas/24);      
                     this.mutex.acquire(); // Wait, empieza la parte crítica
                     
                     this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());//Reinicia los días requeridos
@@ -138,9 +141,11 @@ public class Director extends Thread{
                 for(int i = 1; i <= 24; i++){
                     try{                        
                         //System.out.println(this.estado);
-                        this.estado = "Trabajando en Labores Administrativas";
+                        this.estado = "Trabajando";
+                        changeText();
                         if(i == this.horaAleatoria){
                             this.estado = "Revisando al Project Manager";
+                            changeText();
                             if(this.getProjectManager().getEstado().equals("Viendo One Piece")){
                                 //System.out.println("ATRAPADO!!!");
                                 this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 100);
@@ -162,4 +167,7 @@ public class Director extends Thread{
         }
     }
     
+    public void changeText(){
+        Ventana.getCn_Director_State().setText(this.estado);
+    }
 }
