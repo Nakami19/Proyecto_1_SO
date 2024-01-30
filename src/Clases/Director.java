@@ -125,7 +125,17 @@ public class Director extends Thread{
                     this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());//Reinicia los días requeridos
                     //Aquí va una función para calcular la ganancia, en donde se agarran los caps y se multiplica y se añade a estudio, pero esa conexión no está hecha todavía
                     
-                    if(this.drive.getCaps() > 0){this.drive.setCaps(0);}else{System.out.println("NO SE ENTREGÓ CAPS");
+                    if(this.drive.getCapN() > 0){
+                        this.drive.calcularGananciaN(this.drive.getCapN());
+                        this.drive.setCapN(0);
+                        
+                    }
+                    if(this.drive.getCapP() > 0){
+                        this.drive.calcularGananciaP(this.drive.getCapN());
+                        this.drive.setCapP(0);
+                    }
+                    if(this.drive.getCapN() <= 0 && this.drive.getCapP() <= 0){
+                        System.out.println("NO SE ENTREGO NINGUN CAPITULO");
                     }//Reinicia el la cantidad de caps a 0 ya que agarró todos los que tenían
                     
                     this.mutex.release(); //Signal, termina la parte crítica

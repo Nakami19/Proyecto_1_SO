@@ -16,13 +16,17 @@ public class Drive {
     public int doblajes;
     public int plotTwist;
     
+    
    private int caps; //cantidad de capitulos creados
-   //private int capN; //capitulo normal
-   //private int capP; //capitulo con plot Twist, se me ocurre que para ir calculando la utilidad/ganancias cada vez que se cree algo 
+   private int capN; //capitulo normal
+   private int capP; //capitulo con plot Twist, se me ocurre que para ir calculando la utilidad/ganancias cada vez que se cree algo 
    private int capsHastaPlot;
    private int DiasEntrega;
    private int DiasEntregaOriginal;
    private String estudio;
+   private double ganancias;
+   private double costos;
+   private double utilidad;  
 
     public Drive(String estudio, int capsPlot) {
         this.guion = 0;
@@ -33,6 +37,11 @@ public class Drive {
         this.caps = 0;
         this.estudio=estudio;
         this.capsHastaPlot=capsPlot;
+        this.ganancias = 0;
+        this.costos = 0;
+        this.utilidad = 0;
+        this.capN = 0;
+        this.capP = 0;
         //this.DiasEntrega=Diasentrega;
         //this.DiasEntregaOriginal = Diasentrega;
     }
@@ -100,6 +109,7 @@ public class Drive {
                 this.animaciones-=4;
                 this.doblajes-=4;
                 this.capsHastaPlot-=1;
+                this.capN+=1;
                 System.out.println("se creo un cap nick");
                 
                 
@@ -110,9 +120,9 @@ public class Drive {
                 this.doblajes-=4;
                 this.plotTwist-=2; 
                 this.capsHastaPlot=5;
+                this.capP+=1;
                 //System.out.println("se creo uno con plot");
             }
-            this.caps+=1;
         }
         else {
             if(this.capsHastaPlot>0) {
@@ -121,6 +131,8 @@ public class Drive {
                 this.animaciones-=6;
                 this.doblajes-=5;
                 this.capsHastaPlot-=1;
+                this.capN+=1;
+
             }else {
                 this.guion-=1;
                 this.escenario-=2;
@@ -128,8 +140,8 @@ public class Drive {
                 this.doblajes-=5;
                 this.plotTwist-=1; 
                 this.capsHastaPlot=3;
+                this.capP+=1;
             }
-            this.caps+=1;
             System.out.println("se creo un cap cartoon");
 
         
@@ -141,6 +153,23 @@ public class Drive {
 //        System.out.println("doblajes disponiblesde luego "+this.estudio+": " + this.doblajes);
 //        System.out.println("plot twist disponiblesde luego "+this.estudio+": " + this.plotTwist);
 
+    }
+    
+    public void calcularGananciaN(float ganancia){
+        if(this.estudio.compareTo("Nickelodeon") == 0){
+            setGanancias(getGanancias() + ganancia*450000);
+        }else{
+            setGanancias(getGanancias() + ganancia*300000);
+        }
+        System.out.println("GANANCIAS:"+ getEstudio() + " " + getGanancias());
+    }
+    
+    public void calcularGananciaP(float ganancia){
+        if(this.estudio.compareTo("Nickelodeon") == 0){
+            setGanancias(getGanancias() + ganancia*500000);
+        }else{
+            setGanancias(getGanancias() + ganancia*650000);
+        }
     }
 
     public int getGuion() {
@@ -222,5 +251,46 @@ public class Drive {
     public void setDiasEntregaOriginal(int DiasEntregaOriginal){
         this.DiasEntregaOriginal = DiasEntregaOriginal;
     }
+    
+    public double getCostos(){
+        return costos;
+    }
+    
+    public void setCostos(double costos){
+        this.costos = costos;
+    }
+    
+    public double getGanancias(){
+        return ganancias;
+    }
+    
+    public void setGanancias(double ganancias){
+        this.ganancias = ganancias;
+    }
+    
+    public double getUtilidad(){
+        return utilidad;
+    }
+    
+    public void setUtilidad(double utilidad){
+        this.utilidad = utilidad;
+    }
+
+    public int getCapN() {
+        return capN;
+    }
+
+    public void setCapN(int capN) {
+        this.capN = capN;
+    }
+
+    public int getCapP() {
+        return capP;
+    }
+
+    public void setCapP(int capP) {
+        this.capP = capP;
+    }
+    
     
 }
