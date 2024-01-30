@@ -117,7 +117,8 @@ public class Ventana extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTabbedPane1.setForeground(new java.awt.Color(204, 204, 204));
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane1.setForeground(new java.awt.Color(0, 0, 0));
 
         Config.setBackground(new java.awt.Color(204, 153, 255));
         Config.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

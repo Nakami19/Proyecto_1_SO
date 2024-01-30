@@ -23,7 +23,7 @@ public class Director extends Thread{
     private Drive drive; //El Drive común de toda la compañía, necesario para el contador de días
     private String estado; // Qué esta haciendo
     private int horaAleatoria; //La hora aleatoria para revisar al PM
-    private int horas; //Conversión del día completo en horas
+    private double horas; //Conversión del día completo en horas
     private ProjectManager pm;
     
     public Director(int sueldoph, int dayDuration, Semaphore mutex, Drive drive, ProjectManager pm){
@@ -93,7 +93,7 @@ public class Director extends Thread{
         this.horaAleatoria = horaAleatoria;
     }
     
-    public int getHoras(){
+    public double getHoras(){
         return horas;
     }
     
@@ -117,8 +117,9 @@ public class Director extends Thread{
                 try{
                     this.estado = "Entregando Capitulos";
                     changeText(); //??????? Porque no se cambia a la cosa??????
-                    System.out.println(this.estado);
-                    sleep(this.horas/24);      
+                    //System.out.println("Estado: "+this.estado);
+                    //System.out.println(this.estado);
+                    sleep(this.dayDuration);      
                     this.mutex.acquire(); // Wait, empieza la parte crítica
                     
                     this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());//Reinicia los días requeridos
@@ -143,9 +144,11 @@ public class Director extends Thread{
                         //System.out.println(this.estado);
                         this.estado = "Trabajando";
                         changeText();
+                        //System.out.println("Estado: "+this.estado);
                         if(i == this.horaAleatoria){
                             this.estado = "Revisando al Project Manager";
                             changeText();
+                            //System.out.println("Estado: "+this.estado);
                             if(this.getProjectManager().getEstado().equals("Viendo One Piece")){
                                 //System.out.println("ATRAPADO!!!");
                                 this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 100);
@@ -155,7 +158,8 @@ public class Director extends Thread{
                             //System.out.println("Mosca pues");
                             }
                         }
-                        sleep(this.horas/(12/7)); //Se llevan los 35 minutos que se requieren                    
+                        //System.out.println("horaaa "+this.horas);
+                        sleep((long) (this.horas/(12/7))); //Se llevan los 35 minutos que se requieren                    
                     }catch(InterruptedException ex){
                         Logger.getLogger(Director.class.getName()).log(Level.SEVERE, null, ex);
                         System.out.println("error en director en run cuando no entrega "+this.drive.getEstudio());
