@@ -25,6 +25,8 @@ public class Ventana extends javax.swing.JFrame {
             Estudio nick = new Estudio("Nickelodeon", 5);
             Estudio cn = new Estudio("Cartoon Network", 5);
             boolean iniciado=false;
+            int max_nk = 13; //Carnet de Natalia Rivas termina en 1
+            int max_cn = 12; //Carnet de Tomás Gil termina en 0
     
     /**
      * Creates new form NewJFrame
@@ -50,7 +52,6 @@ public class Ventana extends javax.swing.JFrame {
         saveButton = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         Cont_Deadline = new javax.swing.JSpinner();
-        jButton1 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         Cont_Day_Duration = new javax.swing.JSpinner();
         IniciarSimulacion = new javax.swing.JButton();
@@ -115,14 +116,6 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
         Config.add(Cont_Deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 80, 20));
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        Config.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
@@ -343,270 +336,411 @@ public class Ventana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Cont_Guionista_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Guionista_CNStateChanged
-        if((int)this.Cont_Guionista_CN.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Guionista_CN.getValue() <= 0){
+                this.Cont_Guionista_CN.setValue(1);
+                this.repaint();
+            }        
+            else if((int)this.Cont_Guionista_CN.getValue() + (int)this.Cont_Escenario_CN.getValue() + (int)this.Cont_Animador_CN.getValue() + (int)this.Cont_Actor_Doblaje_CN.getValue() + (int)this.Cont_Ensamblador_CN.getValue() + (int)this.Cont_Guionista_PW_CN.getValue() > max_cn){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Guionista_CN.setValue((int)this.Cont_Guionista_CN.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = cn.getListaGuion().getSize();
+                int cont2 = (int) Cont_Guionista_CN.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        cn.deleteDeveloper(0);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        cn.AddDeveloper(0, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Guionista_CN.setValue(1);
             this.repaint();
         }
-        int cont = cn.getListaGuion().getSize();
-        int cont2 = (int) Cont_Guionista_CN.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                cn.deleteDeveloper(0);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                cn.AddDeveloper(0, 1);
-                cont ++;
-            }
-        }    
     }//GEN-LAST:event_Cont_Guionista_CNStateChanged
 
     private void Cont_Escenario_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Escenario_CNStateChanged
-        if((int)this.Cont_Escenario_CN.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Escenario_CN.getValue() <= 0){
+                this.Cont_Escenario_CN.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_CN.getValue() + (int)this.Cont_Escenario_CN.getValue() + (int)this.Cont_Animador_CN.getValue() + (int)this.Cont_Actor_Doblaje_CN.getValue() + (int)this.Cont_Ensamblador_CN.getValue() + (int)this.Cont_Guionista_PW_CN.getValue() > max_cn){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Escenario_CN.setValue((int)this.Cont_Escenario_CN.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = cn.getListaEscenario().getSize();
+                int cont2 = (int) Cont_Escenario_CN.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        cn.deleteDeveloper(1);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        cn.AddDeveloper(1, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Escenario_CN.setValue(1);
             this.repaint();
         }
-        int cont = cn.getListaEscenario().getSize();
-        int cont2 = (int) Cont_Escenario_CN.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                cn.deleteDeveloper(1);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                cn.AddDeveloper(1, 1);
-                cont ++;
-            }
-        }  
     }//GEN-LAST:event_Cont_Escenario_CNStateChanged
 
     private void Cont_Animador_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Animador_CNStateChanged
-        if((int)this.Cont_Animador_CN.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Animador_CN.getValue() <= 0){
+                this.Cont_Animador_CN.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_CN.getValue() + (int)this.Cont_Escenario_CN.getValue() + (int)this.Cont_Animador_CN.getValue() + (int)this.Cont_Actor_Doblaje_CN.getValue() + (int)this.Cont_Ensamblador_CN.getValue() + (int)this.Cont_Guionista_PW_CN.getValue() > max_cn){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Animador_CN.setValue((int)this.Cont_Animador_CN.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = cn.getListaAnimacion().getSize();
+                int cont2 = (int) Cont_Animador_CN.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        cn.deleteDeveloper(2);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        cn.AddDeveloper(2, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Animador_CN.setValue(1);
             this.repaint();
-        }
-        int cont = cn.getListaAnimacion().getSize();
-        int cont2 = (int) Cont_Animador_CN.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                cn.deleteDeveloper(2);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                cn.AddDeveloper(2, 1);
-                cont ++;
-            }
         }
     }//GEN-LAST:event_Cont_Animador_CNStateChanged
 
     private void Cont_Actor_Doblaje_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Actor_Doblaje_CNStateChanged
-        if((int)this.Cont_Actor_Doblaje_CN.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Actor_Doblaje_CN.getValue() <= 0){
+                this.Cont_Actor_Doblaje_CN.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_CN.getValue() + (int)this.Cont_Escenario_CN.getValue() + (int)this.Cont_Animador_CN.getValue() + (int)this.Cont_Actor_Doblaje_CN.getValue() + (int)this.Cont_Ensamblador_CN.getValue() + (int)this.Cont_Guionista_PW_CN.getValue() > max_cn){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Actor_Doblaje_CN.setValue((int)this.Cont_Actor_Doblaje_CN.getValue() - 1);
+                this.repaint();
+            }
+            else{        
+                int cont = cn.getListaDoblaje().getSize();
+                int cont2 = (int) Cont_Actor_Doblaje_CN.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        cn.deleteDeveloper(3);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        cn.AddDeveloper(3, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Actor_Doblaje_CN.setValue(1);
             this.repaint();
-        }
-        int cont = cn.getListaDoblaje().getSize();
-        int cont2 = (int) Cont_Actor_Doblaje_CN.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                cn.deleteDeveloper(3);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                cn.AddDeveloper(3, 1);
-                cont ++;
-            }
         }
     }//GEN-LAST:event_Cont_Actor_Doblaje_CNStateChanged
 
     private void Cont_Guionista_PW_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Guionista_PW_CNStateChanged
-        if((int)this.Cont_Guionista_PW_CN.getValue() <= 0){
+        if(iniciado==true){
+            if((int)this.Cont_Guionista_PW_CN.getValue() <= 0){
+                this.Cont_Guionista_PW_CN.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_CN.getValue() + (int)this.Cont_Escenario_CN.getValue() + (int)this.Cont_Animador_CN.getValue() + (int)this.Cont_Actor_Doblaje_CN.getValue() + (int)this.Cont_Ensamblador_CN.getValue() + (int)this.Cont_Guionista_PW_CN.getValue() > max_cn){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Guionista_PW_CN.setValue((int)this.Cont_Guionista_PW_CN.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = cn.getListaPlotTwist().getSize();
+                int cont2 = (int) Cont_Guionista_PW_CN.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        cn.deleteDeveloper(4);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        cn.AddDeveloper(4, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Guionista_PW_CN.setValue(1);
             this.repaint();
-        }
-        int cont = cn.getListaPlotTwist().getSize();
-        int cont2 = (int) Cont_Guionista_PW_CN.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                cn.deleteDeveloper(4);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                cn.AddDeveloper(4, 1);
-                cont ++;
-            }
         }
     }//GEN-LAST:event_Cont_Guionista_PW_CNStateChanged
 
     private void Cont_Guionista_PW_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Guionista_PW_NKStateChanged
-        if((int)this.Cont_Guionista_PW_NK.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Guionista_PW_NK.getValue() <= 0){
+                this.Cont_Guionista_PW_NK.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_NK.getValue() + (int)this.Cont_Escenario_NK.getValue() + (int)this.Cont_Animador_NK.getValue() + (int)this.Cont_Actor_Doblaje_NK.getValue() + (int)this.Cont_Ensamblador_NK.getValue() + (int)this.Cont_Guionista_PW_NK.getValue() > max_nk){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Guionista_PW_NK.setValue((int)this.Cont_Guionista_PW_NK.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = nick.getListaPlotTwist().getSize();
+                int cont2 = (int) Cont_Guionista_PW_NK.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        nick.deleteDeveloper(4);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        nick.AddDeveloper(4, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Guionista_PW_NK.setValue(1);
             this.repaint();
-        }
-        int cont = nick.getListaPlotTwist().getSize();
-        int cont2 = (int) Cont_Guionista_PW_NK.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                nick.deleteDeveloper(4);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                nick.AddDeveloper(4, 1);
-                cont ++;
-            }
-        }
-        
+        }        
     }//GEN-LAST:event_Cont_Guionista_PW_NKStateChanged
 
     private void Cont_Guionista_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Guionista_NKStateChanged
-        if((int)this.Cont_Guionista_NK.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Guionista_NK.getValue() <= 0){
+                this.Cont_Guionista_NK.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_NK.getValue() + (int)this.Cont_Escenario_NK.getValue() + (int)this.Cont_Animador_NK.getValue() + (int)this.Cont_Actor_Doblaje_NK.getValue() + (int)this.Cont_Ensamblador_NK.getValue() + (int)this.Cont_Guionista_PW_NK.getValue() > max_nk){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Guionista_NK.setValue((int)this.Cont_Guionista_NK.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = nick.getListaGuion().getSize();
+                int cont2 = (int) Cont_Guionista_NK.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        nick.deleteDeveloper(0);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        nick.AddDeveloper(0, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Guionista_NK.setValue(1);
             this.repaint();
-        }
-        int cont = nick.getListaGuion().getSize();
-        int cont2 = (int) Cont_Guionista_NK.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                nick.deleteDeveloper(0);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                nick.AddDeveloper(0, 1);
-                cont ++;
-            }
         }        
     }//GEN-LAST:event_Cont_Guionista_NKStateChanged
 
     private void Cont_Escenario_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Escenario_NKStateChanged
-        if((int)this.Cont_Escenario_NK.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Escenario_NK.getValue() <= 0){
+                this.Cont_Escenario_NK.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_NK.getValue() + (int)this.Cont_Escenario_NK.getValue() + (int)this.Cont_Animador_NK.getValue() + (int)this.Cont_Actor_Doblaje_NK.getValue() + (int)this.Cont_Ensamblador_NK.getValue() + (int)this.Cont_Guionista_PW_NK.getValue() > max_nk){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Escenario_NK.setValue((int)this.Cont_Escenario_NK.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = nick.getListaEscenario().getSize();
+                int cont2 = (int) Cont_Escenario_NK.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        nick.deleteDeveloper(1);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        nick.AddDeveloper(1, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Escenario_NK.setValue(1);
             this.repaint();
         }
-        int cont = nick.getListaEscenario().getSize();
-        int cont2 = (int) Cont_Escenario_NK.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                nick.deleteDeveloper(1);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                nick.AddDeveloper(1, 1);
-                cont ++;
-            }
-        }    
     }//GEN-LAST:event_Cont_Escenario_NKStateChanged
 
     private void Cont_Animador_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Animador_NKStateChanged
-        if((int)this.Cont_Animador_NK.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Animador_NK.getValue() <= 0){
+                this.Cont_Animador_NK.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_NK.getValue() + (int)this.Cont_Escenario_NK.getValue() + (int)this.Cont_Animador_NK.getValue() + (int)this.Cont_Actor_Doblaje_NK.getValue() + (int)this.Cont_Ensamblador_NK.getValue() + (int)this.Cont_Guionista_PW_NK.getValue() > max_nk){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Animador_NK.setValue((int)this.Cont_Animador_NK.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = nick.getListaAnimacion().getSize();
+                int cont2 = (int) Cont_Animador_NK.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        nick.deleteDeveloper(2);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        nick.AddDeveloper(2, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Animador_NK.setValue(1);
             this.repaint();
-        }
-        
-        int cont = nick.getListaAnimacion().getSize();
-        int cont2 = (int) Cont_Animador_NK.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                nick.deleteDeveloper(2);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                nick.AddDeveloper(2, 1);
-                cont ++;
-            }
         }
     }//GEN-LAST:event_Cont_Animador_NKStateChanged
 
     private void Cont_Actor_Doblaje_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Actor_Doblaje_NKStateChanged
-        if((int)this.Cont_Actor_Doblaje_NK.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Actor_Doblaje_NK.getValue() <= 0){
+                this.Cont_Actor_Doblaje_NK.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_NK.getValue() + (int)this.Cont_Escenario_NK.getValue() + (int)this.Cont_Animador_NK.getValue() + (int)this.Cont_Actor_Doblaje_NK.getValue() + (int)this.Cont_Ensamblador_NK.getValue() + (int)this.Cont_Guionista_PW_NK.getValue() > max_nk){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Actor_Doblaje_NK.setValue((int)this.Cont_Actor_Doblaje_NK.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = nick.getListaDoblaje().getSize();
+                int cont2 = (int) Cont_Actor_Doblaje_NK.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        nick.deleteDeveloper(3);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        nick.AddDeveloper(3, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Actor_Doblaje_NK.setValue(1);
             this.repaint();
-        }
-        int cont = nick.getListaDoblaje().getSize();
-        int cont2 = (int) Cont_Actor_Doblaje_NK.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                nick.deleteDeveloper(3);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                nick.AddDeveloper(3, 1);
-                cont ++;
-            }
         }
     }//GEN-LAST:event_Cont_Actor_Doblaje_NKStateChanged
 
     private void Cont_Ensamblador_CNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Ensamblador_CNStateChanged
-        if((int)this.Cont_Ensamblador_CN.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Ensamblador_CN.getValue() <= 0){
+                this.Cont_Ensamblador_CN.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_CN.getValue() + (int)this.Cont_Escenario_CN.getValue() + (int)this.Cont_Animador_CN.getValue() + (int)this.Cont_Actor_Doblaje_CN.getValue() + (int)this.Cont_Ensamblador_CN.getValue() + (int)this.Cont_Guionista_PW_CN.getValue() > max_cn){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Ensamblador_CN.setValue((int)this.Cont_Ensamblador_CN.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = cn.getListaEnsamblador().getSize();
+                int cont2 = (int) Cont_Ensamblador_CN.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        cn.deleteDeveloper(5);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        cn.AddDeveloper(5, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Ensamblador_CN.setValue(1);
             this.repaint();
-        }
-        int cont = cn.getListaEnsamblador().getSize();
-        int cont2 = (int) Cont_Ensamblador_CN.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                cn.deleteDeveloper(5);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                cn.AddDeveloper(5, 1);
-                cont ++;
-            }
         }
     }//GEN-LAST:event_Cont_Ensamblador_CNStateChanged
 
     private void Cont_Ensamblador_NKStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Ensamblador_NKStateChanged
-        if((int)this.Cont_Ensamblador_NK.getValue() <= 0){
+        if(iniciado == true){
+            if((int)this.Cont_Ensamblador_NK.getValue() <= 0){
+                this.Cont_Ensamblador_NK.setValue(1);
+                this.repaint();
+            }
+            else if((int)this.Cont_Guionista_NK.getValue() + (int)this.Cont_Escenario_NK.getValue() + (int)this.Cont_Animador_NK.getValue() + (int)this.Cont_Actor_Doblaje_NK.getValue() + (int)this.Cont_Ensamblador_NK.getValue() + (int)this.Cont_Guionista_PW_NK.getValue() > max_nk){
+                JOptionPane.showMessageDialog(null,"Número máximo de Empleados Alcanzado!");
+                this.Cont_Ensamblador_NK.setValue((int)this.Cont_Ensamblador_NK.getValue() - 1);
+                this.repaint();
+            }
+            else{
+                int cont = nick.getListaEnsamblador().getSize();
+                int cont2 = (int) Cont_Ensamblador_NK.getValue();
+
+                if (cont > cont2){
+                    while (cont > cont2){
+                        nick.deleteDeveloper(5);
+                        cont --;
+                    }
+                }else if (cont < cont2){
+
+                    while (cont < cont2){
+                        nick.AddDeveloper(5, 1);
+                        cont ++;
+                    }
+                }
+            }
+        }else{
             this.Cont_Ensamblador_NK.setValue(1);
             this.repaint();
-        }
-        int cont = nick.getListaEnsamblador().getSize();
-        int cont2 = (int) Cont_Ensamblador_NK.getValue();
-        
-        if (cont > cont2){
-            while (cont > cont2){
-                nick.deleteDeveloper(5);
-                cont --;
-            }
-        }else if (cont < cont2){
-            
-            while (cont < cont2){
-                nick.AddDeveloper(5, 1);
-                cont ++;
-            }
-        }
-        
+        }        
     }//GEN-LAST:event_Cont_Ensamblador_NKStateChanged
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
@@ -619,20 +753,6 @@ public class Ventana extends javax.swing.JFrame {
             this.repaint();
         }
     }//GEN-LAST:event_Cont_DeadlineStateChanged
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        nick.AddDeveloper(0, 2);
-//        nick.AddDeveloper(1, 1);
-//        nick.AddDeveloper(2, 1);
-//        nick.AddDeveloper(3, 1);
-//        nick.AddDeveloper(4, 1);
-//        nick.AddDeveloper(5, 1);
-        //Developer guion1=new Developer(nick.getPersonalDrive(),0,20,nick.getMutex(),3000,0.5,nick.getName());
-        
-        //nick.getListaGuion().insertBegin(guion1);
-        //guion1.start();
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void Cont_Day_DurationStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Day_DurationStateChanged
         if((int)this.Cont_Deadline.getValue() <= 0){
@@ -874,7 +994,6 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JPanel Graf;
     private javax.swing.JButton IniciarSimulacion;
     private javax.swing.JPanel Nick;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
