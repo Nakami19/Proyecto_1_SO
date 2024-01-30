@@ -143,6 +143,7 @@ public class Developer extends Thread {
     }
     
     public void obtenerSalario() {
+        this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia
         this.salarioacc+=this.sueldoph*24;
     
     }

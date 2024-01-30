@@ -176,7 +176,7 @@ public class Director extends Thread{
                     }
                 }                
             }
-                    
+                this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia    
                 this.salarioAcc+=this.sueldoph*24;
         }
     }

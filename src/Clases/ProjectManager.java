@@ -66,6 +66,7 @@ public class ProjectManager extends Thread {
                 this.drive.setDiasEntrega(this.drive.getDiasEntrega()-1); //baja en 1 el contador de dias hasta la entrega
                 this.mutex.release();
                 //ahora cobra su dia de trabajo
+                this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia
                 this.salarioacc+=this.sueldoph*24;
                 
                 //System.out.println("dias hasta la entrega "+this.drive.getDiasEntrega());

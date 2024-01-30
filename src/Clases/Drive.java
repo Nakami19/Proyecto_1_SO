@@ -25,7 +25,7 @@ public class Drive {
    private int DiasEntregaOriginal;
    private String estudio;
    private double ganancias;
-   private double costos;
+   private double costos; 
    private double utilidad;  
 
     public Drive(String estudio, int capsPlot) {
