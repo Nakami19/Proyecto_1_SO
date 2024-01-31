@@ -214,9 +214,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="ENSAMBLADORES:"/>
               </Properties>
               <Constraints>
@@ -229,9 +226,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="MANEJADOR DE"/>
               </Properties>
@@ -264,9 +258,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="DISE&#xd1;ADORES DE  ESCENARIOS:"/>
               </Properties>
               <Constraints>
@@ -297,9 +288,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="ANIMADORES DE  PERSONAJES:"/>
               </Properties>
@@ -335,9 +323,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="ACTORES DE DOBLAJE:"/>
               </Properties>
               <Constraints>
@@ -368,9 +353,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="GUIONISTAS DE PLOT-TWIST:"/>
               </Properties>
@@ -403,9 +385,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Trabajando"/>
               </Properties>
               <AuxValues>
@@ -422,9 +401,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="18" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="CANTIDAD DE TRABAJADORES:"/>
               </Properties>
               <Constraints>
@@ -438,9 +414,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="GUIONISTAS:"/>
               </Properties>
               <Constraints>
@@ -453,9 +426,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="PROJECT MANAGER:"/>
               </Properties>
@@ -473,9 +443,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="18" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="ESTADOS:"/>
               </Properties>
               <Constraints>
@@ -489,9 +456,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
                 </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="DIRECTOR:"/>
               </Properties>
               <Constraints>
@@ -504,9 +468,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Ebrima" size="14" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color type="null"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Trabajando"/>
               </Properties>

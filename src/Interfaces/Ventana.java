@@ -11,6 +11,7 @@ import Clases.ProjectManager;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.PrintWriter;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -27,6 +28,7 @@ public class Ventana extends javax.swing.JFrame {
             boolean iniciado=false;
             int max_nk = 13; //Carnet de Natalia Rivas termina en 1
             int max_cn = 12; //Carnet de Tomás Gil termina en 0
+            private String path;
     
     /**
      * Creates new form NewJFrame
@@ -36,6 +38,15 @@ public class Ventana extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
     }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+    
     
     public static javax.swing.JLabel getCn_Director_State(){
         return Cn_Director_State;
@@ -862,6 +873,44 @@ public class Ventana extends javax.swing.JFrame {
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         if(iniciado == true){
+            //Cartoon
+            int guionCN=(int) this.Cont_Guionista_CN.getValue();
+            int escCN=(int) this.Cont_Escenario_CN.getValue();
+            int aniCn=(int) this.Cont_Animador_CN.getValue();
+            int doblaCN=(int) this.Cont_Actor_Doblaje_CN.getValue();
+            int plotCN=(int) this.Cont_Guionista_PW_CN.getValue();
+            int ensamCN=(int) this.Cont_Ensamblador_CN.getValue();
+            //Nick
+            int guionN=(int) this.Cont_Guionista_NK.getValue();
+            int escN=(int) this.Cont_Escenario_NK.getValue();
+            int aniN=(int) this.Cont_Animador_NK.getValue();
+            int doblaN=(int) this.Cont_Actor_Doblaje_NK.getValue();
+            int plotN=(int) this.Cont_Guionista_PW_NK.getValue();
+            int ensamN=(int) this.Cont_Ensamblador_NK.getValue();
+            
+            int deadline=(int) this.Cont_Deadline.getValue();
+            int DuracionD=(int) this.Cont_Day_Duration.getValue();
+            
+            String TodoTXT="Duracion\n"+DuracionD+";\nDeadline\n"+deadline+";\nCartoon-\nTrabajadores:\nguionista,"+guionCN+
+                    "\nescenarios,"+escCN+"\nanimador,"+aniCn+"\ndoblaje,"+doblaCN+"\nplotTwist,"+plotCN+"\nensambladores,"+ensamCN+";\n"
+                    + "Nick-\nTrabajadores:\nguionista,"+guionN+
+                    "\nescenarios,"+escN+"\nanimador,"+aniN+"\ndoblaje,"+doblaN+"\nplotTwist,"+plotN+"\nensambladores,"+ensamN;
+            
+            System.out.println(TodoTXT);
+            
+            try {
+            if(getPath()!=null) {
+            PrintWriter pw=new PrintWriter(getPath());
+            pw.print(TodoTXT);
+            pw.close();
+            JOptionPane.showMessageDialog(null, "Guardado exitoso");
+            //System.exit(0);
+            }
+            else{JOptionPane.showMessageDialog(null, "Error!! Primero debe cargar un archivo txt");}
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error!!!!!");
+            System.exit(0);
+        } 
         
         }else{
             JOptionPane.showMessageDialog(null,"La simulación no ha empezado todavía, no se puede guardar");
@@ -903,8 +952,11 @@ public class Ventana extends javax.swing.JFrame {
     file.setFileSelectionMode(JFileChooser.FILES_ONLY);
     file.setFileFilter(filter);
     int selection=file.showOpenDialog(this);
-    File archive=file.getSelectedFile(); 
-    String path=archive.getAbsolutePath();
+    
+    if(selection==JFileChooser.APPROVE_OPTION) {
+        File archive=file.getSelectedFile(); 
+        String path=archive.getAbsolutePath();
+        setPath(path);
     
         if(!path.contains("txt")) {
         JOptionPane.showMessageDialog(null, "Por favor elija un archivo del tipo txt");
@@ -934,10 +986,18 @@ public class Ventana extends javax.swing.JFrame {
                 String [] todo=complete.split(";");
                 String [] Dias=todo[0].split("\n");
                 int duracionDias=Integer.parseInt(Dias[1]);
+                if(duracionDias<=0) {
+                    throw new Exception("La duracion del dia no puede ser 0");
+                }
+                this.Cont_Day_Duration.setValue(duracionDias);
                 //System.out.println(duracionDias); //todo bien aqui
                 String[] Diasdead=todo[1].split("\n");
                 //System.out.println(Diasdead[1]);
                 int Deadline=Integer.parseInt(Diasdead[2]);
+                if(Deadline<=0) {
+                    throw new Exception("El tiempo de entrega no puede ser 0");
+                }
+                this.Cont_Deadline.setValue(Deadline);
                 
                 //ya tengo la duracion del dia y la deadline se crean/agregan las cosas
                 nick.setDuracionDia(duracionDias);
@@ -977,11 +1037,22 @@ public class Ventana extends javax.swing.JFrame {
                          //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
                          //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
                          //System.out.println(cantidad[1]);
-                         cn.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                         if(Integer.parseInt(cantidad[1])>0) {
+                            cn.AddDeveloper(i,Integer.parseInt(cantidad[1]));
+                         }else {
+                         throw new Exception("La cantidad de trabajadores no puede ser 0");
+                         }
+                         
                      }
                     cartoonpm.start();
                     cartoonDir.start();
                     System.out.println("Listo cartoon");
+                    this.Cont_Actor_Doblaje_CN.setValue(cn.getListaDoblaje().getSize());
+                    this.Cont_Animador_CN.setValue(cn.getListaAnimacion().getSize());
+                    this.Cont_Ensamblador_CN.setValue(cn.getListaEnsamblador().getSize());
+                    this.Cont_Escenario_CN.setValue(cn.getListaEscenario().getSize());
+                    this.Cont_Guionista_CN.setValue(cn.getListaGuion().getSize());
+                    this.Cont_Guionista_PW_CN.setValue(cn.getListaPlotTwist().getSize());
                  
                  }
                  else if (infoestu1[0].compareTo("Nick")==0) {
@@ -996,10 +1067,22 @@ public class Ventana extends javax.swing.JFrame {
                          //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
                          //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
                          //System.out.println(cantidad[1]);
-                         nick.AddDeveloper(i, Integer.parseInt(cantidad[1]));
-                     }
+                         if(Integer.parseInt(cantidad[1])>0) {
+                            nick.AddDeveloper(i,Integer.parseInt(cantidad[1]));
+                         } else {
+                         throw new Exception("La cantidad de trabajadores no puede ser 0");
+                         }
+                         
+                    }
                     nickpm.start();
-                    nickDir.start();
+                    nickDir.start(); 
+                    this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
+                    this.Cont_Animador_NK.setValue(nick.getListaAnimacion().getSize());
+                    this.Cont_Ensamblador_NK.setValue(nick.getListaEnsamblador().getSize());
+                    this.Cont_Escenario_NK.setValue(nick.getListaEscenario().getSize());
+                    this.Cont_Guionista_NK.setValue(nick.getListaGuion().getSize());
+                    this.Cont_Guionista_PW_NK.setValue(nick.getListaPlotTwist().getSize());
+                    
                  }
                  
                  if (infoestu2[0].compareTo("Cartoon")==0) {
@@ -1016,11 +1099,21 @@ public class Ventana extends javax.swing.JFrame {
                          //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
                          //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
                          //System.out.println(cantidad[1]);
+                         if(Integer.parseInt(cantidad[1])>0) { 
                          cn.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                        }else {
+                         throw new Exception("La cantidad de trabajadores no puede ser 0");
+                         }
+                         
                      }
-                     
-                 cartoonpm.start();
-                 cartoonDir.start();
+                    cartoonpm.start();
+                    cartoonDir.start(); 
+                    this.Cont_Actor_Doblaje_CN.setValue(cn.getListaDoblaje().getSize());
+                    this.Cont_Animador_CN.setValue(cn.getListaAnimacion().getSize());
+                    this.Cont_Ensamblador_CN.setValue(cn.getListaEnsamblador().getSize());
+                    this.Cont_Escenario_CN.setValue(cn.getListaEscenario().getSize());
+                    this.Cont_Guionista_CN.setValue(cn.getListaGuion().getSize());
+                    this.Cont_Guionista_PW_CN.setValue(cn.getListaPlotTwist().getSize());
                  }
                  else if (infoestu2[0].compareTo("Nick")==0) {
                      String [] divTra=infoestu2[1].split(":");
@@ -1033,10 +1126,22 @@ public class Ventana extends javax.swing.JFrame {
                          //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
                          //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
                          //System.out.println(cantidad[1]);
-                         nick.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                         if(Integer.parseInt(cantidad[1])>0) {
+                            nick.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                         }else {
+                         throw new Exception("La cantidad de trabajadores no puede ser 0");
+                         }
+                         
                      }
-                      nickpm.start();
-                      nickDir.start();
+                    nickpm.start();
+                    nickDir.start(); 
+                    this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
+                    this.Cont_Animador_NK.setValue(nick.getListaAnimacion().getSize());
+                    this.Cont_Ensamblador_NK.setValue(nick.getListaEnsamblador().getSize());
+                    this.Cont_Escenario_NK.setValue(nick.getListaEscenario().getSize());
+                    this.Cont_Guionista_NK.setValue(nick.getListaGuion().getSize());
+                    this.Cont_Guionista_PW_NK.setValue(nick.getListaPlotTwist().getSize());
+                      
                       System.out.println("Listo nick");
                  
                  
@@ -1058,7 +1163,8 @@ public class Ventana extends javax.swing.JFrame {
     } else {
         JOptionPane.showMessageDialog(null, "La simulacion ya ha iniciado");
     }
-    
+    }
+
 //    nickpm.start();
 //    nickDir.start();
     }//GEN-LAST:event_IniciarSimulacionActionPerformed
