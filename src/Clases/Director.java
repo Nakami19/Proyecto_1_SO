@@ -116,7 +116,7 @@ public class Director extends Thread{
             if(this.drive.getDiasEntrega() == 0){
                 try{
                     this.estado = "Entregando Capitulos";
-                    changeText(); //??????? Porque no se cambia a la cosa??????
+                    changeStateText(); //??????? Porque no se cambia a la cosa??????
                     //System.out.println("Estado: "+this.estado);
                     //System.out.println(this.estado);
                     sleep(this.dayDuration);      
@@ -125,19 +125,20 @@ public class Director extends Thread{
                     this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());//Reinicia los días requeridos
                     //Aquí va una función para calcular la ganancia, en donde se agarran los caps y se multiplica y se añade a estudio, pero esa conexión no está hecha todavía
                     
-                    if(this.drive.getCapN() > 0){
+                    if(this.drive.getCapN() <= 0 && this.drive.getCapP() <= 0){
+                        System.out.println("NO SE ENTREGO NINGUN CAPITULO");
+                    }else{
+                        if(this.drive.getCapN() > 0){
                         this.drive.calcularGananciaN(this.drive.getCapN());
                         this.drive.setCapN(0);
                         
                     }
-                    if(this.drive.getCapP() > 0){
-                        this.drive.calcularGananciaP(this.drive.getCapN());
-                        this.drive.setCapP(0);
-                    }
-                    if(this.drive.getCapN() <= 0 && this.drive.getCapP() <= 0){
-                        System.out.println("NO SE ENTREGO NINGUN CAPITULO");
-                    }//Reinicia el la cantidad de caps a 0 ya que agarró todos los que tenían
-                    
+                        if(this.drive.getCapP() > 0){
+                            this.drive.calcularGananciaP(this.drive.getCapN());
+                            this.drive.setCapP(0);
+                        }
+                    }                 
+                                        
                     this.mutex.release(); //Signal, termina la parte crítica
                 }catch(InterruptedException ex){
                         Logger.getLogger(Director.class.getName()).log(Level.SEVERE, null, ex);
@@ -153,17 +154,18 @@ public class Director extends Thread{
                     try{                        
                         //System.out.println(this.estado);
                         this.estado = "Trabajando";
-                        changeText();
+                        changeStateText();
                         //System.out.println("Estado: "+this.estado);
                         if(i == this.horaAleatoria){
                             this.estado = "Revisando al Project Manager";
-                            changeText();
+                            changeStateText();
                             //System.out.println("Estado: "+this.estado);
                             if(this.getProjectManager().getEstado().equals("Viendo One Piece")){
                                 //System.out.println("ATRAPADO!!!");
-                                this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 100);
+                                this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 1);
                                 this.getProjectManager().setDineroDescontado(this.getProjectManager().getDineroDescontado() + 100);
                                 this.getProjectManager().setSalarioacc(this.getProjectManager().getSalarioacc() - 100);
+                                changeFailText();
                             } else{
                             //System.out.println("Mosca pues");
                             }
@@ -175,13 +177,44 @@ public class Director extends Thread{
                         System.out.println("error en director en run cuando no entrega "+this.drive.getEstudio());
                     }
                 }                
-            }
-                this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia    
-                this.salarioAcc+=this.sueldoph*24;
+            }            
+            obtenerSalario();            
         }
     }
     
-    public void changeText(){
-        Ventana.getCn_Director_State().setText(this.estado);
+    public void changeStateText(){
+        if(this.drive.getEstudio().compareTo("Nickelodeon") == 0){
+            Ventana.getNk_Director_State().setText(this.estado);
+        }else{
+            Ventana.getCn_Director_State().setText(this.estado);
+        }        
+    }
+    
+    
+    
+    public void obtenerSalario() {
+        try{
+            this.mutex.acquire();
+            this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia            
+            this.mutex.release();
+            this.salarioAcc+=this.sueldoph*24;
+            
+        }catch(InterruptedException ex) {
+                Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Error!!! del Director en obtenerSalario ");
+        }
+            
+    }
+    
+    public void changeFailText(){
+        if(this.drive.getEstudio().compareTo("Nickelodeon") == 0){
+            System.out.println("Atrapado el de nickelodeon");
+            Ventana.getNk_Fail_Counter().setText(Integer.toString(getProjectManager().getFaltas()));
+            //Ventana.getNk_Discounted_Counter().setText(Integer.toString(dineroDescontado));
+        }else{
+            System.out.println("Atrapado el de Cartoon Network!");
+            Ventana.getCn_Fail_Counter().setText(Integer.toString(getProjectManager().getFaltas()));
+            //Ventana.getCn_Discounted_Counter().setText(Integer.toString(dineroDescontado));
+        }     
     }
 }

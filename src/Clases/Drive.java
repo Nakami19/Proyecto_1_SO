@@ -4,6 +4,8 @@
  */
 package Clases;
 
+import Interfaces.Ventana;
+
 /**
  *
  * @author Natalia
@@ -56,6 +58,11 @@ public class Drive {
         if (type==0) {
             if(this.guion<25) {
                 this.guion+=1;
+                if(this.estudio.compareTo("Nickelodeon") == 0){
+                    Ventana.getDrive_Guionista_Nk().setText(Integer.toString(guion));
+                }else{
+                    Ventana.getDrive_Guionista_Cn().setText(Integer.toString(guion));
+                }
             }
             else {System.out.println("Drive lleno!! guion");}
             //System.out.println("guiones disponibles de "+this.estudio+": " + this.guion);
@@ -63,6 +70,11 @@ public class Drive {
         if (type==1) {
             if (this.escenario<20) {
                 this.escenario+=1;
+                if(this.estudio.compareTo("Nickelodeon") == 0){
+                    Ventana.getDrive_Escenario_Nk().setText(Integer.toString(escenario));
+                }else{
+                    Ventana.getDrive_Escenario_Cn().setText(Integer.toString(escenario));
+                }
             }
             else {System.out.println("Drive lleno!! escenario");}
             //System.out.println("escenarios disponiblesde "+this.estudio+": " + this.escenario);
@@ -73,6 +85,11 @@ public class Drive {
                     this.animaciones+=(55-this.animaciones);
                 } else {
                     this.animaciones+=3;
+                }
+                if(this.estudio.compareTo("Nickelodeon") == 0){
+                    Ventana.getDrive_Personaje_Nk().setText(Integer.toString(animaciones));
+                }else{
+                    Ventana.getDrive_Personaje_Cn().setText(Integer.toString(animaciones));
                 }
                 
             }
@@ -87,6 +104,11 @@ public class Drive {
                 } else {
                     this.doblajes+=3;
                 }
+                if(this.estudio.compareTo("Nickelodeon") == 0){
+                    Ventana.getDrive_Doblaje_Nk().setText(Integer.toString(doblajes));
+                }else{
+                    Ventana.getDrive_Doblaje_Cn().setText(Integer.toString(doblajes));
+                }
                 
                //System.out.println("doblajes disponiblesde "+this.estudio+": " + this.doblajes);
             }
@@ -96,6 +118,11 @@ public class Drive {
             if (this.plotTwist<10) {
                this.plotTwist+=1;
                //System.out.println("plot twist disponiblesde "+this.estudio+": " + this.plotTwist);
+               if(this.estudio.compareTo("Nickelodeon") == 0){
+                    Ventana.getDrive_PW_Nk().setText(Integer.toString(plotTwist));
+                }else{
+                    Ventana.getDrive_PW_Cn().setText(Integer.toString(plotTwist));
+                }
             }
             else {System.out.println("Drive lleno!! plot");}
         }
@@ -110,6 +137,7 @@ public class Drive {
                 this.doblajes-=4;
                 this.capsHastaPlot-=1;
                 this.capN+=1;
+                Ventana.getNk_Cont_Caps().setText(Integer.toString(capN));
                 System.out.println("se creo un cap nick");
                 
                 
@@ -121,8 +149,14 @@ public class Drive {
                 this.plotTwist-=2; 
                 this.capsHastaPlot=5;
                 this.capP+=1;
+                Ventana.getNk_Cont_PW().setText(Integer.toString(capP));
                 //System.out.println("se creo uno con plot");
             }
+            Ventana.getDrive_Guionista_Nk().setText(Integer.toString(guion));
+            Ventana.getDrive_Escenario_Nk().setText(Integer.toString(escenario));
+            Ventana.getDrive_Personaje_Nk().setText(Integer.toString(animaciones));
+            Ventana.getDrive_Doblaje_Nk().setText(Integer.toString(doblajes));
+            Ventana.getDrive_PW_Nk().setText(Integer.toString(plotTwist));
         }
         else {
             if(this.capsHastaPlot>0) {
@@ -132,6 +166,7 @@ public class Drive {
                 this.doblajes-=5;
                 this.capsHastaPlot-=1;
                 this.capN+=1;
+                Ventana.getCn_Cont_Caps().setText(Integer.toString(capN));
 
             }else {
                 this.guion-=1;
@@ -141,9 +176,14 @@ public class Drive {
                 this.plotTwist-=1; 
                 this.capsHastaPlot=3;
                 this.capP+=1;
+                Ventana.getCn_Cont_Caps().setText(Integer.toString(capN));
             }
             System.out.println("se creo un cap cartoon");
-
+            Ventana.getDrive_Guionista_Cn().setText(Integer.toString(guion));
+            Ventana.getDrive_Escenario_Cn().setText(Integer.toString(escenario));
+            Ventana.getDrive_Personaje_Cn().setText(Integer.toString(animaciones));
+            Ventana.getDrive_Doblaje_Cn().setText(Integer.toString(doblajes));
+            Ventana.getDrive_PW_Cn().setText(Integer.toString(plotTwist));
         
         }
 //        System.out.println("caps creados: "+this.caps);

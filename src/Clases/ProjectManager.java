@@ -4,6 +4,7 @@
  */
 package Clases;
 
+import Interfaces.Ventana;
 import static Interfaces.Ventana.getCn_Pm_State;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
@@ -44,12 +45,12 @@ public class ProjectManager extends Thread {
             for (int i = 1; i <= 16; i++) {
                 try {
                     this.estado="Viendo One Piece";
-                    getCn_Pm_State().setText(this.estado);
+                    changeStateText();
                    // System.out.println(this.estado);
                     sleep(this.horas/2);//espera media hora
                     
                     this.estado="Trabajando"; //paso la media hora y trabaja de nuevo
-                    getCn_Pm_State().setText(this.estado);
+                    changeStateText();
                     //System.out.println(this.estado);
                     sleep(this.horas/2);//espera media hora
                     
@@ -64,9 +65,9 @@ public class ProjectManager extends Thread {
                 sleep(this.horas*8);//pasan las 8 horas y baja el contador
                 this.mutex.acquire();
                 this.drive.setDiasEntrega(this.drive.getDiasEntrega()-1); //baja en 1 el contador de dias hasta la entrega
-                this.mutex.release();
                 //ahora cobra su dia de trabajo
                 this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia
+                this.mutex.release();
                 this.salarioacc+=this.sueldoph*24;
                 
                 //System.out.println("dias hasta la entrega "+this.drive.getDiasEntrega());
@@ -80,6 +81,16 @@ public class ProjectManager extends Thread {
         }
     
     }
+    
+    public void changeStateText(){
+        if(this.drive.getEstudio().compareTo("Nickelodeon") == 0){
+            Ventana.getNk_Pm_State().setText(this.estado);
+        }else{
+            Ventana.getCn_Pm_State().setText(this.estado);
+        }        
+    }
+    
+    
 
     public int getSueldoph() {
         return sueldoph;

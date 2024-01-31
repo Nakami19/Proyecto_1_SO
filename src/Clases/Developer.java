@@ -143,9 +143,17 @@ public class Developer extends Thread {
     }
     
     public void obtenerSalario() {
-        this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia
-        this.salarioacc+=this.sueldoph*24;
-    
+        try{
+            this.mutex.acquire();
+            this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia            
+            this.mutex.release();
+            this.salarioacc+=this.sueldoph*24;
+            
+        }catch(InterruptedException ex) {
+                Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Error!!! "+this.estudio+" en obtenerSalario "+ this.type );
+        }
+            
     }
 
     public double getAcc() {
