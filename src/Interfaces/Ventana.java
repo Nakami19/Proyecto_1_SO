@@ -186,6 +186,7 @@ public class Ventana extends javax.swing.JFrame {
         jTabbedPane1.addTab("Config", Config);
 
         Cartoon.setBackground(new java.awt.Color(0, 0, 0));
+        Cartoon.setForeground(new java.awt.Color(255, 255, 255));
         Cartoon.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Cont_Guionista_PW_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_PW_CN, ""));
@@ -198,12 +199,12 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.add(Cont_Guionista_PW_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 80, 20));
 
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel1.setForeground(null);
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ENSAMBLADORES:");
         Cartoon.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 210, -1));
 
         jLabel2.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel2.setForeground(null);
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MANEJADOR DE");
         Cartoon.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
 
@@ -217,7 +218,7 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.add(Cont_Guionista_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 80, 20));
 
         jLabel3.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel3.setForeground(null);
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("DISEÑADORES DE  ESCENARIOS:");
         Cartoon.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 220, -1));
 
@@ -231,7 +232,7 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.add(Cont_Escenario_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 80, 20));
 
         jLabel4.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel4.setForeground(null);
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("ANIMADORES DE  PERSONAJES:");
         Cartoon.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 220, -1));
 
@@ -246,7 +247,7 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.add(Cont_Animador_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel5.setForeground(null);
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("ACTORES DE DOBLAJE:");
         Cartoon.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 210, -1));
 
@@ -260,7 +261,7 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.add(Cont_Actor_Doblaje_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 80, 20));
 
         jLabel11.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel11.setForeground(null);
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("GUIONISTAS DE PLOT-TWIST:");
         Cartoon.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 210, -1));
 
@@ -274,38 +275,38 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.add(Cont_Ensamblador_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 430, 80, -1));
 
         Cn_Director_State.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Cn_Director_State.setForeground(null);
+        Cn_Director_State.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Director_State.setText("Trabajando");
         Cartoon.add(Cn_Director_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel17.setForeground(null);
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("CANTIDAD DE TRABAJADORES:");
         Cartoon.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel18.setForeground(null);
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("GUIONISTAS:");
         Cartoon.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel19.setForeground(null);
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("PROJECT MANAGER:");
         Cartoon.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
 
         jLabel25.setBackground(new java.awt.Color(0, 0, 0));
         jLabel25.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel25.setForeground(null);
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("ESTADOS:");
         Cartoon.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         jLabel26.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel26.setForeground(null);
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("DIRECTOR:");
         Cartoon.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
 
         Cn_Pm_State.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Cn_Pm_State.setForeground(null);
+        Cn_Pm_State.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Pm_State.setText("Trabajando");
         Cartoon.add(Cn_Pm_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, -1, -1));
 
