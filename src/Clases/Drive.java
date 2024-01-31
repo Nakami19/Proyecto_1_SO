@@ -81,7 +81,7 @@ public class Drive {
         }
         if (type==2) {
             if (this.animaciones<55) {
-                if((this.animaciones+=3)>55){
+                if((this.animaciones+3)>55){
                     this.animaciones+=(55-this.animaciones);
                 } else {
                     this.animaciones+=3;
@@ -99,7 +99,7 @@ public class Drive {
         }
         if (type==3) {
             if (this.doblajes<35) {
-                if((this.doblajes+=3)>35){
+                if((this.doblajes+3)>35){
                     this.doblajes+=(35-this.doblajes);
                 } else {
                     this.doblajes+=3;
@@ -197,9 +197,13 @@ public class Drive {
     
     public void calcularGananciaN(float ganancia){
         if(this.estudio.compareTo("Nickelodeon") == 0){
-            setGanancias(getGanancias() + ganancia*450000);
+            setGanancias(getGanancias() + ganancia*450000);            
+            Ventana.getNk_Gain_Counter().setText(Integer.toString((int) getGanancias())+"$");
+            Ventana.getNk_Utility_Counter().setText(Integer.toString((int) ((int) getGanancias() - getCostos()))+"$");
         }else{
             setGanancias(getGanancias() + ganancia*300000);
+            Ventana.getCn_Gain_Counter().setText(Integer.toString((int) getGanancias())+"$");
+            Ventana.getCn_Utility_Counter().setText(Integer.toString((int) ((int) getGanancias() - getCostos()))+"$");
         }
         System.out.println("GANANCIAS:"+ getEstudio() + " " + getGanancias());
     }
@@ -207,8 +211,12 @@ public class Drive {
     public void calcularGananciaP(float ganancia){
         if(this.estudio.compareTo("Nickelodeon") == 0){
             setGanancias(getGanancias() + ganancia*500000);
+            Ventana.getNk_Gain_Counter().setText(Integer.toString((int) getGanancias())+"$");
+            Ventana.getNk_Utility_Counter().setText(Integer.toString((int) ((int) getGanancias() - getCostos()))+"$");
         }else{
             setGanancias(getGanancias() + ganancia*650000);
+            Ventana.getCn_Gain_Counter().setText(Integer.toString((int) getGanancias())+"$");
+            Ventana.getCn_Utility_Counter().setText(Integer.toString((int) ((int) getGanancias() - getCostos()))+"$");
         }
     }
 

@@ -4,6 +4,7 @@
  */
 package Clases;
 
+import Interfaces.Ventana;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -145,7 +146,12 @@ public class Developer extends Thread {
     public void obtenerSalario() {
         try{
             this.mutex.acquire();
-            this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia            
+            this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia
+            if(this.estudio.compareTo("Nickelodeon")==0){
+                Ventana.getNk_Loss_Counter().setText(Integer.toString((int) this.drive.getCostos())+"$");
+            }else{
+                Ventana.getCn_Loss_Counter().setText(Integer.toString((int) this.drive.getCostos())+"$");
+            }            
             this.mutex.release();
             this.salarioacc+=this.sueldoph*24;
             

@@ -123,6 +123,8 @@ public class Director extends Thread{
                     this.mutex.acquire(); // Wait, empieza la parte crítica
                     
                     this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());//Reinicia los días requeridos
+                    Ventana.getNk_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega() + 1));
+                    Ventana.getCn_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega() + 1));
                     //Aquí va una función para calcular la ganancia, en donde se agarran los caps y se multiplica y se añade a estudio, pero esa conexión no está hecha todavía
                     
                     if(this.drive.getCapN() <= 0 && this.drive.getCapP() <= 0){
@@ -160,8 +162,9 @@ public class Director extends Thread{
                             this.estado = "Revisando al Project Manager";
                             changeStateText();
                             //System.out.println("Estado: "+this.estado);
+                            //System.out.println("Estado PM: "+this.getProjectManager().getEstado());
                             if(this.getProjectManager().getEstado().equals("Viendo One Piece")){
-                                //System.out.println("ATRAPADO!!!");
+                                System.out.println("ATRAPADO!!!" + this.drive.getEstudio());
                                 this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 1);
                                 this.getProjectManager().setDineroDescontado(this.getProjectManager().getDineroDescontado() + 100);
                                 this.getProjectManager().setSalarioacc(this.getProjectManager().getSalarioacc() - 100);
@@ -188,10 +191,8 @@ public class Director extends Thread{
         }else{
             Ventana.getCn_Director_State().setText(this.estado);
         }        
-    }
-    
-    
-    
+    }  
+        
     public void obtenerSalario() {
         try{
             this.mutex.acquire();
@@ -208,13 +209,13 @@ public class Director extends Thread{
     
     public void changeFailText(){
         if(this.drive.getEstudio().compareTo("Nickelodeon") == 0){
-            System.out.println("Atrapado el de nickelodeon");
-            Ventana.getNk_Fail_Counter().setText(Integer.toString(getProjectManager().getFaltas()));
-            //Ventana.getNk_Discounted_Counter().setText(Integer.toString(dineroDescontado));
+            System.out.println("Atrapado el de Nickelodeon!");
+            Ventana.getNk_Fail_Counter().setText(Integer.toString(this.getProjectManager().getFaltas()));
+            Ventana.getNk_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()));
         }else{
             System.out.println("Atrapado el de Cartoon Network!");
-            Ventana.getCn_Fail_Counter().setText(Integer.toString(getProjectManager().getFaltas()));
-            //Ventana.getCn_Discounted_Counter().setText(Integer.toString(dineroDescontado));
+            Ventana.getCn_Fail_Counter().setText(Integer.toString(this.getProjectManager().getFaltas()));
+            Ventana.getCn_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()));
         }     
     }
 }
