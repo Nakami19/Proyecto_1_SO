@@ -167,7 +167,6 @@ public class Director extends Thread{
                             if(this.horaAleatoria <=16){
                                 //System.out.println("LO ATRAPE SI O SI "+this.drive.getEstudio());
                             }
-                            
                             checkPm();                           
                             
                         }
