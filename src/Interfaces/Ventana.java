@@ -294,6 +294,13 @@ public class Ventana extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         Cont_Day_Duration = new javax.swing.JSpinner();
         IniciarSimulacion = new javax.swing.JButton();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        Finn1 = new javax.swing.JLabel();
+        Spongebob1 = new javax.swing.JLabel();
+        Fondo_Menu1 = new javax.swing.JLabel();
         Cartoon = new javax.swing.JPanel();
         Cont_Guionista_PW_CN = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
@@ -308,13 +315,11 @@ public class Ventana extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         Cont_Ensamblador_CN = new javax.swing.JSpinner();
         Cn_Director_State = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         Cn_Pm_State = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         Cn_Cont_PW = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
@@ -343,64 +348,79 @@ public class Ventana extends javax.swing.JFrame {
         Cn_Gain_Counter = new javax.swing.JLabel();
         Cn_Loss_Counter = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
         Cn_Deadline_Counter = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel60 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        Logo_Cn = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
+        Finn = new javax.swing.JLabel();
+        Fondo_Cn = new javax.swing.JLabel();
         Nick = new javax.swing.JPanel();
-        Cont_Guionista_PW_NK = new javax.swing.JSpinner();
-        jLabel6 = new javax.swing.JLabel();
+        Gary = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel61 = new javax.swing.JLabel();
+        Nk_Deadline_Counter = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        Nk_Gain_Counter = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        Nk_Loss_Counter = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        Nk_Utility_Counter = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        Cont_Guionista_NK = new javax.swing.JSpinner();
         jLabel8 = new javax.swing.JLabel();
-        Cont_Escenario_NK = new javax.swing.JSpinner();
         jLabel9 = new javax.swing.JLabel();
-        Cont_Animador_NK = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
-        Cont_Actor_Doblaje_NK = new javax.swing.JSpinner();
+        jLabel6 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        Cont_Guionista_NK = new javax.swing.JSpinner();
+        Cont_Escenario_NK = new javax.swing.JSpinner();
+        Cont_Animador_NK = new javax.swing.JSpinner();
+        Cont_Actor_Doblaje_NK = new javax.swing.JSpinner();
+        Cont_Guionista_PW_NK = new javax.swing.JSpinner();
         Cont_Ensamblador_NK = new javax.swing.JSpinner();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        Nk_Director_State = new javax.swing.JLabel();
-        Nk_Pm_State = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
         Drive_Guionista_Nk = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
         Drive_Escenario_Nk = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         Drive_Personaje_Nk = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
         Drive_Doblaje_Nk = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         Drive_PW_Nk = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
         Nk_Cont_Caps = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         Nk_Cont_PW = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        Nk_Director_State = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        Nk_Pm_State = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         Nk_Fail_Counter = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         Nk_Discount_Counter = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        Nk_Gain_Counter = new javax.swing.JLabel();
-        Nk_Loss_Counter = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        Nk_Utility_Counter = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        Nk_Deadline_Counter = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
+        Logo_Nk = new javax.swing.JLabel();
+        Spongebob = new javax.swing.JLabel();
+        Jellyfish = new javax.swing.JLabel();
+        Fondo_Nick = new javax.swing.JLabel();
         Graf = new javax.swing.JPanel();
+        jLabel67 = new javax.swing.JLabel();
+        Fondo_Menu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -415,21 +435,25 @@ public class Ventana extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("DURACIÓN DE DÍAS (S): ");
-        Config.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        Config.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, -1, -1));
 
+        saveButton.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         saveButton.setText("GUARDAR");
+        saveButton.setBorderPainted(false);
+        saveButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveButtonActionPerformed(evt);
             }
         });
-        Config.add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
+        Config.add(saveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 210, 40));
 
         jLabel14.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("GUARDAR: ");
-        Config.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        jLabel14.setText("Para terminar la simulación y guardar los cambios hechos presione el siguiente botón");
+        Config.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, -1));
 
+        Cont_Deadline.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Deadline.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Deadline, ""));
         Cont_Deadline.setValue(1);
         Cont_Deadline.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -437,13 +461,14 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_DeadlineStateChanged(evt);
             }
         });
-        Config.add(Cont_Deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 80, 20));
+        Config.add(Cont_Deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 80, 20));
 
         jLabel15.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("DIAS ENTRE DEADLINES: ");
-        Config.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+        Config.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
+        Cont_Day_Duration.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Day_Duration.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Day_Duration, ""));
         Cont_Day_Duration.setValue(1);
         Cont_Day_Duration.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -451,15 +476,52 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Day_DurationStateChanged(evt);
             }
         });
-        Config.add(Cont_Day_Duration, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 80, 20));
+        Config.add(Cont_Day_Duration, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 220, 80, 20));
 
+        IniciarSimulacion.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         IniciarSimulacion.setText("Iniciar simulacion");
+        IniciarSimulacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        IniciarSimulacion.setDefaultCapable(false);
         IniciarSimulacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IniciarSimulacionActionPerformed(evt);
             }
         });
-        Config.add(IniciarSimulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, -1, -1));
+        Config.add(IniciarSimulacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 110, 200, 40));
+
+        jLabel68.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel68.setFont(new java.awt.Font("Ebrima", 1, 24)); // NOI18N
+        jLabel68.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel68.setText("EN VENEZUELA");
+        Config.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+
+        jLabel70.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel70.setFont(new java.awt.Font("Ebrima", 1, 24)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel70.setText("BIENVENIDOS A LA SIMULACIÓN DE ESTUDIOS DE ANIMACIÓN");
+        Config.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel23.setText("Para iniciar la simulación, presione el siguiente botón y seleccione el archivo correspondiente");
+        Config.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel24.setText("Aquí podrá cambiar diversas configuraciones (los cambios de estos se reflejarán al reiniciar):");
+        Config.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+
+        Finn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Finn_the_Human_Portrait_Full1.png"))); // NOI18N
+        Finn1.setName(""); // NOI18N
+        Config.add(Finn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, 190, 200));
+
+        Spongebob1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/SpongebobFullRender.png"))); // NOI18N
+        Spongebob1.setName(""); // NOI18N
+        Config.add(Spongebob1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 200, 200));
+
+        Fondo_Menu1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Fondo_Menu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/MenuBg.jpg"))); // NOI18N
+        Config.add(Fondo_Menu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 840, 520));
 
         jTabbedPane1.addTab("Config", Config);
 
@@ -467,6 +529,7 @@ public class Ventana extends javax.swing.JFrame {
         Cartoon.setForeground(new java.awt.Color(255, 255, 255));
         Cartoon.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Cont_Guionista_PW_CN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Guionista_PW_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_PW_CN, ""));
         Cont_Guionista_PW_CN.setValue(1);
         Cont_Guionista_PW_CN.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -474,18 +537,19 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Guionista_PW_CNStateChanged(evt);
             }
         });
-        Cartoon.add(Cont_Guionista_PW_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 80, 20));
+        Cartoon.add(Cont_Guionista_PW_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 80, 20));
 
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ENSAMBLADORES:");
-        Cartoon.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 210, -1));
+        Cartoon.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 210, -1));
 
         jLabel2.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Capitulos Plot-Twist:");
-        Cartoon.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, -1, -1));
+        Cartoon.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, -1, -1));
 
+        Cont_Guionista_CN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Guionista_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_CN, ""));
         Cont_Guionista_CN.setValue(1);
         Cont_Guionista_CN.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -493,13 +557,14 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Guionista_CNStateChanged(evt);
             }
         });
-        Cartoon.add(Cont_Guionista_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 80, 20));
+        Cartoon.add(Cont_Guionista_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 80, 20));
 
         jLabel3.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("DISEÑADORES DE  ESCENARIOS:");
-        Cartoon.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 220, -1));
+        Cartoon.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 220, -1));
 
+        Cont_Escenario_CN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Escenario_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Escenario_CN, ""));
         Cont_Escenario_CN.setValue(1);
         Cont_Escenario_CN.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -507,14 +572,15 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Escenario_CNStateChanged(evt);
             }
         });
-        Cartoon.add(Cont_Escenario_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 80, 20));
+        Cartoon.add(Cont_Escenario_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 80, 20));
 
         jLabel4.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("ANIMADORES DE  PERSONAJES:");
-        Cartoon.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 220, -1));
+        Cartoon.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 220, -1));
 
         Cont_Animador_CN.setModel(new javax.swing.SpinnerNumberModel());
+        Cont_Animador_CN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Animador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Animador_CN, ""));
         Cont_Animador_CN.setValue(1);
         Cont_Animador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -522,13 +588,14 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Animador_CNStateChanged(evt);
             }
         });
-        Cartoon.add(Cont_Animador_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 80, 20));
+        Cartoon.add(Cont_Animador_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 80, 20));
 
         jLabel5.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("ACTORES DE DOBLAJE:");
-        Cartoon.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 210, -1));
+        Cartoon.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 210, -1));
 
+        Cont_Actor_Doblaje_CN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Actor_Doblaje_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Actor_Doblaje_CN, ""));
         Cont_Actor_Doblaje_CN.setValue(1);
         Cont_Actor_Doblaje_CN.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -536,13 +603,14 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Actor_Doblaje_CNStateChanged(evt);
             }
         });
-        Cartoon.add(Cont_Actor_Doblaje_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 80, 20));
+        Cartoon.add(Cont_Actor_Doblaje_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 80, 20));
 
         jLabel11.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("GUIONISTAS DE PLOT-TWIST:");
-        Cartoon.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 210, -1));
+        Cartoon.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 210, -1));
 
+        Cont_Ensamblador_CN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Ensamblador_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Ensamblador_CN, ""));
         Cont_Ensamblador_CN.setValue(1);
         Cont_Ensamblador_CN.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -550,239 +618,345 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Ensamblador_CNStateChanged(evt);
             }
         });
-        Cartoon.add(Cont_Ensamblador_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 430, 80, -1));
+        Cartoon.add(Cont_Ensamblador_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 80, -1));
 
         Cn_Director_State.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Director_State.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Director_State.setText("Trabajando");
-        Cartoon.add(Cn_Director_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
-
-        jLabel17.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("CANTIDAD DE TRABAJADORES:");
-        Cartoon.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        Cartoon.add(Cn_Director_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("GUIONISTAS:");
-        Cartoon.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        Cartoon.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("PROJECT MANAGER:");
-        Cartoon.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+        Cartoon.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         jLabel25.setBackground(new java.awt.Color(0, 0, 0));
         jLabel25.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("UTILIDAD:");
-        Cartoon.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
+        Cartoon.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, -1, -1));
 
         jLabel26.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("DIRECTOR:");
-        Cartoon.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
+        Cartoon.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         Cn_Pm_State.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Pm_State.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Pm_State.setText("Trabajando");
-        Cartoon.add(Cn_Pm_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, -1, -1));
-
-        jLabel16.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("MANEJADOR DE");
-        Cartoon.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
+        Cartoon.add(Cn_Pm_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, -1, -1));
 
         Cn_Cont_PW.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Cont_PW.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Cont_PW.setText("0");
-        Cartoon.add(Cn_Cont_PW, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 460, 30, -1));
+        Cartoon.add(Cn_Cont_PW, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, 30, -1));
 
         jLabel28.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("Elementos Drive:");
-        Cartoon.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, -1, -1));
+        Cartoon.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, -1));
 
         jLabel29.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("Elementos Drive:");
-        Cartoon.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
+        Cartoon.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, -1, -1));
 
         jLabel30.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Elementos Drive:");
-        Cartoon.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, -1, -1));
+        Cartoon.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, -1, -1));
 
         jLabel31.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText("Elementos Drive:");
-        Cartoon.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, -1, -1));
+        Cartoon.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
 
         jLabel32.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("Sueldo Descontado:");
-        Cartoon.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, -1, -1));
+        Cartoon.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, -1));
 
         Drive_Escenario_Cn.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Drive_Escenario_Cn.setForeground(new java.awt.Color(255, 255, 255));
         Drive_Escenario_Cn.setText("0");
-        Cartoon.add(Drive_Escenario_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, -1));
+        Cartoon.add(Drive_Escenario_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 290, -1, -1));
 
         Drive_Personaje_Cn.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Drive_Personaje_Cn.setForeground(new java.awt.Color(255, 255, 255));
         Drive_Personaje_Cn.setText("0");
-        Cartoon.add(Drive_Personaje_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, -1, -1));
+        Cartoon.add(Drive_Personaje_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, -1, -1));
 
         Drive_Doblaje_Cn.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Drive_Doblaje_Cn.setForeground(new java.awt.Color(255, 255, 255));
         Drive_Doblaje_Cn.setText("0");
-        Cartoon.add(Drive_Doblaje_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, -1, -1));
+        Cartoon.add(Drive_Doblaje_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, -1, -1));
 
         Drive_PW_Cn.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Drive_PW_Cn.setForeground(new java.awt.Color(255, 255, 255));
         Drive_PW_Cn.setText("0");
-        Cartoon.add(Drive_PW_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, -1, -1));
+        Cartoon.add(Drive_PW_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, -1, -1));
 
         jLabel33.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("Capitulos Normales:");
-        Cartoon.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
+        Cartoon.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, -1, -1));
 
         Cn_Cont_Caps.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Cont_Caps.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Cont_Caps.setText("0");
-        Cartoon.add(Cn_Cont_Caps, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, 30, -1));
+        Cartoon.add(Cn_Cont_Caps, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 30, -1));
 
         jLabel49.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setText("/25");
-        Cartoon.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, -1));
+        Cartoon.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, -1, -1));
 
         jLabel50.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setText("/20");
-        Cartoon.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, -1, -1));
+        Cartoon.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, -1, -1));
 
         jLabel51.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setText("/55");
-        Cartoon.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, -1, -1));
+        Cartoon.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, -1, -1));
 
         jLabel52.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel52.setForeground(new java.awt.Color(255, 255, 255));
         jLabel52.setText("/35");
-        Cartoon.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 350, -1, -1));
+        Cartoon.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, -1, -1));
 
         jLabel53.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(255, 255, 255));
         jLabel53.setText("/10");
-        Cartoon.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, -1, -1));
+        Cartoon.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, -1, -1));
 
         jLabel35.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setText("Elementos Drive:");
-        Cartoon.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, -1, -1));
+        Cartoon.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, -1, -1));
 
         jLabel36.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("Faltas del PM:");
-        Cartoon.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        Cartoon.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         Drive_Guionista_Cn.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Drive_Guionista_Cn.setForeground(new java.awt.Color(255, 255, 255));
         Drive_Guionista_Cn.setText("0");
-        Cartoon.add(Drive_Guionista_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, -1, -1));
+        Cartoon.add(Drive_Guionista_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, -1, -1));
 
         Cn_Fail_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Fail_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Fail_Counter.setText("0");
-        Cartoon.add(Cn_Fail_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, -1, -1));
+        Cartoon.add(Cn_Fail_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
 
         Cn_Discount_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Discount_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Discount_Counter.setText("0");
-        Cartoon.add(Cn_Discount_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
+        Cartoon.add(Cn_Discount_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, -1, -1));
 
         jLabel54.setBackground(new java.awt.Color(0, 0, 0));
         jLabel54.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setText("GANANCIAS:");
-        Cartoon.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, -1, -1));
+        Cartoon.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, -1, -1));
 
         jLabel55.setBackground(new java.awt.Color(0, 0, 0));
         jLabel55.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
         jLabel55.setText("GASTOS:");
-        Cartoon.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, -1, -1));
+        Cartoon.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, -1, -1));
 
         Cn_Utility_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Utility_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Utility_Counter.setText("0");
-        Cartoon.add(Cn_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, -1, -1));
+        Cartoon.add(Cn_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, -1, -1));
 
         Cn_Gain_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Gain_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Gain_Counter.setText("0");
-        Cartoon.add(Cn_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 60, -1, -1));
+        Cartoon.add(Cn_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, -1, -1));
 
         Cn_Loss_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Loss_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Loss_Counter.setText("0");
-        Cartoon.add(Cn_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, -1, -1));
+        Cartoon.add(Cn_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, -1, -1));
 
         jLabel59.setBackground(new java.awt.Color(0, 0, 0));
         jLabel59.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
         jLabel59.setForeground(new java.awt.Color(255, 255, 255));
         jLabel59.setText("DEADLINE:");
-        Cartoon.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
+        Cartoon.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
+        Cn_Deadline_Counter.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        Cn_Deadline_Counter.setForeground(new java.awt.Color(255, 255, 255));
+        Cn_Deadline_Counter.setText("0");
+        Cartoon.add(Cn_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0, 90));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel17.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("CANTIDAD DE TRABAJADORES:");
+        jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("MANEJADOR DE");
+        jLabel16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, -1, -1));
+
+        Cartoon.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 530, 330));
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0, 90));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel60.setBackground(new java.awt.Color(0, 0, 0));
         jLabel60.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
         jLabel60.setForeground(new java.awt.Color(255, 255, 255));
         jLabel60.setText("ESTADOS:");
-        Cartoon.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
+        jPanel2.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
 
-        Cn_Deadline_Counter.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        Cn_Deadline_Counter.setForeground(new java.awt.Color(255, 255, 255));
-        Cn_Deadline_Counter.setText("0");
-        Cartoon.add(Cn_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, -1, -1));
+        Cartoon.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 400, 140));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
-        Cartoon.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 510, 320));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0, 90));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
+        Cartoon.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 180, 140));
 
-        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Cn_Bg.jpg"))); // NOI18N
+        Logo_Cn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Cn_Logo2.svg.png"))); // NOI18N
+        Cartoon.add(Logo_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, 150));
+
+        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Jakesalad2.png"))); // NOI18N
         jLabel64.setText("jLabel64");
-        Cartoon.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 520));
+        Cartoon.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 140, 180));
+
+        Finn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Finn.png"))); // NOI18N
+        Finn.setName(""); // NOI18N
+        Cartoon.add(Finn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, 190, 200));
+
+        Fondo_Cn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Cn_Bg.jpg"))); // NOI18N
+        Cartoon.add(Fondo_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 520));
 
         jTabbedPane1.addTab("Cartoon", Cartoon);
 
         Nick.setBackground(new java.awt.Color(255, 153, 0));
         Nick.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Cont_Guionista_PW_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Cont_Guionista_PW_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_PW_NK, ""));
-        Cont_Guionista_PW_NK.setValue(1);
-        Cont_Guionista_PW_NK.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                Cont_Guionista_PW_NKStateChanged(evt);
-            }
-        });
-        Nick.add(Cont_Guionista_PW_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 80, 20));
+        Gary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Gary_looking_up_stock_art2.png"))); // NOI18N
+        Nick.add(Gary, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 260, 220));
 
-        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel6.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("GUIONISTAS DE PLOT-TWIST:");
-        Nick.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 210, -1));
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0, 90));
+        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel61.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel61.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel61.setText("DEADLINE:");
+        jPanel4.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        Nk_Deadline_Counter.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        Nk_Deadline_Counter.setForeground(new java.awt.Color(255, 255, 255));
+        Nk_Deadline_Counter.setText("0");
+        jPanel4.add(Nk_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, -1));
+
+        jLabel56.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel56.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setText("GANANCIAS:");
+        jPanel4.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+
+        Nk_Gain_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Nk_Gain_Counter.setForeground(new java.awt.Color(255, 255, 255));
+        Nk_Gain_Counter.setText("0");
+        jPanel4.add(Nk_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
+
+        jLabel57.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel57.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setText("GASTOS:");
+        jPanel4.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
+
+        Nk_Loss_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Nk_Loss_Counter.setForeground(new java.awt.Color(255, 255, 255));
+        Nk_Loss_Counter.setText("0");
+        jPanel4.add(Nk_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
+
+        jLabel58.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel58.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel58.setText("UTILIDAD:");
+        jPanel4.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+
+        Nk_Utility_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Nk_Utility_Counter.setForeground(new java.awt.Color(255, 255, 255));
+        Nk_Utility_Counter.setText("0");
+        jPanel4.add(Nk_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
+
+        Nick.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 180, 140));
+
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0, 90));
+        jPanel5.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel63.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel63.setText("CANTIDAD DE TRABAJADORES:");
+        jLabel63.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel5.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
+
+        jLabel65.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel65.setText("MANEJADOR DE");
+        jLabel65.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel5.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, -1, -1));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("GUIONISTAS:");
-        Nick.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
-        Cont_Guionista_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("DISEÑADORES DE  ESCENARIOS:");
+        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 220, -1));
+
+        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel9.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("ANIMADORES DE  PERSONAJES:");
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 220, -1));
+
+        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel10.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("ACTORES DE DOBLAJE:");
+        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 210, -1));
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("GUIONISTAS DE PLOT-TWIST:");
+        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 210, -1));
+
+        jLabel12.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("ENSAMBLADORES:");
+        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 210, -1));
+
+        Cont_Guionista_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Guionista_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_NK, ""));
         Cont_Guionista_NK.setValue(1);
         Cont_Guionista_NK.setVerifyInputWhenFocusTarget(false);
@@ -791,15 +965,9 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Guionista_NKStateChanged(evt);
             }
         });
-        Nick.add(Cont_Guionista_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 80, 20));
+        jPanel5.add(Cont_Guionista_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 80, 20));
 
-        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel8.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("DISEÑADORES DE  ESCENARIOS:");
-        Nick.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 220, -1));
-
-        Cont_Escenario_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Escenario_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Escenario_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Escenario_NK, ""));
         Cont_Escenario_NK.setValue(1);
         Cont_Escenario_NK.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -807,15 +975,9 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Escenario_NKStateChanged(evt);
             }
         });
-        Nick.add(Cont_Escenario_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 80, 20));
+        jPanel5.add(Cont_Escenario_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 80, 20));
 
-        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("ANIMADORES DE  PERSONAJES:");
-        Nick.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 220, -1));
-
-        Cont_Animador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Animador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Animador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Animador_NK, ""));
         Cont_Animador_NK.setValue(1);
         Cont_Animador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -823,15 +985,9 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Animador_NKStateChanged(evt);
             }
         });
-        Nick.add(Cont_Animador_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 80, 20));
+        jPanel5.add(Cont_Animador_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 80, 20));
 
-        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel10.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("ACTORES DE DOBLAJE:");
-        Nick.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 210, -1));
-
-        Cont_Actor_Doblaje_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Actor_Doblaje_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Actor_Doblaje_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Actor_Doblaje_NK, ""));
         Cont_Actor_Doblaje_NK.setValue(1);
         Cont_Actor_Doblaje_NK.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -839,14 +995,19 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Actor_Doblaje_NKStateChanged(evt);
             }
         });
-        Nick.add(Cont_Actor_Doblaje_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 80, 20));
+        jPanel5.add(Cont_Actor_Doblaje_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 80, 20));
 
-        jLabel12.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("ENSAMBLADORES:");
-        Nick.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 210, -1));
+        Cont_Guionista_PW_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Cont_Guionista_PW_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_PW_NK, ""));
+        Cont_Guionista_PW_NK.setValue(1);
+        Cont_Guionista_PW_NK.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Cont_Guionista_PW_NKStateChanged(evt);
+            }
+        });
+        jPanel5.add(Cont_Guionista_PW_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 80, 20));
 
-        Cont_Ensamblador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Cont_Ensamblador_NK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Cont_Ensamblador_NK.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Ensamblador_NK, ""));
         Cont_Ensamblador_NK.setValue(1);
         Cont_Ensamblador_NK.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -854,221 +1015,191 @@ public class Ventana extends javax.swing.JFrame {
                 Cont_Ensamblador_NKStateChanged(evt);
             }
         });
-        Nick.add(Cont_Ensamblador_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 430, 80, -1));
+        jPanel5.add(Cont_Ensamblador_NK, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 80, -1));
+
+        jLabel39.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setText("Elementos Drive:");
+        jPanel5.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, -1, -1));
+
+        Drive_Guionista_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Drive_Guionista_Nk.setForeground(new java.awt.Color(255, 255, 255));
+        Drive_Guionista_Nk.setText("0");
+        jPanel5.add(Drive_Guionista_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, -1, -1));
+
+        jLabel41.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel41.setText("/25");
+        jPanel5.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, -1, -1));
+
+        jLabel43.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setText("/20");
+        jPanel5.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, -1));
+
+        Drive_Escenario_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Drive_Escenario_Nk.setForeground(new java.awt.Color(255, 255, 255));
+        Drive_Escenario_Nk.setText("0");
+        jPanel5.add(Drive_Escenario_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
+
+        jLabel40.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel40.setText("Elementos Drive:");
+        jPanel5.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, -1, -1));
+
+        jLabel42.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel42.setText("Elementos Drive:");
+        jPanel5.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, -1, -1));
+
+        Drive_Personaje_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Drive_Personaje_Nk.setForeground(new java.awt.Color(255, 255, 255));
+        Drive_Personaje_Nk.setText("0");
+        jPanel5.add(Drive_Personaje_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, -1, -1));
+
+        jLabel45.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("/55");
+        jPanel5.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
+
+        jLabel47.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel47.setText("/35");
+        jPanel5.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, -1, -1));
+
+        Drive_Doblaje_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Drive_Doblaje_Nk.setForeground(new java.awt.Color(255, 255, 255));
+        Drive_Doblaje_Nk.setText("0");
+        jPanel5.add(Drive_Doblaje_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setText("Elementos Drive:");
+        jPanel5.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, -1, -1));
+
+        jLabel46.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel46.setText("Elementos Drive:");
+        jPanel5.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, -1, -1));
+
+        Drive_PW_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Drive_PW_Nk.setForeground(new java.awt.Color(255, 255, 255));
+        Drive_PW_Nk.setText("0");
+        jPanel5.add(Drive_PW_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, -1, -1));
+
+        jLabel48.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setText("/10");
+        jPanel5.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, -1, -1));
+
+        Nk_Cont_Caps.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Nk_Cont_Caps.setForeground(new java.awt.Color(255, 255, 255));
+        Nk_Cont_Caps.setText("0");
+        jPanel5.add(Nk_Cont_Caps, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 30, -1));
+
+        jLabel34.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setText("Capitulos Normales:");
+        jPanel5.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, -1, -1));
+
+        jLabel27.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("Capitulos Plot-Twist:");
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 300, -1, -1));
+
+        Nk_Cont_PW.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        Nk_Cont_PW.setForeground(new java.awt.Color(255, 255, 255));
+        Nk_Cont_PW.setText("0");
+        jPanel5.add(Nk_Cont_PW, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 30, -1));
+
+        Nick.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 530, 330));
+
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0, 90));
+        jPanel6.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel66.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel66.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel66.setText("ESTADOS:");
+        jPanel6.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
 
         jLabel20.setBackground(new java.awt.Color(0, 0, 0));
         jLabel20.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("DIRECTOR:");
-        Nick.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
-
-        jLabel21.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel21.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel21.setText("PROJECT MANAGER:");
-        Nick.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
-
-        jLabel22.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel22.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel22.setText("MANEJADOR DE");
-        Nick.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
-
-        jLabel23.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel23.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel23.setText("ESTADOS:");
-        Nick.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
-
-        jLabel24.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel24.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel24.setText("CANTIDAD DE TRABAJADORES:");
-        Nick.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        jPanel6.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         Nk_Director_State.setBackground(new java.awt.Color(0, 0, 0));
         Nk_Director_State.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Director_State.setForeground(new java.awt.Color(0, 0, 0));
+        Nk_Director_State.setForeground(new java.awt.Color(255, 255, 255));
         Nk_Director_State.setText("Trabajando");
-        Nick.add(Nk_Director_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+        jPanel6.add(Nk_Director_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
+
+        jLabel21.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel21.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("PROJECT MANAGER:");
+        jPanel6.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
         Nk_Pm_State.setBackground(new java.awt.Color(0, 0, 0));
         Nk_Pm_State.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Pm_State.setForeground(new java.awt.Color(0, 0, 0));
+        Nk_Pm_State.setForeground(new java.awt.Color(255, 255, 255));
         Nk_Pm_State.setText("Trabajando");
-        Nick.add(Nk_Pm_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, -1, -1));
-
-        Drive_Guionista_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Drive_Guionista_Nk.setForeground(new java.awt.Color(0, 0, 0));
-        Drive_Guionista_Nk.setText("0");
-        Nick.add(Drive_Guionista_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, -1, -1));
-
-        jLabel40.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel40.setText("Elementos Drive:");
-        Nick.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
-
-        Drive_Escenario_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Drive_Escenario_Nk.setForeground(new java.awt.Color(0, 0, 0));
-        Drive_Escenario_Nk.setText("0");
-        Nick.add(Drive_Escenario_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, -1, -1));
-
-        jLabel42.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel42.setText("Elementos Drive:");
-        Nick.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, -1, -1));
-
-        Drive_Personaje_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Drive_Personaje_Nk.setForeground(new java.awt.Color(0, 0, 0));
-        Drive_Personaje_Nk.setText("0");
-        Nick.add(Drive_Personaje_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, -1, -1));
-
-        jLabel44.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel44.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel44.setText("Elementos Drive:");
-        Nick.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, -1, -1));
-
-        Drive_Doblaje_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Drive_Doblaje_Nk.setForeground(new java.awt.Color(0, 0, 0));
-        Drive_Doblaje_Nk.setText("0");
-        Nick.add(Drive_Doblaje_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, -1, -1));
-
-        jLabel46.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel46.setText("Elementos Drive:");
-        Nick.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, -1, -1));
-
-        Drive_PW_Nk.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Drive_PW_Nk.setForeground(new java.awt.Color(0, 0, 0));
-        Drive_PW_Nk.setText("0");
-        Nick.add(Drive_PW_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, -1, -1));
-
-        Nk_Cont_Caps.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Cont_Caps.setForeground(new java.awt.Color(0, 0, 0));
-        Nk_Cont_Caps.setText("0");
-        Nick.add(Nk_Cont_Caps, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, 30, -1));
-
-        jLabel34.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel34.setText("Capitulos Normales:");
-        Nick.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, -1, -1));
-
-        jLabel27.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel27.setText("Capitulos Plot-Twist:");
-        Nick.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, -1, -1));
-
-        Nk_Cont_PW.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Cont_PW.setForeground(new java.awt.Color(0, 0, 0));
-        Nk_Cont_PW.setText("0");
-        Nick.add(Nk_Cont_PW, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 460, 30, -1));
-
-        jLabel39.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel39.setText("Elementos Drive:");
-        Nick.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, -1, -1));
-
-        jLabel41.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel41.setText("/25");
-        Nick.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, -1));
-
-        jLabel43.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel43.setText("/20");
-        Nick.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, -1, -1));
-
-        jLabel45.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel45.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel45.setText("/55");
-        Nick.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 310, -1, -1));
-
-        jLabel47.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel47.setText("/35");
-        Nick.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 350, -1, -1));
-
-        jLabel48.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel48.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel48.setText("/10");
-        Nick.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, -1, -1));
+        jPanel6.add(Nk_Pm_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, -1));
 
         jLabel37.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setText("Faltas del PM:");
-        Nick.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        jPanel6.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
 
         Nk_Fail_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Fail_Counter.setForeground(new java.awt.Color(0, 0, 0));
+        Nk_Fail_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Nk_Fail_Counter.setText("0");
-        Nick.add(Nk_Fail_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, -1, -1));
+        jPanel6.add(Nk_Fail_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
         jLabel38.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("Sueldo Descontado:");
-        Nick.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, -1, -1));
+        jPanel6.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
 
         Nk_Discount_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Discount_Counter.setForeground(new java.awt.Color(0, 0, 0));
+        Nk_Discount_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Nk_Discount_Counter.setText("0");
-        Nick.add(Nk_Discount_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
+        jPanel6.add(Nk_Discount_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, -1, -1));
 
-        jLabel56.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel56.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel56.setText("GANANCIAS:");
-        Nick.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, -1, -1));
+        Nick.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 400, 140));
 
-        Nk_Gain_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Gain_Counter.setForeground(new java.awt.Color(0, 0, 0));
-        Nk_Gain_Counter.setText("0");
-        Nick.add(Nk_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 60, -1, -1));
+        Logo_Nk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Nk_Logo.png"))); // NOI18N
+        Nick.add(Logo_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 170, 150));
 
-        Nk_Loss_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Loss_Counter.setForeground(new java.awt.Color(0, 0, 0));
-        Nk_Loss_Counter.setText("0");
-        Nick.add(Nk_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, -1, -1));
+        Spongebob.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Spongebob.png"))); // NOI18N
+        Spongebob.setName(""); // NOI18N
+        Nick.add(Spongebob, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, 190, 200));
 
-        jLabel57.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel57.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel57.setText("GASTOS:");
-        Nick.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, -1, -1));
+        Jellyfish.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Jellyfish.png"))); // NOI18N
+        Jellyfish.setName(""); // NOI18N
+        Nick.add(Jellyfish, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 180, 190, 130));
 
-        jLabel58.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel58.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel58.setText("UTILIDAD:");
-        Nick.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
-
-        Nk_Utility_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
-        Nk_Utility_Counter.setForeground(new java.awt.Color(0, 0, 0));
-        Nk_Utility_Counter.setText("0");
-        Nick.add(Nk_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, -1, -1));
-
-        jLabel61.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel61.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel61.setText("DEADLINE:");
-        Nick.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
-
-        Nk_Deadline_Counter.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        Nk_Deadline_Counter.setForeground(new java.awt.Color(0, 0, 0));
-        Nk_Deadline_Counter.setText("0");
-        Nick.add(Nk_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, -1, -1));
-
-        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Gary_looking_up_stock_art2.png"))); // NOI18N
-        Nick.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 260, 220));
-
-        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/il_fullxfull.4079544308_c7w1.jpg"))); // NOI18N
-        jLabel63.setText("jLabel63");
-        Nick.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 520));
+        Fondo_Nick.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        Fondo_Nick.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/il_fullxfull.4079544308_c7w1.jpg"))); // NOI18N
+        Nick.add(Fondo_Nick, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 520));
 
         jTabbedPane1.addTab("Nick", Nick);
 
         Graf.setBackground(new java.awt.Color(204, 153, 255));
         Graf.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel67.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel67.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel67.setText("GRÁFICO DE GANANCIAS:");
+        Graf.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, -1, -1));
+
+        Fondo_Menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Fondo_Menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/MenuBg.jpg"))); // NOI18N
+        Graf.add(Fondo_Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 840, 520));
+
         jTabbedPane1.addTab("Grafico", Graf);
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 550));
@@ -1863,8 +1994,18 @@ public class Ventana extends javax.swing.JFrame {
     private static javax.swing.JLabel Drive_PW_Nk;
     private static javax.swing.JLabel Drive_Personaje_Cn;
     private static javax.swing.JLabel Drive_Personaje_Nk;
+    private javax.swing.JLabel Finn;
+    private javax.swing.JLabel Finn1;
+    private javax.swing.JLabel Fondo_Cn;
+    private javax.swing.JLabel Fondo_Menu;
+    private javax.swing.JLabel Fondo_Menu1;
+    private javax.swing.JLabel Fondo_Nick;
+    private javax.swing.JLabel Gary;
     private javax.swing.JPanel Graf;
     private javax.swing.JButton IniciarSimulacion;
+    private javax.swing.JLabel Jellyfish;
+    private javax.swing.JLabel Logo_Cn;
+    private javax.swing.JLabel Logo_Nk;
     private javax.swing.JPanel Nick;
     private static javax.swing.JLabel Nk_Cont_Caps;
     private static javax.swing.JLabel Nk_Cont_PW;
@@ -1876,6 +2017,8 @@ public class Ventana extends javax.swing.JFrame {
     private static javax.swing.JLabel Nk_Loss_Counter;
     private static javax.swing.JLabel Nk_Pm_State;
     private static javax.swing.JLabel Nk_Utility_Counter;
+    private javax.swing.JLabel Spongebob;
+    private javax.swing.JLabel Spongebob1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1890,7 +2033,6 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -1934,13 +2076,22 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton saveButton;
     // End of variables declaration//GEN-END:variables
