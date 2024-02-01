@@ -110,9 +110,77 @@ public class Director extends Thread{
     }
     
     @Override
+//    public void run() {
+//        while (true) {
+//            try {
+//                mutex.acquire();
+//                if(this.drive.getDiasEntrega()<=0){
+//                  this.estado="Entregando capitulos";
+//                  changeStateText();
+//                  
+//                  if(this.drive.getCapN() <= 0 && this.drive.getCapP() <= 0){
+//                        System.out.println("NO SE ENTREGO NINGUN CAPITULO");
+//                    }else{
+//                        if(this.drive.getCapN() > 0){
+//                        this.drive.calcularGananciaN(this.drive.getCapN());
+//                        this.drive.setCapN(0);
+//                        
+//                    }
+//                        if(this.drive.getCapP() > 0){
+//                            this.drive.calcularGananciaP(this.drive.getCapN());
+//                            this.drive.setCapP(0);
+//                        }
+//                }
+//                this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());
+//                mutex.release();
+//                obtenerSalario();
+//                sleep(this.dayDuration);
+//                
+//             }
+//                else {
+//                mutex.release();
+//                Random random = new Random();
+//                int horaAleatoria;
+//                while((horaAleatoria=random.nextInt(24))==0) {
+//                    horaAleatoria=random.nextInt(24);
+//                }
+//                System.out.println("HORA ALEATORIA: "+horaAleatoria+ " "+this.drive.getEstudio());
+//                
+//                    for (int i = 1; i <= 24; i++) {
+//                        this.estado = "Labores Administrativas";
+//                        changeStateText();
+//                        if(i==horaAleatoria){
+//                            this.estado = "Revisando al Project Manager";
+//                            changeStateText();
+//                            if(this.getProjectManager().getEstado().equals("Viendo One Piece")){
+//                System.out.println("ATRAPADO!!! " + this.drive.getEstudio());
+//                this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 1);
+//                this.getProjectManager().setDineroDescontado(this.getProjectManager().getDineroDescontado() + 100);
+//                this.getProjectManager().setSalarioacc(this.getProjectManager().getSalarioacc() - 100);
+//                changeFailText();}
+//                            //checkPm();
+//                            
+//                        }
+//                        sleep((long) (this.horas/(12/7)));
+//                    }
+//                    obtenerSalario();
+//                }
+//            } catch (Exception e) {
+//                System.out.println("pipipipipi");
+//            }
+//        
+//        }
+//    
+//    }
     public void run(){
         while(true){
-            //System.out.println(drive.getDiasEntrega() + " jajaja "+ drive.getEstudio());
+            try {
+                //System.out.println(drive.getDiasEntrega() + " jajaja "+ drive.getEstudio());
+
+                this.mutex.acquire();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Director.class.getName()).log(Level.SEVERE, null, ex);
+            }
             if(this.drive.getDiasEntrega() <= 0){
                 try{
                     this.estado = "Entregando Capitulos";
@@ -120,7 +188,7 @@ public class Director extends Thread{
                     //System.out.println("Estado: "+this.estado);
                     //System.out.println(this.estado);
                     sleep(this.dayDuration);      
-                    this.mutex.acquire(); // Wait, empieza la parte crítica
+                    //this.mutex.acquire(); // Wait, empieza la parte crítica
                     
                     this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());//Reinicia los días requeridos
                     Ventana.getNk_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega()));
@@ -147,6 +215,7 @@ public class Director extends Thread{
                         System.out.println("error en director en run cuando entrega "+this.drive.getEstudio());
                 }                
             }else{
+                this.mutex.release();
                 //Acá abajo está todo el código de el director cuando NO esta entregando caps
                 Random random = new Random();
                 while((this.horaAleatoria=random.nextInt(24))==0) {
