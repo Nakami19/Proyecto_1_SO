@@ -44,21 +44,33 @@ public class ProjectManager extends Thread {
             //primero se hace que pasen las 16 horas
             for (int i = 1; i <= 16; i++) {
                 try {
-                    this.estado="Viendo One Piece";
-                    changeStateText();
-                   // System.out.println(this.estado);
-                    sleep(this.horas/2);//espera media hora
-                    
-                    this.estado="Trabajando"; //paso la media hora y trabaja de nuevo
-                    changeStateText();
-                    //System.out.println(this.estado);
-                    sleep(this.horas/2);//espera media hora
+                      this.estado="Trabajando";
+                      changeStateText();
+                      sleep(this.horas/2);//espera media hora
+                      this.estado="Viendo One Piece";
+                       changeStateText();
+                       sleep(this.horas/2);
+                       
+//                    this.estado="Viendo One Piece";
+//                    changeStateText();
+//                   // System.out.println(this.estado);
+//                    sleep(this.horas/2);//espera media hora
+//                    
+//                    this.estado="Trabajando"; //paso la media hora y trabaja de nuevo
+//                    changeStateText();
+//                    //System.out.println(this.estado);
+//                    sleep(this.horas/2);//espera media hora
+//                    
+//                    this.estado="Viendo One Piece";
+//                    changeStateText();
                     
                 } catch (InterruptedException ex) {
                     Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
                     System.out.println("error en pm en las 16 horas "+this.drive.getEstudio());
                 }
             }
+            this.estado="Trabajando";
+            changeStateText();
             
             try {
                 //ya pasaron las 16 horas, ahora trabaja durante 8 horas
