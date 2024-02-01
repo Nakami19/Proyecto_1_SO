@@ -149,8 +149,11 @@ public class Director extends Thread{
             }else{
                 //Acá abajo está todo el código de el director cuando NO esta entregando caps
                 Random random = new Random();
-                this.horaAleatoria=random.nextInt(24);
-                System.out.println("HORA ALEATORIA: "+ this.horaAleatoria);
+                while((this.horaAleatoria=random.nextInt(24))==0) {
+                    this.horaAleatoria=random.nextInt(24);
+                }
+                
+                System.out.println("HORA ALEATORIA: "+ this.horaAleatoria+ " "+this.drive.getEstudio());
                 //Aquí van a pasar las 24 horas
                 for(int i = 1; i <= 24; i++){
                     try{                        
@@ -161,7 +164,9 @@ public class Director extends Thread{
                         if(i == this.horaAleatoria){
                             this.estado = "Revisando al Project Manager";
                             changeStateText();
-                            if(this.horaAleatoria <=16){System.out.println("LO ATRAPE SI O SI");}
+                            if(this.horaAleatoria <=16){
+                                //System.out.println("LO ATRAPE SI O SI "+this.drive.getEstudio());
+                            }
                             checkPm();                           
                             
                         }
@@ -212,9 +217,8 @@ public class Director extends Thread{
     }
     
     public void checkPm(){
-        
         if(this.getProjectManager().getEstado().equals("Viendo One Piece")){
-                System.out.println("ATRAPADO!!!" + this.drive.getEstudio());
+                System.out.println("ATRAPADO!!! " + this.drive.getEstudio());
                 this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 1);
                 this.getProjectManager().setDineroDescontado(this.getProjectManager().getDineroDescontado() + 100);
                 this.getProjectManager().setSalarioacc(this.getProjectManager().getSalarioacc() - 100);
