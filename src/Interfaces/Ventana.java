@@ -38,6 +38,7 @@ public class Ventana extends javax.swing.JFrame {
         initComponents();        
         this.setLocationRelativeTo(null);
         
+        
     }
 
     public String getPath() {
@@ -344,6 +345,8 @@ public class Ventana extends javax.swing.JFrame {
         jLabel59 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
         Cn_Deadline_Counter = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
         Nick = new javax.swing.JPanel();
         Cont_Guionista_PW_NK = new javax.swing.JSpinner();
         jLabel6 = new javax.swing.JLabel();
@@ -395,6 +398,8 @@ public class Ventana extends javax.swing.JFrame {
         Nk_Utility_Counter = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
         Nk_Deadline_Counter = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
         Graf = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -571,7 +576,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel25.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("UTILIDAD:");
-        Cartoon.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, -1, -1));
+        Cartoon.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
 
         jLabel26.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
@@ -702,28 +707,28 @@ public class Ventana extends javax.swing.JFrame {
         jLabel54.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setText("GANANCIAS:");
-        Cartoon.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 60, -1, -1));
+        Cartoon.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, -1, -1));
 
         jLabel55.setBackground(new java.awt.Color(0, 0, 0));
         jLabel55.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
         jLabel55.setText("GASTOS:");
-        Cartoon.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, -1, -1));
+        Cartoon.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, -1, -1));
 
         Cn_Utility_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Utility_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Utility_Counter.setText("0");
-        Cartoon.add(Cn_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
+        Cartoon.add(Cn_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, -1, -1));
 
         Cn_Gain_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Gain_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Gain_Counter.setText("0");
-        Cartoon.add(Cn_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 60, -1, -1));
+        Cartoon.add(Cn_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 60, -1, -1));
 
         Cn_Loss_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Cn_Loss_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Loss_Counter.setText("0");
-        Cartoon.add(Cn_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, -1, -1));
+        Cartoon.add(Cn_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, -1, -1));
 
         jLabel59.setBackground(new java.awt.Color(0, 0, 0));
         jLabel59.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -741,6 +746,14 @@ public class Ventana extends javax.swing.JFrame {
         Cn_Deadline_Counter.setForeground(new java.awt.Color(255, 255, 255));
         Cn_Deadline_Counter.setText("0");
         Cartoon.add(Cn_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        Cartoon.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 510, 320));
+
+        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Cn_Bg.jpg"))); // NOI18N
+        jLabel64.setText("jLabel64");
+        Cartoon.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 520));
 
         jTabbedPane1.addTab("Cartoon", Cartoon);
 
@@ -1004,34 +1017,34 @@ public class Ventana extends javax.swing.JFrame {
         jLabel56.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel56.setForeground(new java.awt.Color(0, 0, 0));
         jLabel56.setText("GANANCIAS:");
-        Nick.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 60, -1, -1));
+        Nick.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, -1, -1));
 
         Nk_Gain_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Nk_Gain_Counter.setForeground(new java.awt.Color(0, 0, 0));
         Nk_Gain_Counter.setText("0");
-        Nick.add(Nk_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 60, -1, -1));
+        Nick.add(Nk_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 60, -1, -1));
 
         Nk_Loss_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Nk_Loss_Counter.setForeground(new java.awt.Color(0, 0, 0));
         Nk_Loss_Counter.setText("0");
-        Nick.add(Nk_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 90, -1, -1));
+        Nick.add(Nk_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, -1, -1));
 
         jLabel57.setBackground(new java.awt.Color(0, 0, 0));
         jLabel57.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel57.setForeground(new java.awt.Color(0, 0, 0));
         jLabel57.setText("GASTOS:");
-        Nick.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 90, -1, -1));
+        Nick.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, -1, -1));
 
         jLabel58.setBackground(new java.awt.Color(0, 0, 0));
         jLabel58.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel58.setForeground(new java.awt.Color(0, 0, 0));
         jLabel58.setText("UTILIDAD:");
-        Nick.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, -1, -1));
+        Nick.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, -1, -1));
 
         Nk_Utility_Counter.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         Nk_Utility_Counter.setForeground(new java.awt.Color(0, 0, 0));
         Nk_Utility_Counter.setText("0");
-        Nick.add(Nk_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 120, -1, -1));
+        Nick.add(Nk_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, -1, -1));
 
         jLabel61.setBackground(new java.awt.Color(0, 0, 0));
         jLabel61.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -1043,6 +1056,14 @@ public class Ventana extends javax.swing.JFrame {
         Nk_Deadline_Counter.setForeground(new java.awt.Color(0, 0, 0));
         Nk_Deadline_Counter.setText("0");
         Nick.add(Nk_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, -1, -1));
+
+        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Gary_looking_up_stock_art2.png"))); // NOI18N
+        Nick.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 260, 220));
+
+        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/il_fullxfull.4079544308_c7w1.jpg"))); // NOI18N
+        jLabel63.setText("jLabel63");
+        Nick.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 520));
 
         jTabbedPane1.addTab("Nick", Nick);
 
@@ -1913,9 +1934,13 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton saveButton;
     // End of variables declaration//GEN-END:variables
