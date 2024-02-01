@@ -1590,8 +1590,8 @@ public class Ventana extends javax.swing.JFrame {
                     throw new Exception("El tiempo de entrega no puede ser 0");
                 }
                 this.Cont_Deadline.setValue(Deadline);
-                getNk_Deadline_Counter().setText(Integer.toString(Deadline + 1));
-                getCn_Deadline_Counter().setText(Integer.toString(Deadline + 1));
+                getNk_Deadline_Counter().setText(Integer.toString(Deadline));
+                getCn_Deadline_Counter().setText(Integer.toString(Deadline));
                 
                 //ya tengo la duracion del dia y la deadline se crean/agregan las cosas
                 nick.setDuracionDia(duracionDias);

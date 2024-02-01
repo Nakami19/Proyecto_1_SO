@@ -113,7 +113,7 @@ public class Director extends Thread{
     public void run(){
         while(true){
             //System.out.println(drive.getDiasEntrega() + " jajaja "+ drive.getEstudio());
-            if(this.drive.getDiasEntrega() == 0){
+            if(this.drive.getDiasEntrega() <= 0){
                 try{
                     this.estado = "Entregando Capitulos";
                     changeStateText(); //??????? Porque no se cambia a la cosa??????
@@ -123,8 +123,8 @@ public class Director extends Thread{
                     this.mutex.acquire(); // Wait, empieza la parte crítica
                     
                     this.drive.setDiasEntrega(this.drive.getDiasEntregaOriginal());//Reinicia los días requeridos
-                    Ventana.getNk_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega() + 1));
-                    Ventana.getCn_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega() + 1));
+                    Ventana.getNk_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega()));
+                    Ventana.getCn_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega()));
                     //Aquí va una función para calcular la ganancia, en donde se agarran los caps y se multiplica y se añade a estudio, pero esa conexión no está hecha todavía
                     
                     if(this.drive.getCapN() <= 0 && this.drive.getCapP() <= 0){
@@ -150,7 +150,7 @@ public class Director extends Thread{
                 //Acá abajo está todo el código de el director cuando NO esta entregando caps
                 Random random = new Random();
                 this.horaAleatoria=random.nextInt(24);
-                
+                System.out.println("HORA ALEATORIA: "+ this.horaAleatoria);
                 //Aquí van a pasar las 24 horas
                 for(int i = 1; i <= 24; i++){
                     try{                        
@@ -161,20 +161,12 @@ public class Director extends Thread{
                         if(i == this.horaAleatoria){
                             this.estado = "Revisando al Project Manager";
                             changeStateText();
-                            //System.out.println("Estado: "+this.estado);
-                            //System.out.println("Estado PM: "+this.getProjectManager().getEstado());
-                            if(this.getProjectManager().getEstado().equals("Viendo One Piece")){
-                                System.out.println("ATRAPADO!!!" + this.drive.getEstudio());
-                                this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 1);
-                                this.getProjectManager().setDineroDescontado(this.getProjectManager().getDineroDescontado() + 100);
-                                this.getProjectManager().setSalarioacc(this.getProjectManager().getSalarioacc() - 100);
-                                changeFailText();
-                            } else{
-                            //System.out.println("Mosca pues");
-                            }
+                            if(this.horaAleatoria <=16){System.out.println("LO ATRAPE SI O SI");}
+                            checkPm();                           
+                            
                         }
                         //System.out.println("horaaa "+this.horas);
-                        sleep((long) (this.horas/(12/7))); //Se llevan los 35 minutos que se requieren                    
+                        sleep((long) (this.horas/(12/7))); //Se llevan los 35 minutos que se requieren
                     }catch(InterruptedException ex){
                         Logger.getLogger(Director.class.getName()).log(Level.SEVERE, null, ex);
                         System.out.println("error en director en run cuando no entrega "+this.drive.getEstudio());
@@ -217,5 +209,18 @@ public class Director extends Thread{
             Ventana.getCn_Fail_Counter().setText(Integer.toString(this.getProjectManager().getFaltas()));
             Ventana.getCn_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()));
         }     
+    }
+    
+    public void checkPm(){
+        
+        if(this.getProjectManager().getEstado().equals("Viendo One Piece")){
+                System.out.println("ATRAPADO!!!" + this.drive.getEstudio());
+                this.getProjectManager().setFaltas(this.getProjectManager().getFaltas() + 1);
+                this.getProjectManager().setDineroDescontado(this.getProjectManager().getDineroDescontado() + 100);
+                this.getProjectManager().setSalarioacc(this.getProjectManager().getSalarioacc() - 100);
+                changeFailText();
+        } else{
+        //System.out.println("Mosca pues");
+        }
     }
 }

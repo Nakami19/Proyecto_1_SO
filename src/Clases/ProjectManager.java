@@ -64,9 +64,11 @@ public class ProjectManager extends Thread {
                 //ya pasaron las 16 horas, ahora trabaja durante 8 horas
                 sleep(this.horas*8);//pasan las 8 horas y baja el contador
                 this.mutex.acquire();
+                if(this.drive.getDiasEntrega() > 0){
                 this.drive.setDiasEntrega(this.drive.getDiasEntrega()-1); //baja en 1 el contador de dias hasta la entrega
-                Ventana.getNk_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega() + 1));
-                Ventana.getCn_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega() + 1));
+                Ventana.getNk_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega()));
+                Ventana.getCn_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega()));
+                }
                 //ahora cobra su dia de trabajo
                 this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia
                 this.mutex.release();
