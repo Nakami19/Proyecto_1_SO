@@ -1967,7 +1967,7 @@ public class Ventana extends javax.swing.JFrame {
         
     XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
     renderer.setSeriesPaint( 0 , Color.BLACK );
-    renderer.setSeriesPaint( 1 , Color.ORANGE );
+    renderer.setSeriesPaint( 1 , Color.cyan);
     renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
     renderer.setSeriesStroke( 1 , new BasicStroke( 3.0f ) );
     plot.setRenderer( renderer );
