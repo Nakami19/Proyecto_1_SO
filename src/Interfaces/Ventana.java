@@ -1233,7 +1233,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel62.setText("Cartoon Network:");
         Graf.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
 
-        jPanel8.setBackground(new java.awt.Color(255, 125, 0));
+        jPanel8.setBackground(new java.awt.Color(255, 0, 0));
         Graf.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, -1, 20));
 
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
@@ -1954,6 +1954,8 @@ public class Ventana extends javax.swing.JFrame {
             System.exit(0);
             }
         }
+        
+    //Aquí se crea todo el tema de la gráfica    
     Global.addCn(0, 0);
     Global.addNk(0, 0);
     Global.addSeries(Global.getCn());
@@ -1967,9 +1969,9 @@ public class Ventana extends javax.swing.JFrame {
         
     XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
     renderer.setSeriesPaint( 0 , Color.BLACK );
-    renderer.setSeriesPaint( 1 , Color.cyan);
+    renderer.setSeriesPaint( 1 , Color.RED);
     renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
-    renderer.setSeriesStroke( 1 , new BasicStroke( 3.0f ) );
+    renderer.setSeriesStroke( 1 , new BasicStroke( 4.0f ) );
     plot.setRenderer( renderer );
 
     panelChart.removeAll();
