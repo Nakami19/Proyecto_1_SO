@@ -4,6 +4,7 @@
  */
 package Clases;
 
+import Interfaces.Global;
 import Interfaces.Ventana;
 
 /**
@@ -197,13 +198,17 @@ public class Drive {
     
     public void calcularGananciaN(float ganancia){
         if(this.estudio.compareTo("Nickelodeon") == 0){
-            setGanancias(getGanancias() + ganancia*450000);            
+            setGanancias(getGanancias() + ganancia*450000);
+            setUtilidad(getGanancias() - getCostos());
             Ventana.getNk_Gain_Counter().setText(Integer.toString((int) getGanancias())+"$");
             Ventana.getNk_Utility_Counter().setText(Integer.toString((int) ((int) getGanancias() - getCostos()))+"$");
+            Global.addNk((int) getUtilidad(), (Global.getDaycounter()-1)/2);
         }else{
             setGanancias(getGanancias() + ganancia*300000);
+            setUtilidad(getGanancias() - getCostos());
             Ventana.getCn_Gain_Counter().setText(Integer.toString((int) getGanancias())+"$");
             Ventana.getCn_Utility_Counter().setText(Integer.toString((int) ((int) getGanancias() - getCostos()))+"$");
+            Global.addCn((int) getUtilidad(), (Global.getDaycounter()-1)/2);
         }
         System.out.println("GANANCIAS:"+ getEstudio() + " " + getGanancias());
     }

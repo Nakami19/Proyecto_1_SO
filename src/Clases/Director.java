@@ -215,6 +215,7 @@ public class Director extends Thread{
                 while((this.horaAleatoria=random.nextInt(24))==0) {
                     this.horaAleatoria=random.nextInt(24);
                 }
+                //horaAleatoria = 16;
                 System.out.println("Diasss "+this.drive.getDiasEntrega()+" "+this.drive.getEstudio());
                 System.out.println("HORA ALEATORIA: "+ this.horaAleatoria+ " "+this.drive.getEstudio());
                 //Aquí van a pasar las 24 horas
@@ -288,11 +289,11 @@ public class Director extends Thread{
         if(this.drive.getEstudio().compareTo("Nickelodeon") == 0){
             System.out.println("Atrapado el de Nickelodeon!");
             Ventana.getNk_Fail_Counter().setText(Integer.toString(this.getProjectManager().getFaltas()));
-            Ventana.getNk_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()));
+            Ventana.getNk_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()) +"$");
         }else{
             System.out.println("Atrapado el de Cartoon Network!");
             Ventana.getCn_Fail_Counter().setText(Integer.toString(this.getProjectManager().getFaltas()));
-            Ventana.getCn_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()));
+            Ventana.getCn_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()) +"$");
         }     
     }
     

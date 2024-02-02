@@ -4,6 +4,8 @@
  */
 package Clases;
 
+import Interfaces.Global;
+import static Interfaces.Global.getDaycounter;
 import Interfaces.Ventana;
 import static Interfaces.Ventana.getCn_Pm_State;
 import java.util.concurrent.Semaphore;
@@ -81,6 +83,7 @@ public class ProjectManager extends Thread {
                 Ventana.getNk_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega()));
                 Ventana.getCn_Deadline_Counter().setText(Integer.toString(this.drive.getDiasEntrega()));
                 }
+                Global.setDaycounter(getDaycounter() + 1);
                 //ahora cobra su dia de trabajo
                 this.drive.setCostos(this.drive.getCostos()+this.sueldoph*24); //al costo le sumo lo que gano el empleado ese dia
                 this.mutex.release();

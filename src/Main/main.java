@@ -23,7 +23,9 @@ public class main {
      */
     public static void main(String[] args) {
             Ventana ventana= new Ventana();
-      ventana.setVisible(true);
+            ventana.setVisible(true);
+            
+            
 
 //    Semaphore mutex = new Semaphore(1);
 //        Drive drive = new Drive("nick");

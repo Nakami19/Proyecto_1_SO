@@ -8,6 +8,8 @@ import Clases.Developer;
 import Clases.Director;
 import Clases.Estudio;
 import Clases.ProjectManager;
+import java.awt.BasicStroke;
+import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -18,6 +20,16 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
 /**
  *
  * @author Natalia
@@ -36,8 +48,7 @@ public class Ventana extends javax.swing.JFrame {
      */
     public Ventana() {
         initComponents();        
-        this.setLocationRelativeTo(null);
-        
+        this.setLocationRelativeTo(null);        
         
     }
 
@@ -422,6 +433,11 @@ public class Ventana extends javax.swing.JFrame {
         Fondo_Nick = new javax.swing.JLabel();
         Graf = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        panelChart = new javax.swing.JPanel();
         Fondo_Menu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -829,11 +845,11 @@ public class Ventana extends javax.swing.JFrame {
         jLabel60.setText("ESTADOS:");
         jPanel2.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
 
-        Cartoon.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 400, 140));
+        Cartoon.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 420, 140));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0, 90));
         jPanel3.setForeground(new java.awt.Color(255, 255, 255));
-        Cartoon.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 180, 140));
+        Cartoon.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 190, 140));
 
         Logo_Cn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Cn_Logo2.svg.png"))); // NOI18N
         Cartoon.add(Logo_Cn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, 150));
@@ -858,7 +874,7 @@ public class Ventana extends javax.swing.JFrame {
         Nick.add(Gary, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 260, 220));
 
         Logo_Nk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Nk_Logo.png"))); // NOI18N
-        Nick.add(Logo_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 170, 150));
+        Nick.add(Logo_Nk, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 170, 150));
 
         Spongebob.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/Spongebob.png"))); // NOI18N
         Spongebob.setName(""); // NOI18N
@@ -915,7 +931,7 @@ public class Ventana extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 0, 0, 90));
         jPanel4.setForeground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Nick.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 180, 140));
+        Nick.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 190, 140));
 
         jLabel66.setBackground(new java.awt.Color(0, 0, 0));
         jLabel66.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -970,7 +986,7 @@ public class Ventana extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(0, 0, 0, 90));
         jPanel6.setForeground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Nick.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 400, 140));
+        Nick.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 420, 140));
 
         jLabel12.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -1205,7 +1221,28 @@ public class Ventana extends javax.swing.JFrame {
         jLabel67.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
         jLabel67.setForeground(new java.awt.Color(0, 0, 0));
         jLabel67.setText("GRÁFICO DE GANANCIAS:");
-        Graf.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, -1, -1));
+        Graf.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, -1, -1));
+
+        jLabel22.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel22.setText("Nickelodeon:");
+        Graf.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, -1, -1));
+
+        jLabel62.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel62.setText("Cartoon Network:");
+        Graf.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
+
+        jPanel8.setBackground(new java.awt.Color(255, 125, 0));
+        Graf.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, -1, 20));
+
+        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
+        Graf.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, -1, 20));
+
+        panelChart.setBackground(new java.awt.Color(204, 204, 204));
+        panelChart.setForeground(new java.awt.Color(255, 255, 255));
+        panelChart.setLayout(new java.awt.BorderLayout());
+        Graf.add(panelChart, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 780, 450));
 
         Fondo_Menu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Fondo_Menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfaceImages/MenuBg.jpg"))); // NOI18N
@@ -1917,6 +1954,28 @@ public class Ventana extends javax.swing.JFrame {
             System.exit(0);
             }
         }
+    Global.addCn(0, 0);
+    Global.addNk(0, 0);
+    Global.addSeries(Global.getCn());
+    Global.addSeries(Global.getNk());
+        
+    JFreeChart chart = ChartFactory.createXYLineChart("Utilidad vs Tiempo", "Utilidad (Millones $)", "Tiempo (Días)", Global.dataset, PlotOrientation.HORIZONTAL, false, true, false);
+        
+    final XYPlot plot = chart.getXYPlot( );
+        
+    ChartPanel barPanel = new ChartPanel(chart);
+        
+    XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
+    renderer.setSeriesPaint( 0 , Color.BLACK );
+    renderer.setSeriesPaint( 1 , Color.ORANGE );
+    renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
+    renderer.setSeriesStroke( 1 , new BasicStroke( 3.0f ) );
+    plot.setRenderer( renderer );
+
+    panelChart.removeAll();
+    panelChart.add(barPanel);
+    panelChart.validate();
+    
     } else {
         JOptionPane.showMessageDialog(null, "La simulacion ya ha iniciado");
     }
@@ -2044,6 +2103,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -2087,6 +2147,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
@@ -2105,7 +2166,10 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel panelChart;
     private javax.swing.JButton saveButton;
     // End of variables declaration//GEN-END:variables
 }
