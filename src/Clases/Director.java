@@ -195,11 +195,15 @@ public class Director extends Thread{
                         if(this.drive.getCapN() > 0){
                         this.drive.calcularGananciaN(this.drive.getCapN());
                         this.drive.setCapN(0);
+                        Ventana.getNk_Cont_Caps().setText(Integer.toString(this.drive.getCapN()));
+                        Ventana.getCn_Cont_Caps().setText(Integer.toString(this.drive.getCapN()));
                         
                     }
                         if(this.drive.getCapP() > 0){
                             this.drive.calcularGananciaP(this.drive.getCapN());
                             this.drive.setCapP(0);
+                            Ventana.getNk_Cont_PW().setText(Integer.toString(this.drive.getCapP()));
+                            Ventana.getCn_Cont_PW().setText(Integer.toString(this.drive.getCapP()));
                         }
                     }                 
                                         
