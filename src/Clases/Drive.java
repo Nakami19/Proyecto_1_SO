@@ -139,7 +139,7 @@ public class Drive {
                 this.capsHastaPlot-=1;
                 this.capN+=1;
                 Ventana.getNk_Cont_Caps().setText(Integer.toString(capN));
-                System.out.println("se creo un cap nick");
+                //System.out.println("se creo un cap nick, plot "+this.capsHastaPlot);
                 
                 
             }else {
@@ -151,7 +151,7 @@ public class Drive {
                 this.capsHastaPlot=5;
                 this.capP+=1;
                 Ventana.getNk_Cont_PW().setText(Integer.toString(capP));
-                //System.out.println("se creo uno con plot");
+               // System.out.println("se creo uno con plot NICK");
             }
             Ventana.getDrive_Guionista_Nk().setText(Integer.toString(guion));
             Ventana.getDrive_Escenario_Nk().setText(Integer.toString(escenario));
@@ -168,6 +168,7 @@ public class Drive {
                 this.capsHastaPlot-=1;
                 this.capN+=1;
                 Ventana.getCn_Cont_Caps().setText(Integer.toString(capN));
+                //System.out.println("se creo un cap cn, plot "+this.capsHastaPlot);
 
             }else {
                 this.guion-=1;
@@ -177,9 +178,10 @@ public class Drive {
                 this.plotTwist-=1; 
                 this.capsHastaPlot=3;
                 this.capP+=1;
-                Ventana.getCn_Cont_Caps().setText(Integer.toString(capN));
+                Ventana.getCn_Cont_PW().setText(Integer.toString(capP));
+                //System.out.println("se creo uno con plot CN");
             }
-            System.out.println("se creo un cap cartoon");
+            //System.out.println("se creo un cap cartoon");
             Ventana.getDrive_Guionista_Cn().setText(Integer.toString(guion));
             Ventana.getDrive_Escenario_Cn().setText(Integer.toString(escenario));
             Ventana.getDrive_Personaje_Cn().setText(Integer.toString(animaciones));

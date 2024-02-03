@@ -1688,7 +1688,7 @@ public class Ventana extends javax.swing.JFrame {
                     + "Nick-\nTrabajadores:\nguionista,"+guionN+
                     "\nescenarios,"+escN+"\nanimador,"+aniN+"\ndoblaje,"+doblaN+"\nplotTwist,"+plotN+"\nensambladores,"+ensamN;
             
-            System.out.println(TodoTXT);
+//            System.out.println(TodoTXT);
             
             try {
             if(getPath()!=null) {
@@ -1696,7 +1696,7 @@ public class Ventana extends javax.swing.JFrame {
             pw.print(TodoTXT);
             pw.close();
             JOptionPane.showMessageDialog(null, "Guardado exitoso");
-            //System.exit(0);
+            System.exit(0);
             }
             else{JOptionPane.showMessageDialog(null, "Error!! Primero debe cargar un archivo txt");}
         } catch (Exception e) {
@@ -1979,8 +1979,11 @@ public class Ventana extends javax.swing.JFrame {
     panelChart.validate();
     
     } else {
-        JOptionPane.showMessageDialog(null, "La simulacion ya ha iniciado");
+        JOptionPane.showMessageDialog(null, "ERROR");
+        System.exit(0);
     }
+    } else{
+        JOptionPane.showMessageDialog(null, "La simulacion ya ha iniciado");
     }
 
 //    nickpm.start();

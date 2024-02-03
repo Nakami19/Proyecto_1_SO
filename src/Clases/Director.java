@@ -287,11 +287,11 @@ public class Director extends Thread{
     
     public void changeFailText(){
         if(this.drive.getEstudio().compareTo("Nickelodeon") == 0){
-            System.out.println("Atrapado el de Nickelodeon!");
+//            System.out.println("Atrapado el de Nickelodeon!");
             Ventana.getNk_Fail_Counter().setText(Integer.toString(this.getProjectManager().getFaltas()));
             Ventana.getNk_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()) +"$");
         }else{
-            System.out.println("Atrapado el de Cartoon Network!");
+//            System.out.println("Atrapado el de Cartoon Network!");
             Ventana.getCn_Fail_Counter().setText(Integer.toString(this.getProjectManager().getFaltas()));
             Ventana.getCn_Discount_Counter().setText(Integer.toString(this.getProjectManager().getDineroDescontado()) +"$");
         }     
