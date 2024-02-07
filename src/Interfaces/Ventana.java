@@ -1838,6 +1838,9 @@ public class Ventana extends javax.swing.JFrame {
                          }
                          
                      }
+                    if(cn.getListaAnimacion().getSize()+cn.getListaDoblaje().getSize()+cn.getListaEnsamblador().getSize()+cn.getListaEscenario().getSize()+cn.getListaGuion().getSize()+cn.getListaPlotTwist().getSize()>12){
+                        throw new Exception("La cantidad de trabajadores no puede ser 0");
+                    }
                     cartoonpm.start();
                     cartoonDir.start();
                     System.out.println("Listo cartoon");
@@ -1927,6 +1930,9 @@ public class Ventana extends javax.swing.JFrame {
                          }
                          
                      }
+                    if(nick.getListaAnimacion().getSize()+nick.getListaDoblaje().getSize()+nick.getListaEnsamblador().getSize()+nick.getListaEscenario().getSize()+nick.getListaGuion().getSize()+nick.getListaPlotTwist().getSize()>13){
+                        throw new Exception("La cantidad de trabajadores no puede ser 0");
+                    }
                     nickpm.start();
                     nickDir.start(); 
                     this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
