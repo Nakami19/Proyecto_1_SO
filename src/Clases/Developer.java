@@ -48,13 +48,13 @@ public class Developer extends Thread {
             try {
                 obtenerSalario();
                 //System.out.println("Trabajador: "+ this.type+" trabaja en: "+this.estudio + " gana: "+this.salarioacc+"$");
-                if (type==5) {        
-                    if(PuedeEnsamblar()) {
-                        Work();
-                    }
-                } else {
+//                if (type==5) {        
+//                    if(PuedeEnsamblar()) {
+//                        Work();
+//                    }
+//                } else {
                 Work();
-                }
+//                }
                 sleep(this.dayDuration);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
@@ -79,7 +79,10 @@ public class Developer extends Thread {
             this.mutex.acquire(); //wait
             //empieza parte critica
             if(this.type==5) {
-                this.drive.Create(); //se crea un cap
+                if(PuedeEnsamblar()) {
+                this.drive.Create();
+                }
+                 //se crea un cap
             }
             else {
             this.drive.addPart(this.type); //se añade la parte al drive, aqui creo que si necesito pasarle el tipo 
